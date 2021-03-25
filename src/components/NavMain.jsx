@@ -24,26 +24,41 @@ const NavMain = (props) => {
       <NavLink exact to="/">
         <h3 className="logo">App name</h3>
       </NavLink>
+
       <ul className="nav-list">
+        <React.Fragment>
+          <li>
+            <NavLink to="/carte">Carte</NavLink>
+          </li>
+          <li>
+            <NavLink to="/donnees">Données</NavLink>
+          </li>
+          <li>
+            <NavLink to="/ressources">Ressources</NavLink>
+          </li>
+          <li>
+            <NavLink to="/a-propos">À propos</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact">Contact</NavLink>
+          </li>
+        </React.Fragment>
         {context.isLoggedIn && (
           <React.Fragment>
             <li>
-              <NavLink to="/profile">
-                {context.user && context.user.email}
+              <NavLink to="/tableau-de-bord">
+                Tableau de bord
               </NavLink>
             </li>
             <li>
-              <p onClick={handleLogout}>Logout</p>
+              <p onClick={handleLogout}>Se déconnecter</p>
             </li>
           </React.Fragment>
         )}
         {!context.isLoggedIn && (
           <React.Fragment>
             <li>
-              <NavLink to="/signin">Log in</NavLink>
-            </li>
-            <li>
-              <NavLink to="/signup">Create account</NavLink>
+              <NavLink to="/espace-admin">Espace admin</NavLink>
             </li>
           </React.Fragment>
         )}
