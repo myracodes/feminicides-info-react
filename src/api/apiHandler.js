@@ -53,7 +53,7 @@ const apiHandler = {
 
   getUsers() {
     return service
-      .get("/api/tableau-de-bord")
+      .get("/api/dashboard")
       .then(res => res.data)
       .catch(errorHandler);
   },
