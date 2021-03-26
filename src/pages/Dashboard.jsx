@@ -17,6 +17,7 @@ class Dashboard extends Component {
   }
 
   render() {
+    console.log()
     return (
       <div>
         <h1>Tableau de bord</h1>
@@ -33,7 +34,9 @@ class Dashboard extends Component {
               </tr>
             </thead>
             <tbody>
-            {this.state.users.map(user => (
+            {this.state.users.map(user => {
+              console.log("user inside map: ", user);
+              return (
               <tr key={user._id}>
                 <td>
                   {user.firstName}
@@ -53,7 +56,8 @@ class Dashboard extends Component {
                 <i className="fas fa-trash"></i>
                 </td>
               </tr>
-            ))}
+            )
+            })}
             </tbody>
           </table>
 

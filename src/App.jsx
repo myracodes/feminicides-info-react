@@ -29,7 +29,7 @@ function App() {
         <Route exact path="/ajouter-admin" component={ConnexionAdmin} />
         <ProtectedRoute exact path="/admin/nouvel-utilisateur" component={Signup} />
         <ProtectedRoute exact path="/admin/tableau-de-bord" component={Dashboard} />
-        <ProtectedRoute exact path="/admin/editer-utilisateur" component={EditUser} />
+        <Route exact path="/admin/editer-utilisateur/:id" component={EditUser} />
       </Switch>
     </div>
   );

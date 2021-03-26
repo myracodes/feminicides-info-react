@@ -28,75 +28,70 @@ class FormEditUser extends Component {
     this.setState({ [key]: value });
   };
 
-  // handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   apiHandler
-  //     .editUser(this.state)
-  //     .then((data) => {
-  //       this.props.history.push("/tableau-de-bord");
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
+  handleSubmit = (event) => {
+    event.preventDefault();
+    apiHandler
+      .editUser(this.props.location.state.user._id, this.state)
+      .then((data) => {
+        console.log(data);
+        this.props.history.push("/admin/tableau-de-bord");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   render() {
-    console.log(this.props);
-    console.log(this.props.location.state);
-
     return (
-      <div>
-        <h1>Coucou</h1>
 
-      </div>
-      // <form onSubmit={this.handleSubmit}>
-      //   <label htmlFor="firstName">Prénom</label>
-      //   <input
-      //     onChange={this.handleChange}
-      //     value={this.state.userInfo.firstName}
-      //     type="text"
-      //     id="firstName"
-      //     name="firstName"
-      //   />
-      //   <label htmlFor="lastName">Nom</label>
-      //   <input
-      //     onChange={this.handleChange}
-      //     value={this.state.lastName}
-      //     type="text"
-      //     id="lastName"
-      //     name="lastName"
-      //   />
-      //   <label htmlFor="email">E-mail</label>
-      //   <input
-      //     onChange={this.handleChange}
-      //     value={this.state.email}
-      //     type="email"
-      //     id="email"
-      //     name="email"
-      //   />
-      //   <label htmlFor="password">Mot de passe</label>
-      //   <input
-      //     onChange={this.handleChange}
-      //     value={this.state.password}
-      //     type="password"
-      //     id="password"
-      //     name="password"
-      //   />
-      //   <label htmlFor="role">Rôle</label>
-      //   <select
-      //     onChange={this.handleChange}
-      //     value={this.state.role}
-      //     id="role"
-      //     name="role"
-      //   >
-      //     <option value="éditrice">Éditrice.eur</option>
-      //     <option value="admin">Admin</option>
-      //   </select>
+      <form onSubmit={this.handleSubmit}>
+        <label htmlFor="firstName">Prénom</label>
+        <input
+          onChange={this.handleChange}
+          value={this.state.firstName}
+          type="text"
+          id="firstName"
+          name="firstName"
+        />
+        <label htmlFor="lastName">Nom</label>
+        <input
+          onChange={this.handleChange}
+          value={this.state.lastName}
+          type="text"
+          id="lastName"
+          name="lastName"
+        />
+        <label htmlFor="email">E-mail</label>
+        <input
+          onChange={this.handleChange}
+          value={this.state.email}
+          type="email"
+          id="email"
+          name="email"
+        />
+        <label htmlFor="password">Mot de passe</label>
+        <input
+          onChange={this.handleChange}
+          value={this.state.password}
+          type="password"
+          id="password"
+          name="password"
+        />
+        <label htmlFor="role">Rôle</label>
+        <select
+          onChange={this.handleChange}
+          value={this.state.role}
+          id="role"
+          name="role"
+        >
+          <option value="éditrice">Éditrice.eur</option>
+          <option value="admin">Admin</option>
+        </select>
 
-      //   <button>Créer</button>
-      // </form>
+        <button>Mettre à jour</button>
+      </form>
     );
   }
 }
 
-export default FormEditUser;
+export default withRouter(FormEditUser);
