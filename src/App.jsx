@@ -18,7 +18,7 @@ function App() {
       <NavMain />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/carte" component={Map} />
+        {/* <Route exact path="/carte" component={Map} /> */}
         <Route exact path="/donnees" component={Data} />
         <Route exact path="/ressources" component={Resources} />
         <Route exact path="/a-propos" component={About} />

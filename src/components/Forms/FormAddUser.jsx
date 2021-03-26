@@ -25,7 +25,7 @@ class FormSignup extends Component {
       .signup(this.state)
       .then((data) => {
         this.props.context.setUser(data);
-        return <Redirect to="/tableau-de-bord" />;
+        this.props.push("/tableau-de-bord");
       })
       .catch((error) => {
         console.log(error);

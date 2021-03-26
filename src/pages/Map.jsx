@@ -8,17 +8,17 @@ import SearchBar from "../components/Map-components/SearchBar";
 class Map extends React.Component {
 
   state = {
-    filteredInfos = []
+    filteredInfos: []
   }
 
-  componentDidMount()
+  componentDidMount() {}
 
   searchByName = (inputName) => {
     let filArr = this.props.events.filter((event) => {
-      return event.firstName.includes(inputText)
+      return event.firstName.includes(inputName)
     })
 
-    this.setState({ filteredInfos = filArr})
+    this.setState({ filteredInfos: filArr})
   }
 
   searchByAge = (inputAgeMin, inputAgeMax) => {
@@ -26,7 +26,7 @@ class Map extends React.Component {
       return event.age > inputAgeMin && event.age < inputAgeMax
         })
 
-    this.setState({ filteredInfos = filArr})
+    this.setState({ filteredInfos: filArr})
   }
 
   searchByRegion = (inputRegion) => {
@@ -34,7 +34,7 @@ class Map extends React.Component {
       return event.region === inputRegion
     })
 
-    this.setState({ filteredInfos = filArr})
+    this.setState({ filteredInfos: filArr})
   }
 
   render(){
