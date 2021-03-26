@@ -16,6 +16,37 @@ function errorHandler(error) {
 const apiHandler = {
   service,
 
+
+  //Events
+  allEvents() {
+    return service
+      .get("/api/dashboard/all-events")
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  oneEvent() {
+    return service
+    .get("/api/dashboard/:eventId")
+    .then((res) => res.data)
+    .catch(errorHandler);
+  },
+
+  updateEvent() {
+    return service
+    .patch("/api/dashboard/:eventId")
+    .then((res) => res.data)
+    .catch(errorHandler);
+  },
+
+  deleteEvent() {
+    return service
+    .delete("/api/dashboard/:eventId")
+    .then((res) => res.data)
+    .catch(errorHandler);
+  },
+
+
   signup(userInfo) {
     return service
       .post("/api/auth/signup", userInfo)
@@ -51,34 +82,35 @@ const apiHandler = {
   //     .catch(errorHandler);
   // },
 
+
+  //Users
   getUsers() {
     return service
-      .get("/api/dashboard")
-      .then(res => res.data)
+      .get("/api/dashboard/all-users")
+      .then((res) => res.data)
       .catch(errorHandler);
   },
 
   getOneUser(userID) {
     return service
       .get(`/api/dashboard/${userID}`)
-      .then(res => res.data)
+      .then((res) => res.data)
       .catch(errorHandler);
   },
 
   editUser(userID) {
     return service
       .patch(`/api/dashboard/${userID}`)
-      .then(res => res.data)
+      .then((res) => res.data)
       .catch(errorHandler);
   },
 
   deleteUser(userID) {
     return service
       .delete(`/api/dashboard/${userID}`)
-      .then(res => res.data)
+      .then((res) => res.data)
       .catch(errorHandler);
-  }
-
+  },
 };
 
 export default apiHandler;
