@@ -16,7 +16,6 @@ function errorHandler(error) {
 const apiHandler = {
   service,
 
-
   //Events
   allEvents() {
     return service
@@ -25,28 +24,35 @@ const apiHandler = {
       .catch(errorHandler);
   },
 
-  oneEvent() {
+  oneEvent(eventId) {
     return service
-    .get("/api/dashboard/:eventId")
-    .then((res) => res.data)
-    .catch(errorHandler);
+      .get(`/api/dashboard/${eventId}`)
+      .then((res) => res.data)
+      .catch(errorHandler);
   },
 
-  updateEvent() {
+  editEvent(eventId, eventInfo) {
     return service
-    .patch("/api/dashboard/:eventId")
-    .then((res) => res.data)
-    .catch(errorHandler);
+      .patch(`/api/dashboard/${eventId}`, eventInfo)
+      .then((res) => res.data)
+      .catch(errorHandler);
   },
 
-  deleteEvent() {
+  deleteEvent(eventId) {
     return service
-    .delete("/api/dashboard/:eventId")
-    .then((res) => res.data)
-    .catch(errorHandler);
+      .delete(`/api/dashboard/${eventId}`)
+      .then((res) => res.data)
+      .catch(errorHandler);
   },
 
+  createEvent(body) {
+    return service
+      .post("/api/dashboard/:eventId", body)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
 
+  //sign et log
   signup(userInfo) {
     return service
       .post("/api/auth/signup", userInfo)
@@ -82,7 +88,6 @@ const apiHandler = {
   //     .catch(errorHandler);
   // },
 
-
   //Users
   getUsers() {
     return service
@@ -91,16 +96,16 @@ const apiHandler = {
       .catch(errorHandler);
   },
 
-  getOneUser(userID) {
-    return service
-      .get(`/api/dashboard/${userID}`)
-      .then((res) => res.data)
-      .catch(errorHandler);
-  },
+  // getOneUser(userID) {
+  //   return service
+  //     .get(`/api/dashboard/${userID}`)
+  //     .then((res) => res.data)
+  //     .catch(errorHandler);
+  // },
 
-  editUser(userID) {
+  editUser(userID, userInfo) {
     return service
-      .patch(`/api/dashboard/${userID}`)
+      .patch(`/api/dashboard/${userID}`, userInfo)
       .then((res) => res.data)
       .catch(errorHandler);
   },
@@ -111,6 +116,75 @@ const apiHandler = {
       .then((res) => res.data)
       .catch(errorHandler);
   },
+
+  //Regions
+
+  allRegions() {
+    return service
+      .get("/api/dashboard/all-regions")
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  oneRegion(regionId) {
+    return service
+      .get(`/api/dashboard/${regionId}`)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  editRegion(regionId, regionInfo) {
+    return service
+      .patch(`/api/dashboard/${regionId}`, regionInfo)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  //*Data et map*//
+
+  //map
+  mapAllEvents() {
+    return service
+      .get("/api/data")
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  mapOneEvent(eventId) {
+    return service
+      .get(`/api/dashboard/${eventId}`)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  mapRegions() {
+    return service
+      .get("/api/data/:eventId")
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  //data
+  dataAllEvents() {
+    return service
+      .get("/api/map")
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  dataOneEvent(eventId) {
+    return service
+      .get(`/api/data/${eventId}`)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  dataRegions() {
+    return service
+      .get("/api/data")
+      .then((res) => res.data)
+      .catch(errorHandler);
+  }
 };
 
 export default apiHandler;
