@@ -46,7 +46,7 @@ const NavMain = (props) => {
         {context.isLoggedIn && (
           <React.Fragment>
             <li>
-              <NavLink to="/tableau-de-bord">
+              <NavLink to="/admin/tableau-de-bord">
                 Tableau de bord
               </NavLink>
             </li>

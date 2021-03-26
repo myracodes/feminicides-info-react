@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withRouter, Redirect } from "react-router-dom";
-import { withUser } from "../Auth/withUser";
-import apiHandler from "../../api/apiHandler";
+import { withUser } from "../../Auth/withUser";
+import apiHandler from "../../../api/apiHandler";
 
 class FormSignup extends Component {
   state = {
@@ -25,7 +25,7 @@ class FormSignup extends Component {
       .signup(this.state)
       .then((data) => {
         this.props.context.setUser(data);
-        this.props.push("/tableau-de-bord");
+        this.props.history.push("/tableau-de-bord");
       })
       .catch((error) => {
         console.log(error);

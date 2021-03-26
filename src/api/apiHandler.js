@@ -58,6 +58,27 @@ const apiHandler = {
       .catch(errorHandler);
   },
 
+  getOneUser(userID) {
+    return service
+      .get(`/api/dashboard/${userID}`)
+      .then(res => res.data)
+      .catch(errorHandler);
+  },
+
+  editUser(userID) {
+    return service
+      .patch(`/api/dashboard/${userID}`)
+      .then(res => res.data)
+      .catch(errorHandler);
+  },
+
+  deleteUser(userID) {
+    return service
+      .delete(`/api/dashboard/${userID}`)
+      .then(res => res.data)
+      .catch(errorHandler);
+  }
+
 };
 
 export default apiHandler;
