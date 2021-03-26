@@ -5,8 +5,11 @@ import apiHandler from "../../api/apiHandler";
 
 class FormSignup extends Component {
   state = {
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
+    role: ""
   };
 
   handleChange = (event) => {
@@ -18,11 +21,11 @@ class FormSignup extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-
     apiHandler
       .signup(this.state)
       .then((data) => {
         this.props.context.setUser(data);
+        return <Redirect to="/tableau-de-bord" />;
       })
       .catch((error) => {
         console.log(error);
@@ -30,13 +33,25 @@ class FormSignup extends Component {
   };
 
   render() {
-    if (this.props.context.user) {
-      return <Redirect to="/" />;
-    }
-
     return (
       <form onSubmit={this.handleSubmit}>
-        <label htmlFor="email">Email</label>
+        <label htmlFor="firstName">Prénom</label>
+        <input
+          onChange={this.handleChange}
+          value={this.state.firstName}
+          type="text"
+          id="firstName"
+          name="firstName"
+        />
+        <label htmlFor="lastName">Nom</label>
+        <input
+          onChange={this.handleChange}
+          value={this.state.lastName}
+          type="text"
+          id="lastName"
+          name="lastName"
+        />
+        <label htmlFor="email">E-mail</label>
         <input
           onChange={this.handleChange}
           value={this.state.email}
@@ -44,7 +59,7 @@ class FormSignup extends Component {
           id="email"
           name="email"
         />
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">Mot de passe</label>
         <input
           onChange={this.handleChange}
           value={this.state.password}
@@ -52,7 +67,18 @@ class FormSignup extends Component {
           id="password"
           name="password"
         />
-        <button>Submit</button>
+        <label htmlFor="role">Rôle</label>
+        <select
+          onChange={this.handleChange}
+          value={this.state.role}
+          id="role"
+          name="role"
+        >
+          <option value="éditrice">Éditrice.eur</option>
+          <option value="admin">Admin</option>
+        </select>
+
+        <button>Créer</button>
       </form>
     );
   }

@@ -32,16 +32,16 @@ class FormSignin extends Component {
 
   render() {
     if (this.props.context.user) {
-      return <Redirect to="/" />;
+      return <Redirect to="/tableau-de-bord" />;
     }
 
     return (
       <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">E-mail</label>
         <input type="email" id="email" name="email" />
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">Mot de passe</label>
         <input type="password" id="password" name="password" />
-        <button>Submit</button>
+        <button>Connexion</button>
       </form>
     );
   }

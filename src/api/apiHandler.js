@@ -44,12 +44,20 @@ const apiHandler = {
       .catch(errorHandler);
   },
 
-  getItems() {
+  // getItems() {
+  //   return service
+  //     .get("/api/items")
+  //     .then((res) => res.data)
+  //     .catch(errorHandler);
+  // },
+
+  getUsers() {
     return service
-      .get("/api/items")
-      .then((res) => res.data)
+      .get("/api/tableau-de-bord")
+      .then(res => res.data)
       .catch(errorHandler);
   },
+
 };
 
 export default apiHandler;
