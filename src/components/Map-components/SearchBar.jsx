@@ -1,5 +1,5 @@
 import React from 'react'
-import Map from '../../pages/Map';
+
 
 class SearchBar extends React.Component {
 

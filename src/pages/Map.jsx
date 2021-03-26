@@ -1,9 +1,9 @@
 import React from 'react';
-import axios from 'axios';
 import DisplayMap from "../components/Map-components/DisplayMap";
 import Filters from "../components/Map-components/Filters";
 import PopUpDetails from "../components/Map-components/PopUpDetails";
 import SearchBar from "../components/Map-components/SearchBar";
+//import apiHandler from '../api/apiHandler';
 
 class Map extends React.Component {
 
@@ -11,7 +11,12 @@ class Map extends React.Component {
     filteredInfos: []
   }
 
-  componentDidMount() {}
+  // componentDidMount() {
+  //   apiHandler
+  //   .get()
+  //   .then()
+  //   .catch()
+  // }
 
   searchByName = (inputName) => {
     let filArr = this.props.events.filter((event) => {

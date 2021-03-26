@@ -3,19 +3,52 @@ import apiHandler from '../../api/apiHandler'
 
 class Filters extends React.Component {
 
-componentDidMount() {
+    state = {
+        
+    }
 
-    apiHandler
-    .get()
-    .then()
-    .catch()
-}
+// componentDidMount() { /*pour avoir toutes les régions*/
+
+//     apiHandler
+//     .get()
+//     .then()
+//     .catch()
+// }
 
 handleSubmitAge = (event) => {
 
+    let inputAgeMin = 0;
+    let inputAgeMax = 100;
+    if(event.target.value === "15-25"){
+        inputAgeMin = 15
+        inputAgeMax = 25
+    } else if (event.target.value === "25-35"){
+        inputAgeMin = 25
+        inputAgeMax = 35
+    } else if (event.target.value === "35-45"){
+        inputAgeMin = 35
+        inputAgeMax = 45
+    } else if (event.target.value === "45-55"){
+        inputAgeMin = 45
+        inputAgeMax = 55
+    } else if (event.target.value === "55-65"){
+        inputAgeMin = 55
+        inputAgeMax = 65
+    } else if (event.target.value === "65-75"){
+        inputAgeMin = 65
+        inputAgeMax = 75
+    } else if (event.target.value === "75-100"){
+        inputAgeMin = 75
+        inputAgeMax = 100
+    }
+
+
+    this.props.searchByAge(inputAgeMin, inputAgeMax)
 }
 
 handleSubmitRegion = (event) => {
+    let inputRegion = event.target.value;
+    this.props.searchByRegion(inputRegion)
 
 }
 
