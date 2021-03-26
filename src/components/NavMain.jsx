@@ -58,6 +58,9 @@ const NavMain = (props) => {
         {!context.isLoggedIn && (
           <React.Fragment>
             <li>
+              <NavLink to="/ajouter-admin">Lien temporaire admin</NavLink>
+            </li>
+            <li>
               <NavLink to="/espace-admin">Espace admin</NavLink>
             </li>
           </React.Fragment>
