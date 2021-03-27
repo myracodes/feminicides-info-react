@@ -1,5 +1,6 @@
 import React from 'react';
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl'
+import apiHandler from '../../api/apiHandler';
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
@@ -7,7 +8,9 @@ mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
 
 class DisplayMap extends React.Component {
 
-    state = {}
+    state = {
+        filteredInfos: null
+    }
 
 
     mapDomRef = React.createRef(null)
@@ -15,7 +18,20 @@ class DisplayMap extends React.Component {
     marker = React.createRef(null).current
 
     componentDidMount(){
-        this.initMap(3.4, 47)
+
+        apiHandler
+        .mapAllEvents()
+        .then(data => {
+            this.setState({filteredInfos: data})
+            this.initMap(3.4, 47)
+            this.initMarkers()
+            console.log(this.state.filteredInfos)
+        })
+        
+        // this.addMarker([2,48])
+        // this.setState({filteredInfos: this.props.filteredInfos})
+         
+        
     }
 
     initMap = (lng, lat) => {
@@ -30,11 +46,29 @@ class DisplayMap extends React.Component {
         // Add zoom control on the top right corner
         this.map.addControl(new mapboxgl.NavigationControl());
     
-        // Create a marker on the map with the coordinates ([lng, lat])
-        //  this.marker = new mapboxgl.Marker({ color: 'red' })
-        //    .setLngLat([lng, lat])
-        //    .addTo(map)
-       }
+    }
+
+    initMarkers = () => {
+        let eventsToDisplay = this.state.filteredInfos
+        eventsToDisplay.forEach((event) => {
+            if (event.coordinates) {
+                let lng = event.coordinates.lng
+                let lat = event.coordinates.lat
+                if(lng && lat) {
+                    console.log(event.coordinates)
+                    this.addMarker(event.coordinates)
+                }
+            }
+        })
+        
+
+    }
+
+    addMarker = (coordinates) => {
+        this.marker = new mapboxgl.Marker({ color: 'red' })
+            .setLngLat(coordinates)
+            .addTo(this.map)
+    }
 
     render(){
         return(

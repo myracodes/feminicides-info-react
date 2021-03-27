@@ -1,5 +1,5 @@
 import React from 'react'
-import apiHandler from '../../api/apiHandler'
+//import apiHandler from '../../api/apiHandler'
 
 class Filters extends React.Component {
 
