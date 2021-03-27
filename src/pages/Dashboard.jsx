@@ -16,8 +16,16 @@ class Dashboard extends Component {
       .catch(error => console.log(error));
   }
 
+  handleDeleteUser(userID) {
+    apiHandler
+      .deleteUser(userID)
+      .then(deletedUser => {
+        this.setState({ users: [...this.state.users.filter(user => userID !== user._id)] });
+      })
+      .catch(error => console.log(error));
+  }
+
   render() {
-    console.log()
     return (
       <div>
         <h1>Tableau de bord</h1>
@@ -35,7 +43,6 @@ class Dashboard extends Component {
             </thead>
             <tbody>
             {this.state.users.map(user => {
-              console.log("user inside map: ", user);
               return (
               <tr key={user._id}>
                 <td>
@@ -53,7 +60,7 @@ class Dashboard extends Component {
                   </Link>
                 </td>
                 <td>
-                <i className="fas fa-trash"></i>
+                <i className="fas fa-trash" onClick={() => this.handleDeleteUser(user._id)}></i>
                 </td>
               </tr>
             )

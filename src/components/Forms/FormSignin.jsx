@@ -32,7 +32,7 @@ class FormSignin extends Component {
 
   render() {
     if (this.props.context.user) {
-      return <Redirect to="/tableau-de-bord" />;
+      return <Redirect to="/admin/tableau-de-bord" />;
     }
 
     return (
