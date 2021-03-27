@@ -14,6 +14,11 @@ class Dashboard extends Component {
       .getUsers()
       .then(data => this.setState({ users: data }))
       .catch(error => console.log(error));
+
+    apiHandler
+      .allEvents()
+      .then(data => this.setState({ events: data }))
+      .catch(error => console.log(error));
   }
 
   handleDeleteUser(userID) {
@@ -72,6 +77,39 @@ class Dashboard extends Component {
         <section>
           <h2>Événements</h2>
           <Link to="/nouvel-evenement">Ajouter un événement</Link>
+          <table>
+            <thead>
+              <tr>
+                <th>N°</th>
+                <th>Date</th>
+                <th>Prénom</th>
+                <th>Ville</th>
+                <th>Éditer</th>
+                <th>Supprimer</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.state.events.map(event => (
+                <tr key={event._id}>
+                  <td>{event.eventNumber}</td>
+                  <td>{event.date}</td>
+                  <td>{event.firstName}</td>
+                  <td>{event.city}</td>
+                  <td>
+                  <Link 
+                  to={{pathname: `/admin/editer-event/${event._id}`,
+                  state: {event: event}
+                }}>
+                    <i className="fas fa-edit"></i>
+                  </Link>
+                </td>
+                <td>
+                <i className="fas fa-trash" onClick={() => this.handleDeleteEvent(event._id)}></i>
+                </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </section>
         <section>
           <h2>Régions, collectivités & territoires</h2>

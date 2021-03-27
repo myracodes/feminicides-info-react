@@ -13,6 +13,7 @@ import Data from "./pages/Data";
 import Map from "./pages/Map";
 import Resources from "./pages/Resources";
 import EditUser from "./pages/EditUser";
+import EditEvent from "./pages/EditEvent";
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
         <Route exact path="/ajouter-admin" component={ConnexionAdmin} />
         <ProtectedRoute exact path="/admin/nouvel-utilisateur" component={Signup} />
         <ProtectedRoute exact path="/admin/tableau-de-bord" component={Dashboard} />
-        <Route exact path="/admin/editer-utilisateur/:id" component={EditUser} />
+        <ProtectedRoute exact path="/admin/editer-utilisateur/:id" component={EditUser} />
+        <ProtectedRoute exact path="/admin/editer-event/:id" component={EditEvent} />
       </Switch>
     </div>
   );
