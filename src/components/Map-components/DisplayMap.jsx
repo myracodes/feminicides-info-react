@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl'
 
-// Mapbox token
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
 
 class DisplayMap extends React.Component {
@@ -13,13 +14,17 @@ class DisplayMap extends React.Component {
     map = React.createRef(null).current
     marker = React.createRef(null).current
 
+    componentDidMount(){
+        this.initMap(3.4, 47)
+    }
+
     initMap = (lng, lat) => {
         // Embed the map where "mapDomRef" is defined in the render
         this.map = new mapboxgl.Map({
           container: this.mapDomRef.current,
           style: 'mapbox://styles/mapbox/streets-v11',
           center: [lng, lat],
-          zoom: 10,
+          zoom: 5.3,
         });
     
         // Add zoom control on the top right corner
@@ -34,7 +39,7 @@ class DisplayMap extends React.Component {
     render(){
         return(
         <div>
-            <div ref={this.mapDomRef} style={{height: 400, width: "100%"}}></div>
+            <div ref={this.mapDomRef} style={{height: 850, width: "100%"}}></div>
         </div>
         )
     }

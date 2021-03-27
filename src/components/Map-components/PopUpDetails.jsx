@@ -3,7 +3,7 @@ import React from 'react'
 const PopUpDetails = () => {
     return (
         <div>
-            <h1>hello</h1>
+            <h1>PopUp Détails</h1>
         </div>
     )
 }

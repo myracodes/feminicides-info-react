@@ -11,10 +11,11 @@ class SearchBar extends React.Component {
     return (
         <div>
             <form>
+                <p>Rechercher par prénom</p>
                 <input 
                 onChange={this.handleChange}
                 type="text"
-                placeholder="Rechercher par prénom"
+                placeholder="Prénom"
                 />
             </form>
             
