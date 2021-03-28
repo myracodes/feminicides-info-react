@@ -4,7 +4,7 @@ const Resources = () => {
   return (
     <div>
       <h1>Ressources</h1>
-      <h2>Historique féminicides en France par année</h2>
+      <h2>Historique féminicides recensés en France</h2>
       <ul className="cartesParAnnee">
         <li>
           <a href="https://www.google.com/maps/d/u/1/viewer?hl=fr&mid=1AoTHJTAvWz-P1ddCKe1NhWtdsOQgcLPA&ll=50.45705082693985%2C18.134848058083932&z=3&fbclid=IwAR2-jJGcwvBFX91wDKM7ThWJMF1bqaUv-iV_mnwAlCpZfZnR6OX3jjqFJzs" target="_blank" rel="noreferrer">
