@@ -9,13 +9,13 @@ mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
 class DisplayMap extends React.Component {
 
     state = {
-        filteredInfos: null
+        filteredInfos: null,
     }
-
 
     mapDomRef = React.createRef(null)
     map = React.createRef(null).current
     marker = React.createRef(null).current
+    allMarkers = []
 
     async componentDidMount(){
             await this.setState({filteredInfos: this.props.filteredInfos})
@@ -38,6 +38,8 @@ class DisplayMap extends React.Component {
     }
 
     initMarkers = () => {
+        this.clearAllMarkers()
+
         let eventsToDisplay = this.state.filteredInfos
         eventsToDisplay.forEach((event) => {
             if (event.coordinates) {
@@ -57,9 +59,23 @@ class DisplayMap extends React.Component {
         this.marker = new mapboxgl.Marker({ color: 'black' })
             .setLngLat(coordinates)
             .addTo(this.map)
+        
+        this.allMarkers.push(this.marker)
+    }
+
+    clearAllMarkers = () => {
+        console.log(this.allMarkers)
+        this.allMarkers.forEach((marker) => {
+            marker.remove()
+        })
+        this.allMarkers = []
     }
 
     render(){
+        if(this.map) {
+            this.initMarkers()
+        }
+
         return(
         <div>
             <div ref={this.mapDomRef} style={{height: 850, width: "100%"}}></div>

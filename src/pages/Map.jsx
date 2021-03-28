@@ -34,7 +34,7 @@ class Map extends React.Component {
       return event.age > inputAgeMin && event.age < inputAgeMax
         })
 
-    console.log(filArr)
+    console.log(this.state.allInfos)
     this.setState({ filteredInfos: filArr})
   }
 
