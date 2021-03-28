@@ -4,7 +4,7 @@ import NavMain from "./components/NavMain";
 import Home from "./pages/Home";
 import Signin from "./pages/Users/Signin";
 import Signup from "./pages/Users/Signup";
-import ConnexionAdmin from './pages/Users/ConnexionAdmin';
+import ConnexionAdmin from './components/Forms/Users/ConnexionAdmin';
 import ProtectedRoute from "./components/ProtectedRoute";
 import Dashboard from "./pages/Dashboard";
 import About from "./pages/About";
