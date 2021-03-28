@@ -29,18 +29,23 @@ class Map extends React.Component {
   }
 
   searchByAge = (inputAgeMin, inputAgeMax) => {
+    console.log(inputAgeMin, inputAgeMax)
     let filArr = this.state.allInfos.filter((event) => {
       return event.age > inputAgeMin && event.age < inputAgeMax
         })
 
+    console.log(filArr)
     this.setState({ filteredInfos: filArr})
   }
 
   searchByRegion = (inputRegion) => {
-    let filArr = this.state.allInfos.filter((event) => {
-      return event.region === inputRegion
-    })
+    console.log(this.state.allInfos)
 
+    let filArr = this.state.allInfos.filter((event) => {
+      if(!event.region) return false
+      return event.region.name === inputRegion
+    })
+    console.log(filArr)
     this.setState({ filteredInfos: filArr})
   }
 
