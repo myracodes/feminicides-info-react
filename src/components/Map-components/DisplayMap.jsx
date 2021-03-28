@@ -17,21 +17,10 @@ class DisplayMap extends React.Component {
     map = React.createRef(null).current
     marker = React.createRef(null).current
 
-    componentDidMount(){
-
-        apiHandler
-        .mapAllEvents()
-        .then(data => {
-            this.setState({filteredInfos: data})
+    async componentDidMount(){
+            await this.setState({filteredInfos: this.props.filteredInfos})
             this.initMap(3.4, 47)
-            this.initMarkers()
-            console.log(this.state.filteredInfos)
-        })
-        
-        // this.addMarker([2,48])
-        // this.setState({filteredInfos: this.props.filteredInfos})
-         
-        
+            this.initMarkers()    
     }
 
     initMap = (lng, lat) => {
@@ -65,7 +54,7 @@ class DisplayMap extends React.Component {
     }
 
     addMarker = (coordinates) => {
-        this.marker = new mapboxgl.Marker({ color: 'red' })
+        this.marker = new mapboxgl.Marker({ color: 'black' })
             .setLngLat(coordinates)
             .addTo(this.map)
     }

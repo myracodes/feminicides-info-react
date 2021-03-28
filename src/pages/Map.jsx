@@ -9,17 +9,13 @@ class Map extends React.Component {
 
   state = {
     allInfos:[],
-    filteredInfos:[]
+    filteredInfos:[],
   }
 
   componentDidMount() {
      apiHandler
       .mapAllEvents()
-      .then(data => {
-        console.log(data)
-        this.setState({ allInfos: data, filteredInfos: data })
-        console.log(this.state)
-    })
+      .then(data => this.setState({ allInfos: data, filteredInfos: data }))
       .catch(error => console.log(error));
       
    }
@@ -49,7 +45,7 @@ class Map extends React.Component {
   }
 
   render(){
-    if(!this.state.filteredInfos) return <div>Chargement en cours...</div>;
+  if(!this.state.filteredInfos.length) return <div>Chargement en cours...</div>;
   return (
     
     <div>
