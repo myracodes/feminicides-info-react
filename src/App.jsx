@@ -4,7 +4,6 @@ import NavMain from "./components/NavMain";
 import Home from "./pages/Home";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
-import ConnexionAdmin from './pages/ConnexionAdmin';
 import ProtectedRoute from "./components/ProtectedRoute";
 import Dashboard from "./pages/Dashboard";
 import About from "./pages/About";
@@ -27,10 +26,9 @@ function App() {
         <Route exact path="/a-propos" component={About} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/espace-admin" component={Signin} />
-        <Route exact path="/ajouter-admin" component={ConnexionAdmin} />
-        <ProtectedRoute exact path="/admin/nouvel-utilisateur" component={Signup} />
+        <ProtectedRoute exact path="/admin/nouvelle-utilisatrice" component={Signup} />
         <ProtectedRoute exact path="/admin/tableau-de-bord" component={Dashboard} />
-        <ProtectedRoute exact path="/admin/editer-utilisateur/:id" component={EditUser} />
+        <ProtectedRoute exact path="/admin/editer-utilisatrice/:id" component={EditUser} />
         <ProtectedRoute exact path="/admin/editer-event/:id" component={EditEvent} />
       </Switch>
     </div>

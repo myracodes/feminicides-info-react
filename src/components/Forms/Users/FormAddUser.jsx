@@ -9,7 +9,7 @@ class FormSignup extends Component {
     lastName: "",
     email: "",
     password: "",
-    role: ""
+    role: "éditrice"
   };
 
   handleChange = (event) => {
@@ -74,7 +74,7 @@ class FormSignup extends Component {
           id="role"
           name="role"
         >
-          <option value="éditrice">Éditrice.eur</option>
+          <option default value="éditrice">Éditrice.eur</option>
           <option value="admin">Admin</option>
         </select>
 
