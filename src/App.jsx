@@ -28,10 +28,10 @@ function App() {
         <Route exact path="/a-propos" component={About} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/espace-admin" component={Signin} />
-        <Route exact path="/ajouter-admin" component={ConnexionAdmin} />
-        <ProtectedRoute exact path="/admin/nouvel-utilisateur" component={Signup} />
+        <Route exact path="/connexion-admin" component={ConnexionAdmin} />
+        <ProtectedRoute exact path="/admin/nouvelle-utilisatrice" component={Signup} />
         <ProtectedRoute exact path="/admin/tableau-de-bord" component={Dashboard} />
-        <ProtectedRoute exact path="/admin/editer-utilisateur/:id" component={EditUser} />
+        <ProtectedRoute exact path="/admin/editer-utilisatrice/:id" component={EditUser} />
         <ProtectedRoute exact path="/admin/nouvel-evenement" component={AddEvent} />
         <ProtectedRoute exact path="/admin/editer-event/:id" component={EditEvent} />
       </Switch>

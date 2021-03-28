@@ -36,7 +36,7 @@ class Dashboard extends Component {
         <h1>Tableau de bord</h1>
         <section>
           <h2>Utilisatrices & utilisateurs</h2>
-          <Link to="/admin/nouvel-utilisateur">Ajouter un.e utilisatrice.eur</Link>
+          <Link to="/admin/nouvelle-utilisatrice">Ajouter un.e utilisatrice.eur</Link>
           <table>
             <thead>
               <tr>
@@ -58,7 +58,7 @@ class Dashboard extends Component {
                 </td>
                 <td>
                   <Link 
-                  to={{pathname: `/admin/editer-utilisateur/${user._id}`,
+                  to={{pathname: `/admin/editer-utilisatrice/${user._id}`,
                   state: {user: user}
                 }}>
                     <i className="fas fa-edit"></i>
