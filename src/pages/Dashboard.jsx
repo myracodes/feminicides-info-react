@@ -76,7 +76,7 @@ class Dashboard extends Component {
         </section>
         <section>
           <h2>Événements</h2>
-          <Link to="/nouvel-evenement">Ajouter un événement</Link>
+          <Link to="/admin/nouvel-evenement">Ajouter un événement</Link>
           <table>
             <thead>
               <tr>

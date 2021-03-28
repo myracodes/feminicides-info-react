@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withRouter, Redirect } from "react-router-dom";
-import { withUser } from "../components/Auth/withUser";
-import apiHandler from "../api/apiHandler";
+import { withUser } from "../../components/Auth/withUser";
+import apiHandler from "../../api/apiHandler";
 
 class FormSignup extends Component {
   state = {

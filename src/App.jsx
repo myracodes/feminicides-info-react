@@ -2,9 +2,9 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import NavMain from "./components/NavMain";
 import Home from "./pages/Home";
-import Signin from "./pages/Signin";
-import Signup from "./pages/Signup";
-import ConnexionAdmin from './pages/ConnexionAdmin';
+import Signin from "./pages/Users/Signin";
+import Signup from "./pages/Users/Signup";
+import ConnexionAdmin from './pages/Users/ConnexionAdmin';
 import ProtectedRoute from "./components/ProtectedRoute";
 import Dashboard from "./pages/Dashboard";
 import About from "./pages/About";
@@ -12,8 +12,9 @@ import Contact from "./pages/Contact";
 import Data from "./pages/Data";
 import Map from "./pages/Map";
 import Resources from "./pages/Resources";
-import EditUser from "./pages/EditUser";
-import EditEvent from "./pages/EditEvent";
+import EditUser from "./pages/Users/EditUser";
+import AddEvent from "./pages/Events/AddEvent";
+import EditEvent from "./pages/Events/EditEvent";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <ProtectedRoute exact path="/admin/nouvel-utilisateur" component={Signup} />
         <ProtectedRoute exact path="/admin/tableau-de-bord" component={Dashboard} />
         <ProtectedRoute exact path="/admin/editer-utilisateur/:id" component={EditUser} />
+        <ProtectedRoute exact path="/admin/nouvel-evenement" component={AddEvent} />
         <ProtectedRoute exact path="/admin/editer-event/:id" component={EditEvent} />
       </Switch>
     </div>
