@@ -9,7 +9,7 @@ class Map extends React.Component {
 
   state = {
     allInfos:[],
-    filteredInfos:[],
+    filteredInfos:null,
   }
 
   componentDidMount() {
@@ -49,8 +49,15 @@ class Map extends React.Component {
     this.setState({ filteredInfos: filArr})
   }
 
+  handleReset = (event) => {
+
+    event.preventDefault()
+    this.setState({filteredInfos : this.state.allInfos})
+
+}
+
   render(){
-  if(!this.state.filteredInfos.length) return <div>Chargement en cours...</div>;
+  if(!this.state.filteredInfos) return <div>Chargement en cours...</div>;
   return (
     
     <div>
@@ -59,7 +66,8 @@ class Map extends React.Component {
       <DisplayMap filteredInfos={this.state.filteredInfos}/>
       <SearchBar searchByName={this.searchByName}/>
       <Filters searchByAge={this.searchByAge} searchByRegion={this.searchByRegion}/>
-      <PopUpDetails/>
+      
+      <button onClick={this.handleReset}>Réinitialiser les filtres</button>
 
     </div>
   )

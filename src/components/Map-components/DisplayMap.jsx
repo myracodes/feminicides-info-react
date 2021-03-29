@@ -1,6 +1,5 @@
 import React from 'react';
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl'
-import apiHandler from '../../api/apiHandler';
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
@@ -32,7 +31,7 @@ class DisplayMap extends React.Component {
     
         // Add zoom control on the top right corner
         //this.map.addControl(new mapboxgl.NavigationControl());
-        this.map.addControl(new mapboxgl.NavigationControl());
+        
     
     }
 
