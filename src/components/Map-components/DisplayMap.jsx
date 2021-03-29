@@ -42,7 +42,6 @@ class DisplayMap extends React.Component {
                 let lng = event.coordinates.lng
                 let lat = event.coordinates.lat
                 if(lng && lat) {
-                    console.log(event.coordinates)
                     this.addMarker(event.coordinates)
                 }
             }
