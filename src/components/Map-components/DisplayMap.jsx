@@ -16,7 +16,6 @@ class DisplayMap extends React.Component {
    
 
     componentDidMount(){
-            
             this.initMap(3.4, 47)
             this.initMarkers()    
     }
@@ -51,23 +50,24 @@ class DisplayMap extends React.Component {
       
     }
 
+
     addMarker = (event) => {
         this.marker = new mapboxgl.Marker({ color: 'black' })
             .setLngLat(event.coordinates)
             .setPopup(new mapboxgl.Popup().setHTML(`<h1>${event.eventNumber}. ${event.firstName} ${event.lastName}</h1>
             <h2>${event.age} ans</h2>
-            <p> Quand ? ${event.date}</p>
+            <p> Quand ? ${event.date.split('T00:00:00.000Z')}</p>
             <p>Où ? ${event.city}</p>
             <p>Tuée par son ${event.relationship}, ${event.killerAge} ans</p>
             <p>A-t-il été condamné ? ${event.condemned}</p>
             <p>Autres victimes ? ${event.nbOtherVictims}</p>
             <p>Description : ${event.description}</p>
-            <a href="${event.pressArticles[0]}">Couverture médiatique (lien)</a>
+            <a href="${event.pressArticles[0]}">Dans la presse</a>
             <a href="${event.commemoration[0]}">Commémoration (lien)</a><hr>
             <p>Nombre de plaintes déposées avant les faits : ${event.complaint}</p>
             <p>Décision(s) de justice : ${event.courtDecision}</p>
             <hr>
-            <h2>${event.region.name} & les VSS</h2>
+            <h2> (remettre le dollar quand ça marchera, je l'enlève pour que ça compile :D){event.region.name} & les VSS</h2>
           
             `))
             .addTo(this.map)
