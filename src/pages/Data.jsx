@@ -10,16 +10,20 @@ class Data extends React.Component {
 
   state = {
     victimsAgeData: [],
-    // killerAgeData: [1, 50, 70, 80, 90, 100, 77, 88],
+    killerAgeData: [],
   };
 
+  node = React.createRef(null)
+  chart = React.createRef(null)
+
   componentDidMount() {
-    const node = this.node;
+    // const node = this.node;
 
     apiHandler
       .dataAllEvents()
       .then((events) => {
 
+        // victims age data
         let under26 = 0;
         let under36 = 0;
         let under46 = 0;
@@ -28,6 +32,17 @@ class Data extends React.Component {
         let under76 = 0;
         let under86 = 0;
         let moreThan86 = 0;
+
+        // killer age data
+        let killerUnder26 = 0;
+        let killerUnder36 = 0;
+        let killerUnder46 = 0;
+        let killerUnder56 = 0;
+        let killerUnder66 = 0;
+        let killerUnder76 = 0;
+        let killerUnder86 = 0;
+        let killerMoreThan86 = 0;
+
         let eachAge = events.map((event) => event.age);
         eachAge.forEach((age) => {
           console.log(age);
@@ -49,6 +64,7 @@ class Data extends React.Component {
           } else if (age > 85) {
             moreThan86++;
           };
+
           // switch (age) {
           //   case age < 26:
           //     under26 = under26 + 1;
@@ -78,72 +94,100 @@ class Data extends React.Component {
           //     default: console.log('bibou');
           // }
         });
-        this.setState({ victimsAgeData: [under26, under36, under46, under56, under66, under76, under86, moreThan86] });
+
+        let eachKillerAge = events.map((event) => event.killerAge);
+        eachKillerAge.forEach((killerAge) => {
+          console.log(killerAge);
+
+          if (killerAge < 26) {
+            killerUnder26++;
+          } else if (killerAge < 36 && killerAge > 25) {
+            killerUnder36++;
+          } else if (killerAge < 46 && killerAge > 35) {
+            killerUnder46++;
+          } else if (killerAge < 56 && killerAge > 45) {
+            killerUnder56++;
+          } else if (killerAge < 66 && killerAge > 55) {
+            killerUnder66++;
+          } else if (killerAge < 76 && killerAge > 65) {
+            killerUnder76++;
+          } else if (killerAge < 86 && killerAge > 75) {
+            killerUnder86++;
+          } else if (killerAge > 85) {
+            killerMoreThan86++;
+          };
+        });
+
+        this.setState({ victimsAgeData: [under26, under36, under46, under56, under66, under76, under86, moreThan86], killerAgeData: [killerUnder26, killerUnder36, killerUnder46, killerUnder56, killerUnder66, killerUnder76, killerUnder86, killerMoreThan86] });
+
+        let agesChart = new Chart(this.node.current, {
+          type: "bar",
+          data: {
+            labels: [
+              "25 ans ou moins",
+              "26 à 35 ans",
+              "36 à 45 ans",
+              "46 à 55 ans",
+              "56 à 65 ans",
+              "66 à 75 ans",
+              "76 à 85 ans",
+              "86 ans et plus",
+            ],
+            datasets: [
+              {
+                label: "Victimes",
+                data: [under26, under36, under46, under56, under66, under76, under86, moreThan86],
+                backgroundColor: [
+                  "rgba(107, 255, 99, 0.2)",
+                  "rgba(107, 255, 99, 0.2)",
+                  "rgba(107, 255, 99, 0.2)",
+                  "rgba(107, 255, 99, 0.2)",
+                  "rgba(107, 255, 99, 0.2)",
+                  "rgba(107, 255, 99, 0.2)",
+                  "rgba(107, 255, 99, 0.2)",
+                  "rgba(107, 255, 99, 0.2)",
+                ],
+              },
+              {
+                label: "Assassins ou assassins présumés",
+                // data: this.state.killerAgeData,
+                data: [killerUnder26, killerUnder36, killerUnder46, killerUnder56, killerUnder66, killerUnder76, killerUnder86, killerMoreThan86],
+                backgroundColor: [
+                  "rgba(255, 99, 99, 0.2)",
+                  "rgba(255, 99, 99, 0.2)",
+                  "rgba(255, 99, 99, 0.2)",
+                  "rgba(255, 99, 99, 0.2)",
+                  "rgba(255, 99, 99, 0.2)",
+                  "rgba(255, 99, 99, 0.2)",
+                  "rgba(255, 99, 99, 0.2)",
+                  "rgba(255, 99, 99, 0.2)",
+                ],
+              },
+            ],
+          },
+        });
+
       })
       .catch((err) => console.log(err));
 
-    let victimsAgeChart = new Chart(node, {
-      type: "bar",
-      data: {
-        labels: [
-          "25 ans ou moins",
-          "26 à 35 ans",
-          "36 à 45 ans",
-          "46 à 55 ans",
-          "56 à 65 ans",
-          "66 à 75 ans",
-          "76 à 85 ans",
-          "86 ans et plus",
-        ],
-        datasets: [
-          {
-            label: "Nombre de victimes",
-            data: this.state.victimsAgeData,
-            backgroundColor: [
-              "rgba(107, 255, 99, 0.2)",
-              "rgba(107, 255, 99, 0.2)",
-              "rgba(107, 255, 99, 0.2)",
-              "rgba(107, 255, 99, 0.2)",
-              "rgba(107, 255, 99, 0.2)",
-              "rgba(107, 255, 99, 0.2)",
-              "rgba(107, 255, 99, 0.2)",
-              "rgba(107, 255, 99, 0.2)",
-            ],
-          },
-          {
-            label: "Nombre d'assassins ou assassins présumés",
-            data: this.state.killerAgeData,
-            backgroundColor: [
-              "rgba(255, 99, 99, 0.2)",
-              "rgba(255, 99, 99, 0.2)",
-              "rgba(255, 99, 99, 0.2)",
-              "rgba(255, 99, 99, 0.2)",
-              "rgba(255, 99, 99, 0.2)",
-              "rgba(255, 99, 99, 0.2)",
-              "rgba(255, 99, 99, 0.2)",
-              "rgba(255, 99, 99, 0.2)",
-            ],
-          },
-        ],
-      },
-    });
+
   }
 
   render() {
-    if (this.state.victimsAgeData === []) {
-      return <div>Chargement en cours...</div>
-    }
+    // if (this.state.victimsAgeData === []) {
+    //   return <div>Chargement en cours...</div>
+    // }
 
     return (
       <div>
         {console.log('current state', this.state.victimsAgeData)}
         <canvas
           style={{ width: 800, height: 300 }}
-          ref={(node) => (this.node = node)}
+          ref={this.node}
         />
       </div>
     );
   }
-}
+};
 
 export default Data;
