@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import apiHandler from "../../api/apiHandler";
-import pattern from "patternomaly"
+import pattern from "patternomaly";
 const Chart = require("chart.js");
 
 
