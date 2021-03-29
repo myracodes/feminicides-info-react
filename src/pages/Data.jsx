@@ -1,5 +1,7 @@
 import apiHandler from "../api/apiHandler";
 import React, { Component } from "react";
+import { Route } from "react-router-dom";
+import KillerRelationWithVictim from "../components/Charts-components/KillerRelationWithVictim";
 
 const Chart = require("chart.js");
 
@@ -180,6 +182,7 @@ class Data extends React.Component {
 
     return (
       <div>
+        <Route exact path="/donnees" component={KillerRelationWithVictim} />
         {console.log('current state', this.state.victimsAgeData)}
         <canvas
           style={{ width: 800, height: 300 }}
