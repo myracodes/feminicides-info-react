@@ -1,5 +1,7 @@
 import apiHandler from "../api/apiHandler";
 import React, { Component } from "react";
+import { Route } from "react-router-dom";
+import KillerRelationWithVictim from "../components/Charts-components/KillerRelationWithVictim";
 
 const Chart = require("chart.js");
 
@@ -8,6 +10,10 @@ class Data extends React.Component {
     super(props);
   }
 
+  /**
+   * Initial state of victims and killers ages is an empty array.
+   * Later, the relevant information will be dynamically displayed
+   */
   state = {
     victimsAgeData: [],
     killerAgeData: [],
@@ -23,7 +29,10 @@ class Data extends React.Component {
       .dataAllEvents()
       .then((events) => {
 
-        // victims age data
+        /**
+         * Sets the initial amount of victims within an age range.
+         * This number will be dynamically increased depending on the data retrieved from the database (see below)
+         */
         let under26 = 0;
         let under36 = 0;
         let under46 = 0;
@@ -33,7 +42,10 @@ class Data extends React.Component {
         let under86 = 0;
         let moreThan86 = 0;
 
-        // killer age data
+        /**
+         * Sets the initial amount of killers within an age range.
+         * This number will be dynamically increased depending on the data retrieved from the database (see below)
+         */
         let killerUnder26 = 0;
         let killerUnder36 = 0;
         let killerUnder46 = 0;
@@ -43,6 +55,9 @@ class Data extends React.Component {
         let killerUnder86 = 0;
         let killerMoreThan86 = 0;
 
+        /**
+         * For each event, takes the age of the victim. The if statement inside the forEach will increase by 1 the amout of people in the relevant age range (see above)
+         */
         let eachAge = events.map((event) => event.age);
         eachAge.forEach((age) => {
           console.log(age);
@@ -65,6 +80,9 @@ class Data extends React.Component {
             moreThan86++;
           };
 
+          /**
+           * We tried a switch before going for an "if else", would appreciate feedback on why it did not work. Maybe because it's inside a forEach?
+           */
           // switch (age) {
           //   case age < 26:
           //     under26 = under26 + 1;
@@ -95,6 +113,9 @@ class Data extends React.Component {
           // }
         });
 
+        /**
+         * For each event, takes the age of the killer. The if statement inside the forEach will increase by 1 the amout of people in the relevant age range (see above)
+         */
         let eachKillerAge = events.map((event) => event.killerAge);
         eachKillerAge.forEach((killerAge) => {
           console.log(killerAge);
@@ -166,11 +187,8 @@ class Data extends React.Component {
             ],
           },
         });
-
       })
       .catch((err) => console.log(err));
-
-
   }
 
   render() {
@@ -180,7 +198,7 @@ class Data extends React.Component {
 
     return (
       <div>
-        {console.log('current state', this.state.victimsAgeData)}
+        {/* <Route exact path="/donnees" component={KillerRelationWithVictim} /> */}
         <canvas
           style={{ width: 800, height: 300 }}
           ref={this.node}
