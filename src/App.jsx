@@ -28,7 +28,7 @@ function App() {
         <Route exact path="/a-propos" component={About} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/espace-admin" component={Signin} />
-        <Route exact path="/connexion-admin" component={ConnexionAdmin} />
+        <Route exact path="/ajouter-admin" component={ConnexionAdmin} />
         <ProtectedRoute exact path="/admin/nouvelle-utilisatrice" component={Signup} />
         <ProtectedRoute exact path="/admin/tableau-de-bord" component={Dashboard} />
         <ProtectedRoute exact path="/admin/editer-utilisatrice/:id" component={EditUser} />

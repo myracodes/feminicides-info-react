@@ -4,7 +4,26 @@ import apiHandler from "../../../api/apiHandler";
 
 class FormEditEvent extends Component {
   state = {
-    regionsList: []
+    regionsList: [],
+    eventNumber: "",
+    date: "",
+    city: "",
+    firstName: "",
+    lastName: "",
+    age: 0,
+    lng: 0,
+    lat: 0,
+    relationship: "",
+    killerAge: "",
+    complaint: 0,
+    condemned: false,
+    nbOtherVictims: 0,
+    description: "",
+    courtDecision: "",
+    pressArticles: "",
+    commemoration: "",
+    region: "",
+    completeProfile: false
   }
 
   componentDidMount() {
@@ -17,58 +36,47 @@ class FormEditEvent extends Component {
   }
 
   handleChange = (event) => {
-    const value = event.target.value;
+    const value = event.target.type === "checkbox" ?
+                  event.target.checked 
+                  : event.target.value;
     const key = event.target.name;
 
     this.setState({ [key]: value });
   };
 
+  handleImage = (event) => {
+    const file = event.target.files[0];
+    this.setState({ commemoration: file });
+  };
+
   handleSubmit = (event) => {
     event.preventDefault();
-    const {
-      eventNumber,
-      date,
-      city,
-      firstName,
-      lastName,
-      age,
-      relationship,
-      killerAge,
-      complaint,
-      condemned,
-      nbOtherVictims,
-      description,
-      courtDecision,
-      pressArticles,
-      commemoration,
-      region,
-      completeProfile
-    } = this.state;
-    
+
+    const formData = new FormData();
+    formData.append("eventNumber", this.state.eventNumber);
+    formData.append("date", this.state.date);
+    formData.append("city", this.state.city);
+    formData.append("firstName", this.state.firstName);
+    formData.append("lastName", this.state.lastName);
+    formData.append("age", this.state.age);
+    formData.append("coordinates.lng", this.state.lng);
+    formData.append("coordinates.lat", this.state.lat);
+    formData.append("relationship", this.state.relationship);
+    formData.append("killerAge", this.state.killerAge);
+    formData.append("complaint", this.state.complaint);
+    formData.append("condemned", this.state.condemned);
+    formData.append("nbOtherVictims", this.state.nbOtherVictims);
+    formData.append("description", this.state.description);
+    formData.append("courtDecision", this.state.courtDecision);
+    formData.append("pressArticles", this.state.pressArticles);
+    formData.append("commemoration", this.state.commemoration);
+    formData.append("region", this.state.region);
+    formData.append("completeProfile", this.state.completeProfile);
+
+    console.log(...formData);
+
     apiHandler
-      .createEvent( {
-        eventNumber,
-        date,
-        city,
-        firstName,
-        lastName,
-        age,
-        coordinates: {
-          lng: this.state.lng,
-          lat: this.state.lat
-        },
-        relationship,
-        killerAge,
-        complaint,
-        condemned,
-        nbOtherVictims,
-        description,
-        courtDecision,
-        pressArticles,
-        commemoration,
-        region,
-        completeProfile
-      })
+      .createEvent(formData)
       .then((data) => {
         console.log(data);
         this.props.history.push("/admin/tableau-de-bord");
@@ -235,17 +243,17 @@ class FormEditEvent extends Component {
 
         <label htmlFor="commemoration">Collages commémoratifs</label>
         <input
-          onChange={this.handleChange}
+          onChange={this.handleImage}
           value={this.state.commemoration}
           type="file"
           id="commemoration"
-          name="commemoration"
+          // name="commemoration"
         /> <br />
 
         <label htmlFor="region">Région</label>
         <select
           onChange={this.handleChange}
-          value={this.state.region}
+          value={this.state.region ? this.state.region._id : ""}
           type="text"
           id="region"
           name="region"

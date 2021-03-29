@@ -29,6 +29,18 @@ class Dashboard extends Component {
       })
       .catch(error => console.log(error));
   }
+  
+  handleDeleteEvent(eventID) {
+    apiHandler
+      .deleteUser(eventID)
+      .then(deletedEvent => {
+        this.setState({ events: [...this.state.events.filter(event => eventID !== event._id)] });
+      })
+      .catch(error => console.log(error));
+  }
+
+
+
 
   render() {
     return (

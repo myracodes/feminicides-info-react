@@ -44,7 +44,7 @@ class FormEditUser extends Component {
   render() {
     return (
 
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} key={this.props.location.state.user._id}>
         <label htmlFor="firstName">Prénom</label>
         <input
           onChange={this.handleChange}
