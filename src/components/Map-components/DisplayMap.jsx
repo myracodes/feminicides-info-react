@@ -13,6 +13,7 @@ class DisplayMap extends React.Component {
     map = React.createRef(null).current
     marker = React.createRef(null).current
     allMarkers = []
+   
 
     componentDidMount(){
             
@@ -30,6 +31,7 @@ class DisplayMap extends React.Component {
         });
     
         // Add zoom control on the top right corner
+        //this.map.addControl(new mapboxgl.NavigationControl());
         this.map.addControl(new mapboxgl.NavigationControl());
     
     }
@@ -42,21 +44,39 @@ class DisplayMap extends React.Component {
                 let lng = event.coordinates.lng
                 let lat = event.coordinates.lat
                 if(lng && lat) {
-                    this.addMarker(event.coordinates)
+                    this.addMarker(event)
                 }
             }
         })
-        
-
+      
     }
 
-    addMarker = (coordinates) => {
+    addMarker = (event) => {
         this.marker = new mapboxgl.Marker({ color: 'black' })
-            .setLngLat(coordinates)
+            .setLngLat(event.coordinates)
+            .setPopup(new mapboxgl.Popup().setHTML(`<h1>${event.eventNumber}. ${event.firstName} ${event.lastName}</h1>
+            <h2>${event.age} ans</h2>
+            <p> Quand ? ${event.date}</p>
+            <p>Où ? ${event.city}</p>
+            <p>Tuée par son ${event.relationship}, ${event.killerAge} ans</p>
+            <p>A-t-il été condamné ? ${event.condemned}</p>
+            <p>Autres victimes ? ${event.nbOtherVictims}</p>
+            <p>Description : ${event.description}</p>
+            <a href="${event.pressArticles[0]}">Couverture médiatique (lien)</a>
+            <a href="${event.commemoration[0]}">Commémoration (lien)</a><hr>
+            <p>Nombre de plaintes déposées avant les faits : ${event.complaint}</p>
+            <p>Décision(s) de justice : ${event.courtDecision}</p>
+            <hr>
+            <h2>${event.region.name} & les VSS</h2>
+          
+            `))
             .addTo(this.map)
         
         this.allMarkers.push(this.marker)
     }
+
+   
+
 
     clearAllMarkers = () => {
         console.log(this.allMarkers)
@@ -65,6 +85,10 @@ class DisplayMap extends React.Component {
         })
         this.allMarkers = []
     }
+
+  
+
+
 
     render(){
         if(this.map) {
