@@ -38,23 +38,23 @@ handleSubmitAge = (event) => {
     if(this.state.ageRange === "1525"){
         inputAgeMin = 15
         inputAgeMax = 25
-    } else if (this.state.ageRange  === "2535"){
-        inputAgeMin = 25
+    } else if (this.state.ageRange  === "2635"){
+        inputAgeMin = 26
         inputAgeMax = 35
-    } else if (this.state.ageRange  === "3545"){
-        inputAgeMin = 35
+    } else if (this.state.ageRange  === "3645"){
+        inputAgeMin = 36
         inputAgeMax = 45
-    } else if (this.state.ageRange  === "4555"){
-        inputAgeMin = 45
+    } else if (this.state.ageRange  === "4655"){
+        inputAgeMin = 46
         inputAgeMax = 55
-    } else if (this.state.ageRange  === "5565"){
-        inputAgeMin = 55
+    } else if (this.state.ageRange  === "5665"){
+        inputAgeMin = 56
         inputAgeMax = 65
-    } else if (this.state.ageRange  === "6575"){
-        inputAgeMin = 65
+    } else if (this.state.ageRange  === "6675"){
+        inputAgeMin = 66
         inputAgeMax = 75
-    } else if (this.state.ageRange  === "75100"){
-        inputAgeMin = 75
+    } else if (this.state.ageRange  === "76100"){
+        inputAgeMin = 76
         inputAgeMax = 100
     }
 
@@ -83,12 +83,12 @@ handleSubmitRegion = (event) => {
             <label htmlFor="age">Rechercher par tranche d'âges</label>
              <select onChange={this.handleChangeAge} className="age-input">
                 <option className="select-option" value="1525">15 - 25 ans</option>
-                <option className="select-option" value="2535">25 - 35 ans</option>
-                <option className="select-option" value="3545">35 - 45 ans</option>
-                <option className="select-option" value="4555">45 - 55 ans</option>
-                <option className="select-option" value="5565">55 - 65 ans</option>
-                <option className="select-option" value="6575">65 - 75 ans</option>
-                <option className="select-option" value="75100">75 ans et plus</option>
+                <option className="select-option" value="2635">26 - 35 ans</option>
+                <option className="select-option" value="3645">36 - 45 ans</option>
+                <option className="select-option" value="4655">46 - 55 ans</option>
+                <option className="select-option" value="5665">56 - 65 ans</option>
+                <option className="select-option" value="6675">66 - 75 ans</option>
+                <option className="select-option" value="76100">76 ans et plus</option>
             </select>
             <button type="submit">Rechercher</button>
         </form>
