@@ -94,7 +94,7 @@ handleSubmitRegion = (event) => {
         </form>
             
         <form onSubmit={this.handleSubmitRegion}>
-            <label htmlFor="regions">Rechercher par région</label>
+            <label htmlFor="regions">Rechercher par région ou territoire</label>
             <select onChange={this.handleChangeRegion} className="region-input" name="regions">
                 {this.state.regions.map((regionName) => {
                     return (<option key={regionName} className="select-option" value={regionName} >{regionName}</option>

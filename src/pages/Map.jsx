@@ -56,7 +56,7 @@ class Map extends React.Component {
     <div>
       <h1>Carte des Féminicides conjuguaux en France</h1>
       
-      <DisplayMap filteredInfos= {this.state.filteredInfos}/>
+      <DisplayMap filteredInfos={this.state.filteredInfos}/>
       <SearchBar searchByName={this.searchByName}/>
       <Filters searchByAge={this.searchByAge} searchByRegion={this.searchByRegion}/>
       <PopUpDetails/>
