@@ -1,4 +1,5 @@
 import React from 'react';
+import Gallery from './../components/Resources-components/Gallery';
 
 const Resources = () => {
   return (
@@ -36,6 +37,7 @@ const Resources = () => {
       <hr />
       <h2>Haut Conseil à l'Égalité entre les Femmes et les Hommes</h2>
       <a href="https://www.haut-conseil-egalite.gouv.fr/violences-de-genre/" target="_blank" rel="noreferrer">Violences de genre</a> <br/>
+      <Gallery/>
     </div>
   )
 }
