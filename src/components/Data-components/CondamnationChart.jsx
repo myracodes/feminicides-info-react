@@ -8,7 +8,8 @@ export default class CondamnationChart extends PureComponent {
     condemned: [],
     notCondemned: [],
     ongoing: [],
-    nonRens: [],
+    suicide: [],
+    nonRens: []
   };
 
   node = React.createRef(null);
@@ -24,6 +25,7 @@ export default class CondamnationChart extends PureComponent {
           .length;
         let condemned = condamnation.filter((val) => val === "condamné").length;
         let ongoing = condamnation.filter((val) => val === "en cours").length;
+        let suicide = condamnation.filter((val) => val === "suicide après acte").length;
         let nonRens = condamnation.filter((val) => val === "non renseigné")
           .length;
 
@@ -31,6 +33,7 @@ export default class CondamnationChart extends PureComponent {
           condemned: condemned,
           notCondemned: notCondemned,
           ongoing: ongoing,
+          suicide: suicide,
           nonRens: nonRens,
         });
 
@@ -55,6 +58,11 @@ export default class CondamnationChart extends PureComponent {
                 label: "En cours",
                 data: [this.state.ongoing],
                 backgroundColor: pattern.draw("cross", "orchid"),
+              },
+              {
+                label: "Suicide après acte",
+                data: [this.state.suicide],
+                backgroundColor: pattern.draw("line", "purple"),
               },
               {
                 label: "Non renseigné",
