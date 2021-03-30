@@ -33,6 +33,7 @@ class FormEditEvent extends Component {
       description: this.props.location.state.event.description,
       courtDecision: this.props.location.state.event.courtDecision,
       pressArticles: this.props.location.state.event.pressArticles,
+      commemoration: this.props.location.state.event.commemoration,
       region: this.props.location.state.event.region._id,
       completeProfile: this.props.location.state.event.completeProfile
     });
@@ -90,6 +91,7 @@ class FormEditEvent extends Component {
   };
 
   render() {
+    console.log(this.state);
     return (
       <form 
         onSubmit={this.handleSubmit} 
@@ -236,10 +238,12 @@ class FormEditEvent extends Component {
           rows="5" cols="40"
         ></textarea> <br />
 
+        {this.state.commemoration &&
+        <img src={this.state.commemoration[0]} alt="Collages commémoratifs" />
+        }
         <label htmlFor="commemoration">Collages commémoratifs</label>
         <input
           onChange={this.handleImage}
-          value={this.state.commemoration}
           type="file"
           id="commemoration"
           name="commemoration"

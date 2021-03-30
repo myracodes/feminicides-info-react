@@ -5,6 +5,7 @@ import apiHandler from "../../../api/apiHandler";
 class FormEditEvent extends Component {
   state = {
     regionsList: [],
+    eventsListLength: "",
     eventNumber: "",
     date: "",
     city: "",
@@ -13,11 +14,12 @@ class FormEditEvent extends Component {
     age: 0,
     lng: 0,
     lat: 0,
-    relationship: "",
+    relationship: "non renseigné",
     killerAge: "",
     complaint: 0,
-    condemned: false,
+    condemned: "non renseigné",
     nbOtherVictims: 0,
+    otherVictims: "",
     description: "",
     courtDecision: "",
     pressArticles: "",
@@ -32,6 +34,11 @@ class FormEditEvent extends Component {
       .then(data => {
         this.setState({ regionsList: data.sort((a, b) => a.name.localeCompare(b.name)) })
       })
+      .catch(error => console.log(error));
+
+    apiHandler
+      .allEvents()
+      .then(data => this.setState({ eventsListLength: data.length + 1}))
       .catch(error => console.log(error));
   }
 
@@ -53,7 +60,7 @@ class FormEditEvent extends Component {
     event.preventDefault();
 
     const formData = new FormData();
-    formData.append("eventNumber", this.state.eventNumber);
+    formData.append("eventNumber", this.state.eventsListLength);
     formData.append("date", this.state.date);
     formData.append("city", this.state.city);
     formData.append("firstName", this.state.firstName);
@@ -66,6 +73,7 @@ class FormEditEvent extends Component {
     formData.append("complaint", this.state.complaint);
     formData.append("condemned", this.state.condemned);
     formData.append("nbOtherVictims", this.state.nbOtherVictims);
+    formData.append("otherVictims", this.state.otherVictims);
     formData.append("description", this.state.description);
     formData.append("courtDecision", this.state.courtDecision);
     formData.append("pressArticles", this.state.pressArticles);
@@ -94,12 +102,10 @@ class FormEditEvent extends Component {
         <h1>Ajouter un événement</h1>
         <label htmlFor="eventNumber">N° de l'événement</label>
         <input
-          onChange={this.handleChange}
-          value={this.state.eventNumber}
+          value={this.state.eventsListLength}
           type="number"
           id="eventNumber"
           name="eventNumber"
-          placeholder="se référer à la liste si besoin "
         /> <br />
 
         <label htmlFor="date">Date</label>
@@ -168,13 +174,17 @@ class FormEditEvent extends Component {
         /> <br />
 
         <label htmlFor="relationship">Relation avec son tueur</label>
-        <input
+        <select
           onChange={this.handleChange}
           value={this.state.relationship}
-          type="text"
           id="relationship"
           name="relationship"
-        /> <br />
+        >
+          <option value="compagnon">Compagnon</option>
+          <option value="ex-compagnon">Ex-compagnon</option>
+          <option value="compagnon supposé">Compagnon supposé</option>
+          <option value="non renseigné">Non renseigné</option>
+        </select> <br />
 
         <label htmlFor="killerAge">Âge du tueur</label>
         <input
@@ -195,21 +205,36 @@ class FormEditEvent extends Component {
         /> <br />
 
         <label htmlFor="condemned">Tueur condamné ?</label>
-        <input
+        <select
           onChange={this.handleChange}
           value={this.state.condemned}
-          type="checkbox"
           id="condemned"
           name="condemned"
+        >
+          <option value="condamné">Condamné</option>
+          <option value="non condamné">Non condamné</option>
+          <option value="en cours">En cours</option>
+          <option value="non renseigné">Non renseigné</option>
+        </select>  
+         <br />
+
+        <label htmlFor="nbOtherVictims">Nombre de victimes collatérales</label>
+        <input
+          onChange={this.handleChange}
+          value={this.state.nbOtherVictims}
+          type="number"
+          id="nbOtherVictims"
+          name="nbOtherVictims"
         /> <br />
 
-        <label htmlFor="otherVictims">Nombre de victimes collatérales</label>
+        <label htmlFor="otherVictims">Détails victimes collatérales</label>
         <input
           onChange={this.handleChange}
           value={this.state.otherVictims}
-          type="number"
+          type="text"
           id="otherVictims"
           name="otherVictims"
+          placeholder="Ex: sa mère, son amie, son nouveau compagnon..."
         /> <br />
 
         <label htmlFor="description">Description</label>
@@ -244,7 +269,6 @@ class FormEditEvent extends Component {
         <label htmlFor="commemoration">Collages commémoratifs</label>
         <input
           onChange={this.handleImage}
-          value={this.state.commemoration}
           type="file"
           id="commemoration"
           // name="commemoration"
