@@ -244,7 +244,6 @@ class FormEditEvent extends Component {
         <label htmlFor="commemoration">Collages commémoratifs</label>
         <input
           onChange={this.handleImage}
-          value={this.state.commemoration}
           type="file"
           id="commemoration"
           // name="commemoration"
