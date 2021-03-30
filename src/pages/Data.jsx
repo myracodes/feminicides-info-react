@@ -3,6 +3,7 @@ import React from 'react';
 import AgesChart from '../components/Charts-components/AgesChart';
 import CondamnationChart from '../components/Charts-components/CondamnationChart';
 import RelationshipChart from "../components/Charts-components/RelationshipChart";
+import MonthsChart from "../components/Charts-components/MonthsChart";
 
 function DataComponents() {
     return (
@@ -12,6 +13,8 @@ function DataComponents() {
             <RelationshipChart/>
             <hr/>
             <CondamnationChart/>
+            <hr/>
+            <MonthsChart/>
         </div>
     )
 }
