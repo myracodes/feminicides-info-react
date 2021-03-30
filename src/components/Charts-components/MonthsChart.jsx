@@ -20,18 +20,20 @@ const MonthsChart = () => {
       backgroundColor: gradient,
       labels,
       datasets: [
+        // note: l'année en cours a une bordure plus épaisse, est en rouge, et le champ fill est en true, dans un but de lisibilité du graphique
         {
           // note my : j'ai hardcodé, puisque c'est statique pour les années précédentes. Eventuellement, rendre dynamique l'année en cours plus tard
           label: "2021",
           data: [6, 9, 9],
           borderWidth: 3,
-          fill: false,
-          borderColor: "purple"
+          fill: true,
+          // fillColor: "rgba(255, 99, 99, 0.2)",
+          borderColor: "red"
         },{
           // note My : ces chiffres-là sont bons, je les ai revérifiés
           label: "2020",
           data: [11, 3, 7, 10, 8, 10, 9, 6, 6, 8, 2, 10, 10],
-          borderWidth: 3,
+          borderWidth: 2,
           fill: false,
           borderColor: "green"
         },
@@ -39,9 +41,9 @@ const MonthsChart = () => {
           // note My : ces chiffres-là sont mis au hasard pour faire le bon total, donc à corriger avec les vrais 
           label: "2019",
           data: [13, 9, 15, 8, 11, 14, 12, 10, 11, 13, 16, 18],
-          borderWidth: 3,
+          borderWidth: 2,
           fill: false,
-          borderColor: "blue"
+          borderColor: "purple"
         }
       ]
     };
