@@ -19,6 +19,11 @@ class Dashboard extends Component {
       .allEvents()
       .then(data => this.setState({ events: data }))
       .catch(error => console.log(error));
+
+    apiHandler
+      .allRegions()
+      .then(data => this.setState({ regions: data.sort((a, b) => a.name.localeCompare(b.name)) }))
+      .catch(error => console.log(error));
   }
 
   handleDeleteUser(userID) {
@@ -32,7 +37,7 @@ class Dashboard extends Component {
   
   handleDeleteEvent(eventID) {
     apiHandler
-      .deleteUser(eventID)
+      .deleteEvent(eventID)
       .then(deletedEvent => {
         this.setState({ events: [...this.state.events.filter(event => eventID !== event._id)] });
       })
@@ -125,6 +130,31 @@ class Dashboard extends Component {
         </section>
         <section>
           <h2>Régions, collectivités & territoires</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Nom</th>
+                <th>Nombre d'événements</th>
+                <th>Éditer</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.state.regions.map(region => (
+                <tr key={region._id}>
+                  <td>{region.name}</td>
+                  <td>{region.events.length}</td>
+                  <td>
+                    <Link 
+                    to={{pathname: `/admin/editer-region/${region._id}`,
+                    state: {region: region}
+                    }}>
+                      <i className="fas fa-edit"></i>
+                    </Link>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </section>
       </div>
     )
