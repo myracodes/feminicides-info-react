@@ -78,16 +78,14 @@ class FormEditEvent extends Component {
     formData.append("completeProfile", this.state.completeProfile);
 
     console.log(...formData);
-    
+
     apiHandler
-      .editEvent(this.props.match.params.id, formData)
-      .then((data) => {
-        console.log("edited data: ", data);
-        this.props.history.push("/admin/tableau-de-bord");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    .editEvent(this.props.match.params.id, formData)
+    .then(editedEvent => {
+      console.log("Event edited: ", editedEvent)
+      this.props.history.push("/admin/tableau-de-bord");
+    })
+    .catch((error) => console.log(error));
   };
 
   render() {
@@ -165,13 +163,17 @@ class FormEditEvent extends Component {
         /> <br />
 
         <label htmlFor="relationship">Relation avec son tueur</label>
-        <input
+        <select
           onChange={this.handleChange}
           value={this.state.relationship}
-          type="text"
           id="relationship"
           name="relationship"
-        /> <br />
+        >
+          <option value="compagnon">Compagnon</option>
+          <option value="ex-compagnon">Ex-compagnon</option>
+          <option value="compagnon supposé">Compagnon supposé</option>
+          <option value="non renseigné">Non renseigné</option>
+        </select> <br />
 
         <label htmlFor="killerAge">Âge du tueur</label>
         <input
@@ -192,13 +194,17 @@ class FormEditEvent extends Component {
         /> <br />
 
         <label htmlFor="condemned">Tueur condamné ?</label>
-        <input
+        <select
           onChange={this.handleChange}
           value={this.state.condemned}
-          type="checkbox"
           id="condemned"
           name="condemned"
-        /> <br />
+        >
+          <option value="condamné">Condamné</option>
+          <option value="non condamné">Non condamné</option>
+          <option value="en cours">En cours</option>
+          <option value="non renseigné">Non renseigné</option>
+        </select>  
 
         <label htmlFor="otherVictims">Nombre de victimes collatérales</label>
         <input
@@ -207,6 +213,16 @@ class FormEditEvent extends Component {
           type="number"
           id="otherVictims"
           name="otherVictims"
+        /> <br />
+
+        <label htmlFor="otherVictims">Détails victimes collatérales</label>
+        <input
+          onChange={this.handleChange}
+          value={this.state.otherVictims}
+          type="text"
+          id="otherVictims"
+          name="otherVictims"
+          placeholder="Ex: sa mère, son amie, son nouveau compagnon..."
         /> <br />
 
         <label htmlFor="description">Description</label>
@@ -253,7 +269,6 @@ class FormEditEvent extends Component {
         <select
           onChange={this.handleChange}
           value={this.state.region ? this.state.region : ""}
-          type="text"
           id="region"
           name="region"
         >
