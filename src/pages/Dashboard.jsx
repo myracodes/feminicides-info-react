@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import apiHandler from '../api/apiHandler';
+import moment from "moment";
 
 class Dashboard extends Component {
   state = {
@@ -109,7 +110,7 @@ class Dashboard extends Component {
               {this.state.events.map(event => (
                 <tr key={event._id}>
                   <td>{event.eventNumber}</td>
-                  <td>{event.date}</td>
+                  <td>{moment(event.date).format('D/MM/YYYY')}</td>
                   <td>{event.firstName}</td>
                   <td>{event.city}</td>
                   <td>
