@@ -13,12 +13,12 @@ export class ListOfData extends PureComponent {
       .then((events) => {
         /**
          * functions to re-use
-         * 
+         *
          */
         function giveAverage(array) {
           return array
-          .reduce((acc, val) => acc + val / array.length)
-          .toFixed(0);
+            .reduce((acc, val) => acc + val / array.length)
+            .toFixed(0);
         }
         /**
          * first retrieving the number of complaint filed by the victim
@@ -50,14 +50,8 @@ export class ListOfData extends PureComponent {
       <div>
         <ul>
           <li>
-            <p>
-              Nombre moyen de plaintes déposées par la victime : {this.state.averageComplaints}.
-            </p>
-          </li>
-          <li>
             <p>Âge moyen des victimes : {this.state.averageAge}. </p>
           </li>
-          {/* <li><p></p></li> */}
         </ul>
       </div>
     );

@@ -7,30 +7,33 @@ function RelationshipMetho() {
       <h3>Méthodologie</h3>
       <div>
         <p>
-          Ce graphique est basé sur les données de l'année 2021. Ces données
-          sont mises à jour régulièrement. Nous avons choisi d'utiliser le terme
-          "compagnon" de façon générique afin d'englober les diverses relations
-          possibles : mari, ex-mari, conjoint, concubin, etc.
+          Nous avons choisi d'utiliser le terme "compagnon" de façon générique afin d'englober les diverses relations
+          possibles entre victimes et assassin/assassin présumé : mari, ex-mari, conjoint, petit-ami, etc.
           <ul>
             <li>
-              Compagnon signifie que la victime et le coupable ou l'assassin
-              présumé entretenait une relation au moment des faits.
+              - "Compagnon" signifie que la victime et le coupable ou l'assassin
+              présumé entretenaient une relation au moment des faits.
             </li>
             <li>
-              Ex-compagnon signifie que la relation entre les deux avait cessé.
+              - "Ex-compagnon" signifie que la relation entre les deux personnes
+              avait cessé.
             </li>
             <li>
-              Compagnon supposé signifie que l'enquête en cours n'a pas permis
-              de déterminer la relation entre les deux, pour le moment.
+              - "Compagnon supposé" signifie que l'enquête en cours n'a pas permis
+              de déterminer la relation entre les deux personnes, pour le
+              moment.
             </li>
-            <li>Non renseigné signifie une absence de donnée.</li>
+            <li>- Non renseigné signifie une absence de données.</li>
           </ul>
         </p>
         <h3>Analyse</h3>
         <div>
           <p>
-            Le nombre de compagnon ou ex-compagnon est quasiment identique. Ce
-            qui indique
+            Le nombre de "compagnon" et "ex-compagnon" est quasiment identique.
+            Les femmes qui trouvent les ressources nécessaires et la force de
+            quitter leur compagnon violent vivent sous la menace de représailles
+            (harcèlement, menaces, pistage...). Elles n'ont "pas le droit" de
+            quitter leur compagnon.
           </p>
         </div>
       </div>

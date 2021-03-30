@@ -1,5 +1,5 @@
 import React from "react";
-import TotalNumber from "../components/Home-component/TotalNumber"
+import TotalNumber from "../components/Total-Events/TotalNumber"
 
 class Home extends React.Component {
   render() {

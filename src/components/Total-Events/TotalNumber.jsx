@@ -20,7 +20,7 @@ export class TotalNumber extends PureComponent {
     render() {
         return (
             <div>
-                <div>{this.state.numberOfVictims} féminicides depuis le 1er janvier</div>
+                <div>{this.state.numberOfVictims}</div>
             </div>
         )
     }

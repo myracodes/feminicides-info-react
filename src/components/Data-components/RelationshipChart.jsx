@@ -20,17 +20,14 @@ export class relationshipChart extends PureComponent {
           return event.relationship;
         });
 
-        let compagnon = killerStatus.filter((value) => value === "compagnon")
-          .length;
-        let exCompagnon = killerStatus.filter(
-          (value) => value === "ex-compagnon"
-        ).length;
-        let compagnonSup = killerStatus.filter(
-          (value) => value === "compagnon supposé"
-        ).length;
-        let nonRens = killerStatus.filter((value) => value === "non renseigné")
-          .length;
-        let total = compagnon + exCompagnon + compagnonSup + nonRens;
+        function giveArrayLength(array, value) {
+          return array.filter((elem) => elem === value).length;
+        };
+
+        let compagnon = giveArrayLength(killerStatus, "compagnon");
+        let exCompagnon = giveArrayLength(killerStatus, "ex-compagnon");
+        let compagnonSup = giveArrayLength(killerStatus, "compagnon supposé");
+        let nonRens = giveArrayLength(killerStatus, "non renseigné");
 
         this.setState({
           relationship: [compagnon, exCompagnon, compagnonSup, nonRens],
@@ -56,7 +53,7 @@ export class relationshipChart extends PureComponent {
           options: {
             title: {
               display: true,
-              text: `Amount of events : ${total}`,
+              text: `Relation`,
             },
             legend: {
               display: true,
