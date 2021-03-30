@@ -86,7 +86,10 @@ class FormEditEvent extends Component {
     apiHandler
       .createEvent(formData)
       .then((data) => {
-        console.log(data);
+        apiHandler.editRegion(data.region, { $push: { events: data._id }})
+        .then(editedRegion => console.log("Événément ajouté à la région"))
+        .catch(error => console.log(error));
+        console.log("created event: ", data);
         this.props.history.push("/admin/tableau-de-bord");
       })
       .catch((error) => {
@@ -272,6 +275,14 @@ class FormEditEvent extends Component {
           type="file"
           id="commemoration"
           // name="commemoration"
+        /> <br />
+
+        <label htmlFor="imageSource">Source de l'image</label>
+        <input 
+          onChange={this.handleChange}
+          type="text"
+          id="imageSource"
+          name="imageSource"
         /> <br />
 
         <label htmlFor="region">Région</label>
