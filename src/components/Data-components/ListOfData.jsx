@@ -51,8 +51,7 @@ export class ListOfData extends PureComponent {
         <ul>
           <li>
             <p>
-              Nombre moyen de plaintes déposées par la victime :{" "}
-              {this.state.averageComplaints}.
+              Nombre moyen de plaintes déposées par la victime : {this.state.averageComplaints}.
             </p>
           </li>
           <li>
