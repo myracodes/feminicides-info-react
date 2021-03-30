@@ -1,5 +1,6 @@
 import apiHandler from "../../api/apiHandler";
 import React, { Component } from "react";
+import pattern from "patternomaly";
 import { Route } from "react-router-dom";
 
 const Chart = require("chart.js");
@@ -155,30 +156,12 @@ class Data extends React.Component {
               {
                 label: "Victimes",
                 data: [under26, under36, under46, under56, under66, under76, under86, moreThan86],
-                backgroundColor: [
-                  "rgba(107, 255, 99, 0.2)",
-                  "rgba(107, 255, 99, 0.2)",
-                  "rgba(107, 255, 99, 0.2)",
-                  "rgba(107, 255, 99, 0.2)",
-                  "rgba(107, 255, 99, 0.2)",
-                  "rgba(107, 255, 99, 0.2)",
-                  "rgba(107, 255, 99, 0.2)",
-                  "rgba(107, 255, 99, 0.2)",
-                ],
+                backgroundColor: pattern.draw('diagonal', "rgb(112, 43, 138)"),
               },
               {
                 label: "Assassins ou assassins présumés",
                 data: [killerUnder26, killerUnder36, killerUnder46, killerUnder56, killerUnder66, killerUnder76, killerUnder86, killerMoreThan86],
-                backgroundColor: [
-                  "rgba(255, 99, 99, 0.2)",
-                  "rgba(255, 99, 99, 0.2)",
-                  "rgba(255, 99, 99, 0.2)",
-                  "rgba(255, 99, 99, 0.2)",
-                  "rgba(255, 99, 99, 0.2)",
-                  "rgba(255, 99, 99, 0.2)",
-                  "rgba(255, 99, 99, 0.2)",
-                  "rgba(255, 99, 99, 0.2)",
-                ],
+                backgroundColor: pattern.draw('zigzag', "rgb(199, 178, 217)")
               },
             ],
           },

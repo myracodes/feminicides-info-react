@@ -7,10 +7,15 @@ class SearchBar extends React.Component {
         let inputName = event.target.value;
         this.props.searchByName(inputName)
     }
+
+    handleSubmit = (event) => {
+        event.preventDefault()
+    }
+
     render(){
     return (
         <div>
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <p>Rechercher par prénom</p>
                 <input 
                 onChange={this.handleChange}

@@ -1,6 +1,5 @@
 import React from 'react';
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl'
-import apiHandler from '../../api/apiHandler';
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
@@ -31,7 +30,7 @@ class DisplayMap extends React.Component {
     
         // Add zoom control on the top right corner
         //this.map.addControl(new mapboxgl.NavigationControl());
-        this.map.addControl(new mapboxgl.NavigationControl());
+        
     
     }
 
@@ -62,12 +61,20 @@ class DisplayMap extends React.Component {
             <p>A-t-il été condamné ? ${event.condemned}</p>
             <p>Autres victimes ? ${event.nbOtherVictims}</p>
             <p>Description : ${event.description}</p>
-            <a href="${event.pressArticles[0]}">Dans la presse</a>
-            <a href="${event.commemoration[0]}">Commémoration (lien)</a><hr>
+            <a href="${event.pressArticles[0]}"> > Articles de presse (lien)</a>
+            <br>
+            <a href="${event.commemoration[0]}"> > Commémorations (lien)</a>
+            <hr>
             <p>Nombre de plaintes déposées avant les faits : ${event.complaint}</p>
             <p>Décision(s) de justice : ${event.courtDecision}</p>
             <hr>
-            <h2> (remettre le dollar quand ça marchera, je l'enlève pour que ça compile :D){event.region.name} & les VSS</h2>
+            <h2>${event.region.name} & les VSS</h2>
+            <p>Parti politique majoritaire au Conseil régional : ${event.region.politicalParty}</p>
+            <p>Budget 2021 alloué aux VSS : ${event.region.regionVSSBudget} Md €</p>
+            <p>Nb de personnel formés à la prise en charge des VSS : ${event.region.trainedStaff}</p>
+            <p>Nb de places en hébergement d'urgence pour les femmes victimes de VSS : ${event.region.shelterPlaces}</p>
+            <p>Nb de féminicides dans la région : ${event.region.events.length}</p>
+
           
             `))
             .addTo(this.map)

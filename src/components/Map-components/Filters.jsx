@@ -74,6 +74,7 @@ handleSubmitRegion = (event) => {
     this.props.searchByRegion(this.state.regionName)
 }
 
+
     render(){
     return (
         <div>
@@ -108,7 +109,7 @@ handleSubmitRegion = (event) => {
         </form>     
 
 
-
+                
             
         </div>
     )
