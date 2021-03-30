@@ -1,7 +1,6 @@
 import React from 'react';
 import DisplayMap from "../components/Map-components/DisplayMap";
 import Filters from "../components/Map-components/Filters";
-import PopUpDetails from "../components/Map-components/PopUpDetails";
 import SearchBar from "../components/Map-components/SearchBar";
 import apiHandler from '../api/apiHandler';
 
