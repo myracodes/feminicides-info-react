@@ -59,7 +59,7 @@ class Dashboard extends Component {
               <tr>
                 <th>Prénom</th>
                 <th>Nom</th>
-                <th>Éditer</th>
+                <th>Consulter</th>
                 <th>Supprimer</th>
               </tr>
             </thead>
@@ -135,6 +135,7 @@ class Dashboard extends Component {
               <tr>
                 <th>Nom</th>
                 <th>Nombre d'événements</th>
+                <th>Consulter</th>
                 <th>Éditer</th>
               </tr>
             </thead>
@@ -143,6 +144,11 @@ class Dashboard extends Component {
                 <tr key={region._id}>
                   <td>{region.name}</td>
                   <td>{region.events.length}</td>
+                  <td>
+                    <Link to={`/admin/consulter-region/${region._id}`}>
+                      <i className="fas fa-eye"></i>
+                    </Link>
+                  </td>
                   <td>
                     <Link 
                     to={{pathname: `/admin/editer-region/${region._id}`,

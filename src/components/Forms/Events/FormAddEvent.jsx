@@ -86,9 +86,6 @@ class FormEditEvent extends Component {
     apiHandler
       .createEvent(formData)
       .then((data) => {
-        apiHandler.editRegion(data.region, { $push: { events: data._id }})
-        .then(editedRegion => console.log("Événément ajouté à la région"))
-        .catch(error => console.log(error));
         console.log("created event: ", data);
         this.props.history.push("/admin/tableau-de-bord");
       })

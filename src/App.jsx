@@ -15,6 +15,8 @@ import Resources from "./pages/Resources";
 import EditUser from "./pages/Users/EditUser";
 import AddEvent from "./pages/Events/AddEvent";
 import EditEvent from "./pages/Events/EditEvent";
+import EditRegion from "./pages/Regions/EditRegion";
+import ReadRegion from "./pages/Regions/ReadRegion";
 
 function App() {
   return (
@@ -34,6 +36,12 @@ function App() {
         <ProtectedRoute exact path="/admin/editer-utilisatrice/:id" component={EditUser} />
         <ProtectedRoute exact path="/admin/nouvel-evenement" component={AddEvent} />
         <ProtectedRoute exact path="/admin/editer-event/:id" component={EditEvent} />
+        <ProtectedRoute exact path="/admin/editer-region/:id" component={EditRegion} />
+        <Route exact path="/admin/consulter-region/:id" 
+                        render={(historyProps) => {
+                          return <ReadRegion {...historyProps} />
+                        }}
+        />
       </Switch>
     </div>
   );
