@@ -1,19 +1,24 @@
-import React from 'react';
+import React from "react";
 import { Line } from "react-chartjs-2";
-// import moment from "moment";
 
 const MonthsChart = () => {
-
   const startDate = new Date(2021, 0, 1);
-  const labels = ["janvier", "fevrier", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
-  // for (let i = 0; i < 6; i++) {
-  //   const date = moment(startDate)
-  //     .add(i, "months")
-  //     .format("YYYY-MM");
-  //   labels.push(date.toString());
-  // }
-  
-  const data = canvas => {
+  const labels = [
+    "janvier",
+    "fevrier",
+    "mars",
+    "avril",
+    "mai",
+    "juin",
+    "juillet",
+    "août",
+    "septembre",
+    "octobre",
+    "novembre",
+    "décembre",
+  ];
+
+  const data = (canvas) => {
     const ctx = canvas.getContext("2d");
     const gradient = ctx.createLinearGradient(0, 0, 100, 0);
     return {
@@ -27,36 +32,68 @@ const MonthsChart = () => {
           data: [6, 9, 9],
           borderWidth: 3,
           fill: true,
-          // fillColor: "rgba(255, 99, 99, 0.2)",
-          borderColor: "red"
-        },{
+          borderColor: "red",
+        },
+        {
           // note My : ces chiffres-là sont bons, je les ai revérifiés
           label: "2020",
           data: [11, 3, 7, 10, 8, 10, 9, 6, 6, 8, 2, 10, 10],
           borderWidth: 2,
           fill: false,
-          borderColor: "green"
+          borderColor: "green",
         },
         {
-          // note My : ces chiffres-là sont mis au hasard pour faire le bon total, donc à corriger avec les vrais 
+          // note My : ces chiffres-là sont mis au hasard pour faire le bon total, donc à corriger avec les vrais
           label: "2019",
           data: [13, 9, 15, 8, 11, 14, 12, 10, 11, 13, 16, 18],
           borderWidth: 2,
           fill: false,
-          borderColor: "purple"
-        }
-      ]
+          borderColor: "purple",
+        },
+      ],
+      options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        animation: {
+          duration: 2000,
+          easing: "easeInQuad",
+        },
+        title: {
+          display: true,
+          position: "bottom",
+          fontSize: 18,
+          fontFamily: "Lato",
+          text:
+            "Âge moyen des victimes et des coupables ou assassins présumés - 2021",
+        },
+      },
     };
   };
-    
-      return (
-        <div className="chart">
-          {/* <Line data={monthsData} /> */}
-          <h1>Nombre de féminicides par an et par mois</h1>
-          <Line data={data}/>
-          
-        </div>
-      );
-}
+
+  return (
+    <div className="chart">
+      {/* <Line data={monthsData} /> */}
+      <Line
+        data={data}
+        options={{
+          responsive: true,
+          maintainAspectRatio: true,
+          animation: {
+            duration: 2000,
+            easing: "easeInQuad",
+          },
+          title: {
+            display: true,
+            position: "bottom",
+            fontSize: 18,
+            fontFamily: "Lato",
+            text:
+              "Nombre de féminicides par an et par mois - réalisé en 2021",
+          },
+        }}
+      />
+    </div>
+  );
+};
 
 export default MonthsChart;

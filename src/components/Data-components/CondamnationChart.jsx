@@ -73,6 +73,21 @@ export default class CondamnationChart extends PureComponent {
               },
             ],
           },
+          options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            animation: {
+              duration: 2000,
+              easing: 'easeInQuad'
+            },
+            title: {
+              display: true,
+              position: 'bottom',
+              fontSize: 18,
+              fontFamily: "Lato",
+              text: 'Statut judiciaire des coupables ou assassins présumés - 2021'
+            }
+          }
         });
       })
       .catch((err) => console.log(err));
@@ -85,7 +100,7 @@ export default class CondamnationChart extends PureComponent {
 
     return (
       <div className="chart">
-        <canvas style={{ width: 800, height: 300 }} ref={this.node} />
+        <canvas style={{ width: 800, height: 400 }} ref={this.node} />
       </div>
     );
   }

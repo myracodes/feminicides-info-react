@@ -168,6 +168,17 @@ class Data extends React.Component {
           options: {
             responsive: true,
             maintainAspectRatio: true,
+            animation: {
+              duration: 2000,
+              easing: 'easeInQuad'
+            },
+            title: {
+              display: true,
+              position: 'bottom',
+              fontSize: 18,
+              fontFamily: "Lato",
+              text: 'Âge moyen des victimes et des coupables ou assassins présumés - 2021'
+            }
           }
         });
       })

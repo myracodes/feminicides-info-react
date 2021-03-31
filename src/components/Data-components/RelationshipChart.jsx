@@ -51,9 +51,18 @@ export class relationshipChart extends PureComponent {
             ],
           },
           options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            animation: {
+              duration: 2000,
+              easing: 'easeInQuad'
+            },
             title: {
               display: true,
-              text: `Relation`,
+              position: 'bottom',
+              fontSize: 18,
+              fontFamily: "Lato",
+              text: `Relation entre la victime et le coupable ou l'assassin présumé - 2021`,
             },
             legend: {
               display: true,
