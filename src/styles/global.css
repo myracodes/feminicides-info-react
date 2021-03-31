@@ -132,13 +132,15 @@ ul {
 
 .form-label{
   font-size: larger;
-  padding:15px
+  padding:15px;
+  margin:20px;
 }
 
 .form-input{
   border:none;
   background-color: var(--color-input);
   padding:15px;
+  margin:20px;
 }
 
 

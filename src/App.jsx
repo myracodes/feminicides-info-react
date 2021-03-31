@@ -18,6 +18,7 @@ import AddEvent from "./pages/Events/AddEvent";
 import EditEvent from "./pages/Events/EditEvent";
 import EditRegion from "./pages/Regions/EditRegion";
 import ReadRegion from "./pages/Regions/ReadRegion";
+import Details from "./components/Map-components/Details";
 
 function App() {
   return (
@@ -26,6 +27,12 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/carte" component={Map} />
+        <Route exact path="/carte/details/:id" component={Details} />
+        <Route exact path="/carte/details/:id" 
+                        render={(historyProps) => {
+                          return <Details {...historyProps} />
+                        }}
+        />
         <Route exact path="/donnees" component={Data} />
         <Route exact path="/ressources" component={Resources} />
         <Route exact path="/a-propos" component={About} />
