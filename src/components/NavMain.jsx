@@ -39,9 +39,6 @@ const NavMain = (props) => {
           <li>
             <NavLink to="/a-propos">À propos</NavLink>
           </li>
-          <li>
-            <NavLink to="/contact">Contact</NavLink>
-          </li>
         </React.Fragment>
         {context.isLoggedIn && (
           <React.Fragment>
