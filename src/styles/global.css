@@ -79,6 +79,8 @@ ul {
    padding-left:35px;
    padding-right:35px;
    margin:10px;
+   border:none;
+   border-radius:15px;
    
  }
 
@@ -96,6 +98,7 @@ ul {
   padding-left:35px;
   padding-right:35px;
   margin:10px;
+  border-radius:15px;
   
 }
 
@@ -113,6 +116,7 @@ ul {
   padding-left:35px;
   padding-right:35px;
   margin:10px;
+  border-radius:15px;
   
 }
 
