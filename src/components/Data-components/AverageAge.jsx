@@ -21,21 +21,10 @@ export class ListOfData extends PureComponent {
             .toFixed(0);
         }
         /**
-         * first retrieving the number of complaint filed by the victim
-         * then calculating the average number of complaints
-         */
-        console.log(events);
-        let complaints = events.map((event) => {
-          return event.complaint;
-        });
-        let averageComp = giveAverage(complaints);
-        this.setState({ averageComplaints: averageComp }); //normal que ce soit 0 pour l'instant
-
-        /**
          * first retrieving the age of each victim
          * then calculating the average age
          */
-        console.log(events);
+
         let ages = events.map((event) => {
           return event.age;
         });

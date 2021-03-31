@@ -1,5 +1,5 @@
 import React from "react";
-// import DataCopy from './DataCopy';
+import "../styles/Data.css";
 import AgesChart from "../components/Data-components/AgesChart";
 import CondamnationChart from "../components/Data-components/CondamnationChart";
 import RelationshipChart from "../components/Data-components/RelationshipChart";
@@ -14,13 +14,19 @@ import AverageComplaints from "../components/Data-components/AverageComplaints";
 
 function DataComponents() {
   return (
-    <div>
-      <IntroData/>
-      <AverageComplaints/>
-      <AverageAge/>
+    <div className="page-container">
+      <h1 className="title-1">Données chiffrées</h1>
+      <IntroData />
       <hr />
-      <AgesChart />
-      <AgesMetho />
+      <AverageAge />
+      <div className="chart-grid">
+        <div className="chart">
+          <AgesChart />
+        </div>
+        <div className="method">
+          <AgesMetho />
+        </div>
+      </div>
       <hr />
       <RelationshipChart />
       <RelationshipMetho />
@@ -29,7 +35,9 @@ function DataComponents() {
       <CondamnationMetho />
       <hr />
       <MonthsChart />
-      <FeminicideMetho/>
+      <FeminicideMetho />
+      <hr />
+      <AverageComplaints />
     </div>
   );
 }

@@ -21,13 +21,15 @@ export default class CondamnationChart extends PureComponent {
       .then((events) => {
         let condamnation = events.map((event) => event.condemned);
 
-        let notCondemned = condamnation.filter((val) => val === "non condamné")
-          .length;
-        let condemned = condamnation.filter((val) => val === "condamné").length;
-        let ongoing = condamnation.filter((val) => val === "en cours").length;
-        let suicide = condamnation.filter((val) => val === "suicide après acte").length;
-        let nonRens = condamnation.filter((val) => val === "non renseigné")
-          .length;
+        function giveArrayLength(array, value) {
+          return array.filter((elem) => elem === value).length;
+        };
+
+        let condemned = giveArrayLength(condamnation, "condamné");
+        let notCondemned = giveArrayLength(condamnation, "non condamné")
+        let ongoing = giveArrayLength(condamnation, "en cours");
+        let suicide = giveArrayLength(condamnation, "suicide après acte");
+        let nonRens = giveArrayLength(condamnation, "non renseigné");
 
         this.setState({
           condemned: condemned,
