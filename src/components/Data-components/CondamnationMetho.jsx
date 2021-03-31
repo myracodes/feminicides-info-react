@@ -3,8 +3,8 @@ import React from "react";
 function CondamnationMetho() {
   return (
     <div>
-      <h2>Statut judiciaire</h2>
-      <h3>Méthodologie</h3>
+      <h2 className="title-2">Statut judiciaire</h2>
+      <h3 className="title-3">Méthodologie</h3>
       <div>
         <p>
           Cinq catégories sont représentées :
@@ -29,7 +29,7 @@ function CondamnationMetho() {
             </li>
           </ul>
         </p>
-        <h3>Analyse</h3>
+        <h3 className="title-3">Analyse</h3>
         <div>
           <p>
             L'année 2021 vient de commencer, la plupart des cas sont donc encore

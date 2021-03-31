@@ -73,7 +73,7 @@ export class relationshipChart extends PureComponent {
     }
 
     return (
-      <div>
+      <div className="chart">
         <canvas style={{ width: 800, height: 300 }} ref={this.node} />
       </div>
     );

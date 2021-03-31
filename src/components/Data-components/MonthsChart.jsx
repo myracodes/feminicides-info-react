@@ -50,7 +50,7 @@ const MonthsChart = () => {
   };
     
       return (
-        <div>
+        <div className="chart">
           {/* <Line data={monthsData} /> */}
           <h1>Nombre de féminicides par an et par mois</h1>
           <Line data={data}/>

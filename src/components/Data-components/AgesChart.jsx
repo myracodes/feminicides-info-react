@@ -165,6 +165,10 @@ class Data extends React.Component {
               },
             ],
           },
+          options: {
+            responsive: true,
+            maintainAspectRatio: true,
+          }
         });
       })
       .catch((err) => console.log(err));
@@ -176,9 +180,9 @@ class Data extends React.Component {
     // }
 
     return (
-      <div>        
+      <div className="chart">        
         <canvas
-          style={{ width: 800, height: 300 }}
+          style={{ width: 600, height: 400 }}
           ref={this.node}
         />
       </div>

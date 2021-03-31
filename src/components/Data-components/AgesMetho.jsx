@@ -3,14 +3,14 @@ import React from "react";
 function AgesMetho() {
   return (
     <div>
-      <h2>Âge des victimes et des coupables et assassins présumés</h2>
-      <h3>Méthodologie</h3>
-      <div>
+      <h2 className="title-2">Âge des victimes et des coupables et assassins présumés</h2>
+      <h3 className="title-3">Méthodologie</h3>
+      <div className="method-text">
         <p>
           Sont comparés le nombre de victimes par tranche d'âge avec le nombre
           de coupables ou/et d'assassins présumés par tranche d'âge.
         </p>
-        <h3>Analyse</h3>
+        <h3 className="title-3">Analyse</h3>
         <div>
           <p>
             Toutes les tranches d'âge sont concernées par des féminicides. La
