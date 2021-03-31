@@ -6,8 +6,10 @@ import Signin from "./pages/Users/Signin";
 import Signup from "./pages/Users/Signup";
 import ConnexionAdmin from './components/Forms/Users/ConnexionAdmin';
 import ProtectedRoute from "./components/ProtectedRoute";
-import Dashboard from "./pages/Dashboard";
 import DashboardHome from "./pages/DashboardHome";
+import DashboardEvents from "./pages/DashboardEvents";
+import DashboardRegions from "./pages/DashboardRegions";
+import DashboardUsers from "./pages/DashboardUsers";
 import About from "./pages/About";
 import Data from "./pages/Data";
 import Map from "./pages/Map";
@@ -38,6 +40,9 @@ function App() {
         <Route exact path="/espace-admin" component={Signin} />
         <Route exact path="/ajouter-admin" component={ConnexionAdmin} />
         <ProtectedRoute exact path="/admin/tableau-de-bord" component={DashboardHome} />
+        <ProtectedRoute exact path="/admin/tableau-de-bord/evenements" component={DashboardEvents} />
+        <ProtectedRoute exact path="/admin/tableau-de-bord/regions" component={DashboardRegions} />
+        <ProtectedRoute exact path="/admin/tableau-de-bord/users" component={DashboardUsers} />
         <ProtectedRoute exact path="/admin/nouvelle-utilisatrice" component={Signup} />
         <ProtectedRoute exact path="/admin/editer-utilisatrice/:id" component={EditUser} />
         <ProtectedRoute exact path="/admin/nouvel-evenement" component={AddEvent} />
