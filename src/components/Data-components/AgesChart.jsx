@@ -1,7 +1,6 @@
 import apiHandler from "../../api/apiHandler";
 import React, { Component } from "react";
 import pattern from "patternomaly";
-import { Route } from "react-router-dom";
 
 const Chart = require("chart.js");
 

@@ -1,5 +1,7 @@
-import React from 'react'
-import apiHandler from '../../api/apiHandler'
+import React from 'react';
+import apiHandler from '../../api/apiHandler';
+import "../../styles/global.css";
+import "../../styles/Map.css"
 
 class Filters extends React.Component {
 
@@ -78,34 +80,43 @@ handleSubmitRegion = (event) => {
     render(){
     return (
         <div>
-            <h2>Filtres de recherche</h2>
+            <h2 className="title-2">Filtres de recherche</h2>
 
         <form onSubmit={this.handleSubmitAge}>
-            <label htmlFor="age">Rechercher par tranche d'âges</label>
-             <select onChange={this.handleChangeAge} className="age-input">
-                <option className="select-option" value="1525">15 - 25 ans</option>
-                <option className="select-option" value="2635">26 - 35 ans</option>
-                <option className="select-option" value="3645">36 - 45 ans</option>
-                <option className="select-option" value="4655">46 - 55 ans</option>
-                <option className="select-option" value="5665">56 - 65 ans</option>
-                <option className="select-option" value="6675">66 - 75 ans</option>
-                <option className="select-option" value="76100">76 ans et plus</option>
+            <label className="form-label" htmlFor="age">Rechercher par tranche d'âges</label>
+            <div className="select">
+             <select onChange={this.handleChangeAge} className="standard-select">
+             
+                <option  value="1525">15 - 25 ans</option>
+                <option  value="2635">26 - 35 ans</option>
+                <option  value="3645">36 - 45 ans</option>
+                <option  value="4655">46 - 55 ans</option>
+                <option  value="5665">56 - 65 ans</option>
+                <option  value="6675">66 - 75 ans</option>
+                <option  value="76100">76 ans et plus</option>
+             
             </select>
-            <button type="submit">Rechercher</button>
+            </div>
+            <br></br>
+            <button className="btn-1 btn-center" type="submit">Rechercher</button>
         </form>
+        <br></br>
             
         <form onSubmit={this.handleSubmitRegion}>
-            <label htmlFor="regions">Rechercher par région ou territoire</label>
-            <select onChange={this.handleChangeRegion} className="region-input" name="regions">
+            <label className="form-label" htmlFor="regions">Rechercher par région ou territoire</label>
+            <br></br>
+            <div className="select">
+            <select onChange={this.handleChangeRegion} className="standard-select" name="regions">
                 {this.state.regions.map((regionName) => {
-                    return (<option key={regionName} className="select-option" value={regionName} >{regionName}</option>
+                    return (<option key={regionName} value={regionName} >{regionName}</option>
                     )
                 })}
                
             </select>
-
-            <button type="submit">Rechercher</button>
-
+            </div>
+            <br></br>
+            <button className="btn-1 btn-center" type="submit">Rechercher</button>
+            <br></br>
         </form>     
 
 

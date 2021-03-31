@@ -33,11 +33,24 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2rem;
+  margin: 0.5rem 0 2rem;
 }
 
 .total-num-text {
   font-size: 5rem;
   color: var(--color-second);
   text-shadow: 2px 2px var(--color-third);
+}
+
+.total-num-phrase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.total-num-box {
+  background-color: var(--color-box);
+  border-radius: 15px;
+  padding: 1rem;
 }

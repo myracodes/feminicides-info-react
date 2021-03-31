@@ -22,6 +22,7 @@ html {
   --color-fourth: #f17d52e1;
   --color-text: #646464;
   --color-input: #f9f5f5;
+  --color-box: #e6e6fa25;
 }
 
 a {
@@ -40,12 +41,14 @@ ul {
 .title-1 {
   border-bottom: 3px solid var(--color-main);
   padding: 15px 15px 3px;
+  margin:5px;
   display: inline-block;
 }
 
 .title-2 {
   border-bottom: 3px solid var(--color-second);
-  padding: 15px 15px 3px;
+  padding: 0px 15px 3px;
+  margin-bottom:10px;
   display: inline-block;
 }
 
@@ -130,15 +133,18 @@ ul {
 
 .form-label {
   font-size: larger;
-  padding: 15px;
-  margin: 20px;
+  padding: 5px;
+  margin: 10px;
+  margin-bottom:5px;
 }
 
 .form-input {
   border: none;
   background-color: var(--color-input);
   padding: 15px;
-  margin: 20px;
+  margin: 10px;
+  margin-top:5px;
+  border-radius:15px;
 }
 
 .flex {
@@ -154,5 +160,6 @@ ul {
 }
 
 .page-container {
-  margin: 4% 10% 12%;
+  margin: 4% 7% 7%;
 }
+

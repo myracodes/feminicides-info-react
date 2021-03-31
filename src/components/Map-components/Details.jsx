@@ -26,7 +26,7 @@ class Details extends React.Component {
             return <div>Chargement en cours...</div>
             
         }
-        console.log("hey", this.props)
+       
     return (
         <div className="page-container">
 
@@ -38,24 +38,27 @@ class Details extends React.Component {
             <p>A-t-il été condamné ? {this.state.event.condemned}</p>
             <p>Autres victimes connues ? {this.state.event.otherVictims}</p>
             <p className="padding-top"><b>Description : </b>{this.state.event.description}</p>
+            <hr/>
             <p className="padding-top">Nombre de plaintes déposées avant les faits : {this.state.event.complaint}</p>
             <p>Décision(s) de justice : {this.state.event.courtDecision}</p>
             
             <p>Dans la presse : <a href={this.state.event.pressArticles[0]}>lien</a></p>
             
-            
+            <p>Commémoration :</p>
             <img src={this.state.event.commemoration} alt="collage commémoratif" className="padding-top"/>
             <p>Crédit photo : {this.state.event.imageSource}</p> {console.log(this.state.event.imageSource, "source")}
-            
-            <h2 className="title-2 padding-top">{this.state.event.region.name} et violences sexistes et sexuelles (VSS)</h2>
+            <div className="filters-box">
+            <h2 className="title-2 padding-top">La région {this.state.event.region.name} et le traitement des violences sexistes et sexuelles (VSS)</h2>
             <p className="padding-top">Parti politique majoritaire au Conseil régional : {this.state.event.region.politicalParty}</p>
             <p>Budget 2021 alloué à la lutte contre les VSS : {this.state.event.region.regionVSSBudget} Md €</p>
             <p>Nb de personnel formés à la prise en charge des victimes de violences : {this.state.event.region.trainedStaff}</p>
             <p>Nb de places en hébergement d'urgence pour les femmes victimes de violences : {this.state.event.region.shelterPlaces}</p>
-            <p>Nb de féminicides dans la région : {this.state.event.region.events.length}</p>
+            <p><b>Nb de féminicides dans la région : {this.state.event.region.events.length}</b></p>
+            <br></br>
+            </div>
+            <br/>
 
-
-            <Link to={`/carte`}>Retour à la carte</Link>
+            <Link className="btn-1" to={`/carte`}>Retour à la carte</Link>
             
         </div>
     )
