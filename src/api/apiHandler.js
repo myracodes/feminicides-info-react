@@ -168,7 +168,7 @@ const apiHandler = {
   //data
   dataAllEvents() {
     return service
-      .get("/api/map/list/all-events")
+      .get("/api/data/list/all-events")
       .then((res) => res.data)
       .catch(errorHandler);
   },
