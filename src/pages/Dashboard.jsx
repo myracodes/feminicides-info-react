@@ -51,10 +51,10 @@ class Dashboard extends Component {
   render() {
     return (
       <div>
-        <h1>Tableau de bord</h1>
+        <h1 className="title-1">Tableau de bord</h1>
         <section>
-          <h2>Utilisatrices & utilisateurs</h2>
-          <Link to="/admin/nouvelle-utilisatrice">Ajouter un.e utilisatrice.eur</Link>
+          <h2 className="title-3">Utilisatrices & utilisateurs</h2> <br />
+          <Link to="/admin/nouvelle-utilisatrice" className="btn-3">Ajouter un.e utilisatrice.eur</Link>
           <table>
             <thead>
               <tr>
@@ -93,8 +93,8 @@ class Dashboard extends Component {
 
         </section>
         <section>
-          <h2>Événements</h2>
-          <Link to="/admin/nouvel-evenement">Ajouter un événement</Link>
+          <h2 className="title-2">Événements</h2> <br />
+          <Link to="/admin/nouvel-evenement" className="btn-2">Ajouter un événement</Link>
           <table>
             <thead>
               <tr>
@@ -130,7 +130,7 @@ class Dashboard extends Component {
           </table>
         </section>
         <section>
-          <h2>Régions, collectivités & territoires</h2>
+          <h2 className="title-3">Régions, collectivités & territoires</h2>
           <table>
             <thead>
               <tr>

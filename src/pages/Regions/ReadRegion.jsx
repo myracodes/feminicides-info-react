@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import apiHandler from "../../api/apiHandler";
 import moment from "moment";
+import "../../styles/global.css";
 
 export class ReadRegion extends Component {
   state = {
@@ -31,7 +32,7 @@ export class ReadRegion extends Component {
     console.log(this.props);
     return (
       <div key={this.props.match.params.id}>
-        <h1>{this.state.name}</h1>
+        <h1 className="title-1">{this.state.name}</h1>
         <p><b>Parti politique majoritaire au conseil régional :</b> {this.state.politicalParty}</p>
         <p><b>Budget alloué à la lutte contre les violences sexistes et sexuelles : </b>{this.state.regionVSSBudget} milliards d'€</p>
         <p><b>Féminicides :</b></p>
