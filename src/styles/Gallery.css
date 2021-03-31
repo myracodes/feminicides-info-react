@@ -1,0 +1,9 @@
+img {
+    height: 500px;
+    width: auto;
+    display: flex;
+}
+
+.gallery-container {
+    align-items: center;
+}
