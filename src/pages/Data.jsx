@@ -16,27 +16,31 @@ function DataComponents() {
   return (
     <div className="page-container">
       <h1 className="title-1">Données chiffrées</h1>
-      <IntroData />
-      <hr />
-      <AverageAge />
+      <IntroData /> <AverageAge />
       <div className="chart-grid">
-        <div className="chart">
-          <AgesChart />
-        </div>
+        <AgesChart />
         <div className="method">
           <AgesMetho />
         </div>
       </div>
-      <hr />
-      <RelationshipChart />
-      <RelationshipMetho />
-      <hr />
-      <CondamnationChart />
-      <CondamnationMetho />
-      <hr />
-      <MonthsChart />
-      <FeminicideMetho />
-      <hr />
+      <div className="chart-grid">
+        <RelationshipChart />
+        <div className="method">
+          <RelationshipMetho />
+        </div>
+      </div>
+      <div className="chart-grid">
+        <CondamnationChart />
+        <div className="method">
+          <CondamnationMetho />
+        </div>
+      </div>
+      <div className="chart-grid">
+        <MonthsChart />
+        <div className="method">
+          <FeminicideMetho />
+        </div>
+      </div>
       <AverageComplaints />
     </div>
   );

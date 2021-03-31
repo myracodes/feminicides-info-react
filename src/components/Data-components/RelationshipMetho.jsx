@@ -3,9 +3,9 @@ import React from "react";
 function RelationshipMetho() {
   return (
     <div>
-      <h2>Relation entre la victime et le coupable ou l'assassin présumé</h2>
-      <h3>Méthodologie</h3>
-      <div>
+      <h2 className="title-2">Relation entre la victime et le coupable ou l'assassin présumé</h2>
+      <h3 className="title-3">Méthodologie</h3>
+      <div className="method-text">
         <p>
           Nous avons choisi d'utiliser le terme "compagnon" de façon générique afin d'englober les diverses relations
           possibles entre victimes et assassin/assassin présumé : mari, ex-mari, conjoint, petit-ami, etc.
@@ -25,7 +25,7 @@ function RelationshipMetho() {
             </li>
           </ul>
         </p>
-        <h3>Analyse</h3>
+        <h3 className="title-3">Analyse</h3>
         <div>
           <p>
             Le nombre de "compagnon" et "ex-compagnon" est quasiment identique.

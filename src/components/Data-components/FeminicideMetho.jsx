@@ -3,13 +3,13 @@ import React from "react";
 function FeminicideMetho() {
   return (
     <div>
-      <h2>Nombre de féminicides par an et par mois</h2>
-      <h3>Méthodologie</h3>
+      <h2 className="title-2">Nombre de féminicides par an et par mois</h2>
+      <h3 className="title-3">Méthodologie</h3>
       <div>
         <p>
           Ce graphique est basé sur les données des années 2019, 2020 et 2021.
         </p>
-        <h3>Analyse</h3>
+        <h3 className="title-3">Analyse</h3>
         <div>
           <p>
             Entre 2019 et 2020, nous remarquons une nette baisse des féminicides
