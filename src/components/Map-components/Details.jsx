@@ -32,13 +32,11 @@ class Details extends React.Component {
 
             <h1 className="title-1">{this.state.event.eventNumber}. {this.state.event.firstName} {this.state.event.lastName}</h1> <br/>
             <h2 className="title-2">{this.state.event.age} ans</h2> <br/>
-            <p className="padding-top">Le <b>{this.state.event.date.split('T00:00:00.000Z')}</b>, à <b>{this.state.event.city}</b></p>
-            <p>Tuée par son <b>{this.state.event.relationship}</b>, {this.state.event.killerAge} ans</p>
+            <p className="padding-top">Le <b>{this.state.event.date.split('T00:00:00.000Z')}</b>, à <b>{this.state.event.city}</b>, {this.state.event.firstName} {this.state.event.lastName} a été tuée par son <b>{this.state.event.relationship}</b>, {this.state.event.killerAge} ans</p>
 
 
             <p>A-t-il été condamné ? {this.state.event.condemned}</p>
-            <p>Autres victimes ? {this.state.event.nbOtherVictims}</p>
-            <p>Si oui, qui ? {this.state.event.otherVictims}</p>
+            <p>Autres victimes connues ? {this.state.event.otherVictims}</p>
             <p className="padding-top"><b>Description : </b>{this.state.event.description}</p>
             <p className="padding-top">Nombre de plaintes déposées avant les faits : {this.state.event.complaint}</p>
             <p>Décision(s) de justice : {this.state.event.courtDecision}</p>
