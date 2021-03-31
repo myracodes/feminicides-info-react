@@ -7,8 +7,7 @@ function AgesMetho() {
       <h3>Méthodologie</h3>
       <div>
         <p>
-          Ce graphique est basé sur les données de l'année 2021. Ces données
-          sont mises à jour régulièrement. Y sont comparés le nombre de victimes
+          Sont comparés le nombre de victimes
           par tranche d'âge avec le nombre de coupables ou/et d'assassins présumé par
           tranche d'âge.
         </p>

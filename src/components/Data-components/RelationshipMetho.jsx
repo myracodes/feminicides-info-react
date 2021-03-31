@@ -23,7 +23,6 @@ function RelationshipMetho() {
               de déterminer la relation entre les deux personnes, pour le
               moment.
             </li>
-            <li>- Non renseigné signifie une absence de données.</li>
           </ul>
         </p>
         <h3>Analyse</h3>
