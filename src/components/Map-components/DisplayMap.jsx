@@ -58,6 +58,8 @@ class DisplayMap extends React.Component {
             <p> Quand ? ${event.date.split('T00:00:00.000Z')}</p>
             <p>Où ? ${event.city}</p>
             <p>Tuée par son ${event.relationship}, ${event.killerAge} ans</p>
+            <a href="/carte/details/${event._id}" >Lire plus</a>
+
             <p>A-t-il été condamné ? ${event.condemned}</p>
             <p>Autres victimes ? ${event.nbOtherVictims}</p>
             <p>Description : ${event.description}</p>
