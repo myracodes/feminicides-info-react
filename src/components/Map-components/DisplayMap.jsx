@@ -1,5 +1,7 @@
 import React from 'react';
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl'
+import "../../styles/Map.css";
+import "../../styles/global.css";
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
@@ -53,19 +55,20 @@ class DisplayMap extends React.Component {
     addMarker = (event) => {
         this.marker = new mapboxgl.Marker({ color: 'black' })
             .setLngLat(event.coordinates)
-            .setPopup(new mapboxgl.Popup().setHTML(`<h1>${event.eventNumber}. ${event.firstName} ${event.lastName}</h1>
+            .setPopup(new mapboxgl.Popup()
+                .setHTML(`<div class="popup-container">
+            <h1 class="title-1">${event.eventNumber}. ${event.firstName} ${event.lastName}</h1>
             <h2>${event.age} ans</h2>
             <p> Quand ? ${event.date.split('T00:00:00.000Z')}</p>
             <p>Où ? ${event.city}</p>
             <p>Tuée par son ${event.relationship}, ${event.killerAge} ans</p>
-            <a href="/carte/detail/${event._id}" >Lire plus</a>
+            <a class="btn-3" href="/carte/detail/${event._id}" >Lire plus</a>
+            </div>
+            `)
+            .setMaxWidth("300px"))
 
-          
-           
-
-          
-            `))
             .addTo(this.map)
+
         
         this.allMarkers.push(this.marker)
     }
@@ -91,7 +94,7 @@ class DisplayMap extends React.Component {
         }
 
         return(
-        <div>
+        <div className="mapbox">
             <div ref={this.mapDomRef} style={{height: 850, width: "100%"}}></div>
         </div>
         )

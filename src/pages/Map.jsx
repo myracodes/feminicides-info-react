@@ -1,4 +1,6 @@
 import React from 'react';
+import "../styles/Map.css";
+import "../styles/global.css";
 import DisplayMap from "../components/Map-components/DisplayMap";
 import Filters from "../components/Map-components/Filters";
 import SearchBar from "../components/Map-components/SearchBar";
@@ -59,14 +61,20 @@ class Map extends React.Component {
   if(!this.state.filteredInfos) return <div>Chargement en cours...</div>;
   return (
     
-    <div>
-      <h1>Carte des Féminicides conjuguaux en France</h1>
-      
-      <DisplayMap filteredInfos={this.state.filteredInfos}/>
+    <div className="page-container">
+
+      <h1 className="title-1">Carte des Féminicides conjuguaux en France</h1>
+      <div className="flex">
+        <div className="filters-box flex flex-column">
       <SearchBar searchByName={this.searchByName}/>
+      
       <Filters searchByAge={this.searchByAge} searchByRegion={this.searchByRegion}/>
       
-      <button onClick={this.handleReset}>Réinitialiser les filtres</button>
+      <button className="btn-2" onClick={this.handleReset}>Réinitialiser les filtres</button>
+        </div> 
+
+      <DisplayMap filteredInfos={this.state.filteredInfos}/>
+      </div>
 
     </div>
   )
