@@ -29,7 +29,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/carte" component={Map} />
         <Route exact path="/carte/details/:id" component={Details} />
-        <Route exact path="/carte/details/:id" 
+        <Route exact path="/carte/detail/:id" 
                         render={(historyProps) => {
                           return <Details {...historyProps} />
                         }}
