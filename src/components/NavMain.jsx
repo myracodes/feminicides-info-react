@@ -20,7 +20,7 @@ const NavMain = (props) => {
   }
 
   return (
-    <nav className="NavMain">
+    <nav className="NavMain padding-top">
       <NavLink exact to="/">
         <h3 className="logo">App name</h3>
       </NavLink>

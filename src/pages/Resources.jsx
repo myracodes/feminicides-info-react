@@ -4,7 +4,7 @@ import Gallery from './../components/Resources-components/Gallery';
 const Resources = () => {
   return (
     <div className="page-container">
-      <h1 className="title-1">Ressources</h1>
+      <h1 className="title-1">Ressources</h1><br/>
       <h2 className="title-2">Historique féminicides recensés en France</h2>
       <ul className="cartes-annees flex flex-row">
         <li>
