@@ -3,11 +3,11 @@ import Gallery from './../components/Resources-components/Gallery';
 
 const Resources = () => {
   return (
-    <div>
+    <div className="page-container">
       <h1 className="title-1">Ressources</h1>
       <h2 className="title-2">Historique féminicides recensés en France</h2>
-      <ul className="cartesParAnnee flex flex-row">
-        <li className="flex flex-row">
+      <ul className="cartes-annees flex flex-row">
+        <li>
           <a href="https://www.google.com/maps/d/u/1/viewer?hl=fr&mid=1AoTHJTAvWz-P1ddCKe1NhWtdsOQgcLPA&ll=50.45705082693985%2C18.134848058083932&z=3&fbclid=IwAR2-jJGcwvBFX91wDKM7ThWJMF1bqaUv-iV_mnwAlCpZfZnR6OX3jjqFJzs" target="_blank" rel="noreferrer">
             2021</a>
         </li>
@@ -28,17 +28,17 @@ const Resources = () => {
             2017</a>
         </li>
       </ul>
-      <hr />
-      <h2 className="title-2">Arrêtons les violences</h2>
-      <div className="flex flex-column">
-      <a href="https://arretonslesviolences.gouv.fr/" target="_blank" rel="noreferrer">Arrêtons les violences</a> <br/>
+      
+      <h2 className="title-2"><a href="https://arretonslesviolences.gouv.fr/" target="_blank" rel="noreferrer">Arrêtons les violences</a></h2>
+      <div className="flex flex-column padding-top">
       <a href="https://arretonslesviolences.gouv.fr/besoin-d-aide" target="_blank" rel="noreferrer">Besoin d'aide</a> <br/>
       <a href="https://arretonslesviolences.gouv.fr/associations-de-lutte-contre-les-violences-sexistes-et-sexuelles/associations" target="_blank" rel="noreferrer">Trouver une association près de chez vous</a> <br/>
       <a href="https://arretonslesviolences.gouv.fr/associations-de-lutte-contre-les-violences-sexistes-et-sexuelles#les_associations_nationales1" target="_blank" rel="noreferrer">Les associations nationales</a> <br/>
       </div>
-      <hr />
-      <h2 className="title-2">Haut Conseil à l'Égalité (HCE)</h2>
+      
+      <h2 className="title-2 flex flex-column">Haut Conseil à l'Égalité (HCE)</h2>
       <a href="https://www.haut-conseil-egalite.gouv.fr/violences-de-genre/" target="_blank" rel="noreferrer">Violences de genre</a> <br/>
+      
       <Gallery/>
     </div>
   )

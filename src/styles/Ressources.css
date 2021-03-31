@@ -1,3 +1,7 @@
-.cartesParAnnee a {
+.cartes-annees a {
     padding-right: 20px;
+}
+
+.cartes-annees li, .padding-top {
+    margin-top: 15px;
 }

@@ -154,3 +154,7 @@ ul {
 .flex-row {
   flex-direction: row;
 }
+
+.page-container {
+  margin: 10%;
+}
