@@ -10,10 +10,12 @@ function CondamnationMetho() {
           Cinq catégories sont représentées :
           <ul>
             <li>
-              - "Condamné" signifie que l'assassin a été reconnu coupable.
+              - "Condamné" signifie que l'assassin a été jugé et reconnu
+              coupable.
             </li>
             <li>
-              - "Non condamné" signifie que l'assassin présumé a été acquitté.
+              - "Non condamné" signifie que l'assassin présumé a jugé et
+              acquitté.
             </li>
             <li>
               - "En cours" signifie soit que l'assassin présumé est en fuite,
@@ -31,12 +33,14 @@ function CondamnationMetho() {
         <div>
           <p>
             L'année 2021 vient de commencer, la plupart des cas sont donc encore
-            en cours. Le rendu d'un jugement dans ce genre d'affaire varie entre
-            *** et ***. Les suicides et tentatives de suicides après
-            l'assassinat sont également fréquents dans les affaires de
-            féminicides.
+            en cours. Les suicides et tentatives de suicides après l'assassinat
+            sont également fréquents dans les affaires de féminicides. Ici, les
+            compagnons et ex-compagnons suspects ont été appréhendés. Mais il
+            arrive dans certains cas, non représentés dans ce graphique, que le
+            compagnon ou ex-compagnon suspecté ne soit pas inquiété.
           </p>
         </div>
+        <br></br>
       </div>
     </div>
   );

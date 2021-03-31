@@ -35,6 +35,7 @@ function RelationshipMetho() {
             quitter leur compagnon.
           </p>
         </div>
+        <br></br>
       </div>
     </div>
   );
