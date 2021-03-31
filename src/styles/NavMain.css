@@ -5,11 +5,14 @@
   align-items: center;
   padding: 20px;
   height: 70px;
+  margin: 0 4%;
 }
 
 .NavMain .nav-list {
   margin-left: auto;
   display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 .NavMain .nav-list li:not(:last-child) {
