@@ -1,4 +1,5 @@
 import React from 'react'
+import "../../styles/global.css"
 
 
 class SearchBar extends React.Component {
@@ -16,8 +17,9 @@ class SearchBar extends React.Component {
     return (
         <div>
             <form onSubmit={this.handleSubmit}>
-                <p>Rechercher par prénom</p>
-                <input 
+                <p className="form-label">Rechercher par prénom</p>
+                <input
+                className="form-input" 
                 onChange={this.handleChange}
                 type="text"
                 placeholder="Prénom"
