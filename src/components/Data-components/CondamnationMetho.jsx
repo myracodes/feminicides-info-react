@@ -25,7 +25,6 @@ function CondamnationMetho() {
               ou assassin présumé s'est donné la mort après avoir tué sa
               compagne ou son ex-compagne.
             </li>
-            <li>* Non renseigné signifie une absence de donnée.</li>
           </ul>
         </p>
         <h3>Analyse</h3>
