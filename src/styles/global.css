@@ -38,20 +38,20 @@ ul {
 
 .title-1{
   border-bottom: 3px solid var(--color-main);
-  padding:15px;
-  
+  padding: 15px 15px 3px;
+  display: inline-block;  
 }
 
 .title-2{
   border-bottom: 3px solid var(--color-second);
-  padding:15px;
-  
+  padding: 15px 15px 3px;
+  display: inline-block;  
 }
 
 .title-3{
   border-bottom: 3px solid var(--color-fourth);
-  padding:10px;
-  
+  padding: 15px 15px 3px;
+  display: inline-block;    
 }
 
 .color-1 {
