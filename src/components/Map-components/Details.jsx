@@ -28,31 +28,32 @@ class Details extends React.Component {
         }
         console.log("hey", this.props)
     return (
-        <div>
+        <div className="page-container">
 
-            <h1>{this.state.event.eventNumber}. {this.state.event.firstName} {this.state.event.lastName}</h1>
-            <h2>{this.state.event.age} ans</h2>
-            <p> Quand ? {this.state.event.date.split('T00:00:00.000Z')}</p>
-            <p>Où ? {this.state.event.city}</p>
-            <p>Tuée par son {this.state.event.relationship}, {this.state.event.killerAge} ans</p>
+            <h1 className="title-1">{this.state.event.eventNumber}. {this.state.event.firstName} {this.state.event.lastName}</h1> <br/>
+            <h2 className="title-2">{this.state.event.age} ans</h2> <br/>
+            <p className="padding-top">Le <b>{this.state.event.date.split('T00:00:00.000Z')}</b>, à <b>{this.state.event.city}</b></p>
+            <p>Tuée par son <b>{this.state.event.relationship}</b>, {this.state.event.killerAge} ans</p>
 
 
             <p>A-t-il été condamné ? {this.state.event.condemned}</p>
             <p>Autres victimes ? {this.state.event.nbOtherVictims}</p>
             <p>Si oui, qui ? {this.state.event.otherVictims}</p>
-            <p>Description : {this.state.event.description}</p>
-            <p>Nombre de plaintes déposées avant les faits : {this.state.event.complaint}</p>
+            <p className="padding-top"><b>Description : </b>{this.state.event.description}</p>
+            <p className="padding-top">Nombre de plaintes déposées avant les faits : {this.state.event.complaint}</p>
             <p>Décision(s) de justice : {this.state.event.courtDecision}</p>
-            <hr></hr>
-            <a href={this.state.event.pressArticles[0]}>Articles de presse (lien)</a>
-            <br></br>
-            <a href={this.state.event.commemoration[0]}>Commémorations (lien)</a>
-            <hr></hr>
-            <h2>{this.state.event.region.name} et les VSS</h2>
-            <p>Parti politique majoritaire au Conseil régional : {this.state.event.region.politicalParty}</p>
-            <p>Budget 2021 alloué aux VSS : {this.state.event.region.regionVSSBudget} Md €</p>
-            <p>Nb de personnel formés à la prise en charge des VSS : {this.state.event.region.trainedStaff}</p>
-            <p>Nb de places en hébergement d'urgence pour les femmes victimes de VSS : {this.state.event.region.shelterPlaces}</p>
+            
+            <p>Dans la presse : <a href={this.state.event.pressArticles[0]}>lien</a></p>
+            
+            
+            <img src={this.state.event.commemoration} alt="collage commémoratif" className="padding-top"/>
+            <p>Crédit photo : {this.state.event.imageSource}</p> {console.log(this.state.event.imageSource, "source")}
+            
+            <h2 className="title-2 padding-top">{this.state.event.region.name} et violences sexistes et sexuelles (VSS)</h2>
+            <p className="padding-top">Parti politique majoritaire au Conseil régional : {this.state.event.region.politicalParty}</p>
+            <p>Budget 2021 alloué à la lutte contre les VSS : {this.state.event.region.regionVSSBudget} Md €</p>
+            <p>Nb de personnel formés à la prise en charge des victimes de violences : {this.state.event.region.trainedStaff}</p>
+            <p>Nb de places en hébergement d'urgence pour les femmes victimes de violences : {this.state.event.region.shelterPlaces}</p>
             <p>Nb de féminicides dans la région : {this.state.event.region.events.length}</p>
 
 
