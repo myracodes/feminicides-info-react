@@ -12,6 +12,17 @@ html {
   font-family: "Manrope", sans-serif;
 }
 
+:root{
+
+    --color-main: hsla(275, 89%, 26%, 0.918);
+    --color-second: #cf173ce5;
+    --color-third:#e6e6fae0;
+    --color-fourth:#f17d52e1;
+    --color-text:#646464;
+    --color-input: #f9f5f5;
+  
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -24,3 +35,106 @@ a:hover {
 ul {
   list-style-type: none;
 }
+
+.title-1{
+  border-bottom: 3px solid var(--color-main);
+  padding:15px;
+  
+}
+
+.title-2{
+  border-bottom: 3px solid var(--color-second);
+  padding:15px;
+  
+}
+
+.title-3{
+  border-bottom: 3px solid var(--color-fourth);
+  padding:10px;
+  
+}
+
+.color-1 {
+ background-color: var(--color-main);
+}
+
+.color-2 {
+  background-color: var(--color-second);
+ }
+
+ .color-3 {
+  background-color: var(--color-third);
+ }
+
+ .color-4 {
+  background-color: var(--color-fourth);
+ }
+
+ .btn-1{
+   text-decoration:none;
+   color:white;
+   font-size: larger;
+   background-color: var(--color-main);
+   padding:15px;
+   padding-left:35px;
+   padding-right:35px;
+   margin:10px;
+   
+ }
+
+ .btn-1:hover{
+   box-shadow: 5px 7px var(--color-third)
+ }
+
+ .btn-2{
+  text-decoration:none;
+  border:none;
+  color:white;
+  font-size: larger;
+  background-color: var(--color-second);
+  padding:15px;
+  padding-left:35px;
+  padding-right:35px;
+  margin:10px;
+  
+}
+
+.btn-2:hover{
+  box-shadow: 5px 7px var(--color-third)
+}
+
+.btn-3{
+  text-decoration:none;
+  border:none;
+  color:white;
+  font-size: larger;
+  background-color: var(--color-fourth);
+  padding:15px;
+  padding-left:35px;
+  padding-right:35px;
+  margin:10px;
+  
+}
+
+.btn-3:hover{
+  box-shadow: 5px 7px var(--color-third)
+}
+
+.form-container{
+  display:flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.form-label{
+  font-size: larger;
+  padding:15px
+}
+
+.form-input{
+  border:none;
+  background-color: var(--color-input);
+  padding:15px;
+}
+
+
