@@ -58,24 +58,10 @@ class DisplayMap extends React.Component {
             <p> Quand ? ${event.date.split('T00:00:00.000Z')}</p>
             <p>Où ? ${event.city}</p>
             <p>Tuée par son ${event.relationship}, ${event.killerAge} ans</p>
-            <a href="/carte/details/${event._id}" >Lire plus</a>
+            <a href="/carte/detail/${event._id}" >Lire plus</a>
 
-            <p>A-t-il été condamné ? ${event.condemned}</p>
-            <p>Autres victimes ? ${event.nbOtherVictims}</p>
-            <p>Description : ${event.description}</p>
-            <a href="${event.pressArticles[0]}"> > Articles de presse (lien)</a>
-            <br>
-            <a href="${event.commemoration[0]}"> > Commémorations (lien)</a>
-            <hr>
-            <p>Nombre de plaintes déposées avant les faits : ${event.complaint}</p>
-            <p>Décision(s) de justice : ${event.courtDecision}</p>
-            <hr>
-            <h2>${event.region.name} & les VSS</h2>
-            <p>Parti politique majoritaire au Conseil régional : ${event.region.politicalParty}</p>
-            <p>Budget 2021 alloué aux VSS : ${event.region.regionVSSBudget} Md €</p>
-            <p>Nb de personnel formés à la prise en charge des VSS : ${event.region.trainedStaff}</p>
-            <p>Nb de places en hébergement d'urgence pour les femmes victimes de VSS : ${event.region.shelterPlaces}</p>
-            <p>Nb de féminicides dans la région : ${event.region.events.length}</p>
+          
+           
 
           
             `))

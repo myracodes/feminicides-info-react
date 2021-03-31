@@ -153,9 +153,9 @@ const apiHandler = {
 
   mapOneEvent(eventId) {
     return service
-      .get(`/api/dashboard/details/${eventId}`)
-      .then((res) => res.data)
-      .catch(errorHandler);
+      .get(`/api/carte/detail/${eventId}`)
+    /*   .then((res) => res.data)
+      .catch(error => console.log(error)); */
   },
 
   mapRegions() {
