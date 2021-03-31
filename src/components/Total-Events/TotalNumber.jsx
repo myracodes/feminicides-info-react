@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import apiHandler from '../../api/apiHandler'
+import '../../styles/Data.css'
 
 export class TotalNumber extends PureComponent {
 
@@ -20,7 +21,7 @@ export class TotalNumber extends PureComponent {
     render() {
         return (
             <div>
-                <div>{this.state.numberOfVictims}</div>
+                <div className="total-num-text">{this.state.numberOfVictims}</div>
             </div>
         )
     }

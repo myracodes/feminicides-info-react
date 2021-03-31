@@ -1,6 +1,7 @@
 p {
     color: var(--color-text);
     line-height: 1.7rem;
+    text-align: justify;
 }
 
 .chart-grid {
@@ -26,4 +27,17 @@ p {
     font-size: 0.9rem;
     display: flex;
     flex-direction: column;
+}
+
+.total-num-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.total-num-text {
+  font-size: 5rem;
+  color: var(--color-second);
+  text-shadow: 2px 2px var(--color-third);
 }
