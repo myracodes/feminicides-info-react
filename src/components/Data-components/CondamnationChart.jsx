@@ -59,12 +59,12 @@ export default class CondamnationChart extends PureComponent {
               {
                 label: "En cours",
                 data: [this.state.ongoing],
-                backgroundColor: pattern.draw("cross", "orchid"),
+                backgroundColor: pattern.draw("cross", "rgb(199, 178, 217)"),
               },
               {
                 label: "Suicide après acte",
                 data: [this.state.suicide],
-                backgroundColor: pattern.draw("line", "purple"),
+                backgroundColor: pattern.draw("line", "rgb(112, 43, 138)"),
               },
               {
                 label: "Non renseigné",

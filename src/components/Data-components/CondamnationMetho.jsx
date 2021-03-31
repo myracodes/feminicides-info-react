@@ -3,7 +3,9 @@ import React from "react";
 function CondamnationMetho() {
   return (
     <div>
-      <h2 className="title-2">Statut judiciaire</h2>
+      <h2 className="title-2">
+        Statut judiciaire de l'assassin ou de l'assassin présumé
+      </h2>
       <h3 className="title-3">Méthodologie</h3>
       <div>
         <p>

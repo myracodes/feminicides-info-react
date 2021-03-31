@@ -20,10 +20,10 @@ function FeminicideMetho() {
             restrictions. Elles s'exposent donc moins aux "représailles" de leur
             conjoint violent. Cependant, le nombre repart à la hausse début
             2021. Avant 2020, le nombre total de victimes était en hausse depuis
-            plusieurs années. "Le collectif recense 128 féminicides conjugaux
+            plusieurs années. <i>"Le collectif recense 128 féminicides conjugaux
             pour l'année 2016 ; 138 pour 2017 ; 120 pour 2018 ; 152 pour 2019 et
             98 pour l'année 2020", est-il indiqué sur la page Wikipédia dédiée
-            au collectif.
+            au collectif.</i>
           </p>
         </div>
       </div>

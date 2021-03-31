@@ -177,8 +177,13 @@ class Data extends React.Component {
               fontSize: 18,
               fontFamily: "Lato",
               text: 'Âge moyen des victimes et des coupables ou assassins présumés - 2021'
-            }
-          }
+            },
+            legend : {
+              labels : {
+                defaultFontFamily: "Lato",
+              }
+            },
+          },
         });
       })
       .catch((err) => console.log(err));

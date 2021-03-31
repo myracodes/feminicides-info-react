@@ -1,9 +1,11 @@
 import React from "react";
+import AverageAge from '../Data-components/AverageAge'
 
 function AgesMetho() {
   return (
     <div>
       <h2 className="title-2">Âge des victimes et des coupables et assassins présumés</h2>
+      <AverageAge />
       <h3 className="title-3">Méthodologie</h3>
       <div className="method-text">
         <p>

@@ -39,7 +39,7 @@ export class ListOfData extends PureComponent {
       <div>
         <ul>
           <li>
-            <p>Âge moyen des victimes : {this.state.averageAge}. </p>
+            <p className="to-center">Âge moyen des victimes : <b> {this.state.averageAge} ans.</b> </p>
           </li>
         </ul>
       </div>
