@@ -11,7 +11,7 @@ class DashboardHome extends Component {
         <div className="Dashboard__container flex flex-column">
           <h1 className="title-1">Tableau de bord</h1>
           <div className="page-container">
-            <p>Gérez les utilisateurs,</p>
+            <p>Gérez les utilisateurices,</p>
             <p>Ajoutez ou éditez les informations d'un événement/féminicide,</p>
             <p>Éditez les informations à propos d'une région.</p>
           </div>

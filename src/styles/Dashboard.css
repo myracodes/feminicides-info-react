@@ -8,7 +8,7 @@
 }
 
 .Dashboard__navbar-link {
-  margin: 20px;
+  margin: 40px 0;
   font-size: 1.3em;
 }
 
@@ -16,4 +16,8 @@
   position: absolute;
   left: 15%;
   top: 60px;
+}
+
+.Dashboard__icons {
+  color: var(--color-fourth);
 }
