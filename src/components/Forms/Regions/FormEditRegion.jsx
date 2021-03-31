@@ -88,7 +88,7 @@ class FormEditEvent extends Component {
             />
         ))} <br />
 
-        <label htmlFor="trainedStaff">Personnel formé</label>
+        <label htmlFor="trainedStaff">Nombre de personnel formé</label>
         <input 
         onChange={this.handleChange}
         value={this.state.trainedStaff}

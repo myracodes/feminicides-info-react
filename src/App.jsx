@@ -7,6 +7,7 @@ import Signup from "./pages/Users/Signup";
 import ConnexionAdmin from './components/Forms/Users/ConnexionAdmin';
 import ProtectedRoute from "./components/ProtectedRoute";
 import Dashboard from "./pages/Dashboard";
+import DashboardHome from "./pages/DashboardHome";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Data from "./pages/Data";
@@ -38,8 +39,8 @@ function App() {
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/espace-admin" component={Signin} />
         <Route exact path="/ajouter-admin" component={ConnexionAdmin} />
+        <ProtectedRoute exact path="/admin/tableau-de-bord" component={DashboardHome} />
         <ProtectedRoute exact path="/admin/nouvelle-utilisatrice" component={Signup} />
-        <ProtectedRoute exact path="/admin/tableau-de-bord" component={Dashboard} />
         <ProtectedRoute exact path="/admin/editer-utilisatrice/:id" component={EditUser} />
         <ProtectedRoute exact path="/admin/nouvel-evenement" component={AddEvent} />
         <ProtectedRoute exact path="/admin/editer-event/:id" component={EditEvent} />
