@@ -61,19 +61,20 @@ class Map extends React.Component {
   if(!this.state.filteredInfos) return <div>Chargement en cours...</div>;
   return (
     
-    <div>
+    <div className="page-container">
+
       <h1 className="title-1">Carte des Féminicides conjuguaux en France</h1>
-      <div>
+      <div className="flex">
+        <div className="filters-box flex flex-column">
       <SearchBar searchByName={this.searchByName}/>
-      </div>
-      <div>
+      
       <Filters searchByAge={this.searchByAge} searchByRegion={this.searchByRegion}/>
-      </div>
       
       <button className="btn-2" onClick={this.handleReset}>Réinitialiser les filtres</button>
-      
+        </div> 
+
       <DisplayMap filteredInfos={this.state.filteredInfos}/>
-      
+      </div>
 
     </div>
   )

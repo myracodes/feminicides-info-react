@@ -80,7 +80,7 @@ handleSubmitRegion = (event) => {
     render(){
     return (
         <div>
-            <h2>Filtres de recherche</h2>
+            <h2 className="title-2">Filtres de recherche</h2>
 
         <form onSubmit={this.handleSubmitAge}>
             <label className="form-label" htmlFor="age">Rechercher par tranche d'âges</label>
@@ -97,11 +97,14 @@ handleSubmitRegion = (event) => {
              
             </select>
             </div>
-            <button className="btn-1" type="submit">Rechercher</button>
+            <br></br>
+            <button className="btn-1 btn-center" type="submit">Rechercher</button>
         </form>
+        <br></br>
             
         <form onSubmit={this.handleSubmitRegion}>
             <label className="form-label" htmlFor="regions">Rechercher par région ou territoire</label>
+            <br></br>
             <div className="select">
             <select onChange={this.handleChangeRegion} className="standard-select" name="regions">
                 {this.state.regions.map((regionName) => {
@@ -111,9 +114,9 @@ handleSubmitRegion = (event) => {
                
             </select>
             </div>
-
-            <button className="btn-1" type="submit">Rechercher</button>
-
+            <br></br>
+            <button className="btn-1 btn-center" type="submit">Rechercher</button>
+            <br></br>
         </form>     
 
 

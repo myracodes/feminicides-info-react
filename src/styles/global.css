@@ -40,12 +40,14 @@ ul {
 .title-1 {
   border-bottom: 3px solid var(--color-main);
   padding: 15px 15px 3px;
+  margin:5px;
   display: inline-block;
 }
 
 .title-2 {
   border-bottom: 3px solid var(--color-second);
-  padding: 15px 15px 3px;
+  padding: 0px 15px 3px;
+  margin-bottom:10px;
   display: inline-block;
 }
 
@@ -157,6 +159,6 @@ ul {
 }
 
 .page-container {
-  margin: 4% 10% 12%;
+  margin: 4% 7% 7%;
 }
 
