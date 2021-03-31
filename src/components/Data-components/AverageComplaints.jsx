@@ -45,7 +45,7 @@ export class ListOfData extends PureComponent {
         <ul>
           <li>
             <h2 className="title-2">Plaintes avant le féminicide</h2>
-            <p>
+            <p className="padding-top">
               Nombre moyen de plaintes déposées par la victime :{" "}
               {this.state.averageComplaints}.
             </p>
@@ -89,8 +89,7 @@ export class ListOfData extends PureComponent {
               voient contraintes par leur compagnon ou ex de retirer leur
               plainte, sous la menace.
             </p>
-            <br></br>
-            <hr></hr>
+            <br/>
           </li>
         </ul>
       </div>

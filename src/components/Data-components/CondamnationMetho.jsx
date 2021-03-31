@@ -5,9 +5,11 @@ function CondamnationMetho() {
     <div>
       <h2 className="title-2">Statut judiciaire</h2>
       <h3 className="title-3">Méthodologie</h3>
-      <div>
-        <p>
-          Cinq catégories sont représentées :
+      <div className="padding-top">
+        <div>
+          <p>
+            Cinq catégories sont représentées :
+          </p>
           <ul>
             <li>
               - "Condamné" signifie que l'assassin a été jugé et reconnu
@@ -28,9 +30,10 @@ function CondamnationMetho() {
               compagne ou son ex-compagne.
             </li>
           </ul>
-        </p>
+        </div>
+
         <h3 className="title-3">Analyse</h3>
-        <div>
+        <div className="padding-top">
           <p>
             L'année 2021 vient de commencer, la plupart des cas sont donc encore
             en cours. Les suicides et tentatives de suicides après l'assassinat
@@ -40,7 +43,6 @@ function CondamnationMetho() {
             compagnon ou ex-compagnon suspecté ne soit pas inquiété.
           </p>
         </div>
-        <br></br>
       </div>
     </div>
   );

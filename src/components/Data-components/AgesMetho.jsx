@@ -5,13 +5,13 @@ function AgesMetho() {
     <div>
       <h2 className="title-2">Âge des victimes et des coupables et assassins présumés</h2>
       <h3 className="title-3">Méthodologie</h3>
-      <div className="method-text">
+      <div className="method-text padding-top">
         <p>
           Sont comparés le nombre de victimes par tranche d'âge avec le nombre
           de coupables ou/et d'assassins présumés par tranche d'âge.
         </p>
         <h3 className="title-3">Analyse</h3>
-        <div>
+        <div className="padding-top">
           <p>
             Toutes les tranches d'âge sont concernées par des féminicides. La
             plus touchée est la tranche des 26-35 ans. Mais selon le rapport
@@ -22,7 +22,6 @@ function AgesMetho() {
             femmes de plus de 70 ans sont mortes sous les coups de leur
             compagnon ou ex-compagnon.
           </p>
-          <br></br>
         </div>
       </div>
     </div>

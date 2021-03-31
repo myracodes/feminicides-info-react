@@ -4,7 +4,7 @@ import TotalNumber from "../Total-Events/TotalNumber";
 function IntroData() {
   return (
     <div className="total-num-box">
-      <div class="total-num-phrase">Le nombre de féminicides en France cette année s'élève à</div>
+      <div className="total-num-phrase">Depuis le début de l'année, en France, le nombre de féminicides par compagnons ou ex s'élève à</div>
       <div className="total-num-data">
         <TotalNumber />
       </div>

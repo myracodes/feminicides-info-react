@@ -5,12 +5,12 @@ function FeminicideMetho() {
     <div>
       <h2 className="title-2">Nombre de féminicides par an et par mois</h2>
       <h3 className="title-3">Méthodologie</h3>
-      <div>
+      <div className="padding-top">
         <p>
           Ce graphique est basé sur les données des années 2019, 2020 et 2021.
         </p>
         <h3 className="title-3">Analyse</h3>
-        <div>
+        <div className="padding-top">
           <p>
             Entre 2019 et 2020, nous remarquons une nette baisse des féminicides
             lors des périodes de confinement, mis en place pour lutter contre la
