@@ -46,7 +46,7 @@ export class relationshipChart extends PureComponent {
               {
                 label: "Relation avec la victime",
                 data: this.state.relationship,
-                backgroundColor: pattern.generate(["mediumorchid", "mediumpurple", "indigo", "lightgrey"]),
+                backgroundColor: pattern.generate(["rgb(199, 178, 217)", "rgb(112, 43, 138)", "indigo", "lightgrey"]),
               },
             ],
           },

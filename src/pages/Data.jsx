@@ -10,40 +10,38 @@ import RelationshipMetho from "../components/Data-components/RelationshipMetho";
 import CondamnationMetho from "../components/Data-components/CondamnationMetho";
 import FeminicideMetho from "../components/Data-components/MonthsMetho";
 import IntroData from "../components/Data-components/IntroData";
-import AverageComplaints from "../components/Data-components/AverageComplaints";
+import DatasComplaints from "../components/Data-components/DatasComplaints";
 
 function DataComponents() {
   return (
     <div className="page-container">
       <h1 className="title-1">Données chiffrées</h1>
-      <IntroData /> 
-      <div className="chart-grid">
+      <IntroData />
+      <div className="chart-grid-one">
         <MonthsChart />
         <div className="method">
           <FeminicideMetho />
         </div>
       </div>
-      <AverageAge />
-      <div className="chart-grid">
-        <AgesChart />
+      <div className="chart-grid-two">
         <div className="method">
           <AgesMetho />
         </div>
+        <AgesChart />
       </div>
-      <div className="chart-grid">
+      <div className="chart-grid-one">
         <RelationshipChart />
         <div className="method">
           <RelationshipMetho />
         </div>
       </div>
-      <div className="chart-grid">
-        <CondamnationChart />
+      <div className="chart-grid-two">
         <div className="method">
           <CondamnationMetho />
         </div>
+        <CondamnationChart />
       </div>
-      
-      <AverageComplaints />
+      <DatasComplaints />
     </div>
   );
 }

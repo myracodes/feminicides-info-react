@@ -32,7 +32,7 @@ const MonthsChart = () => {
           data: [6, 9, 9],
           borderWidth: 3,
           fill: true,
-          borderColor: "red",
+          borderColor: "purple",
         },
         {
           // note My : ces chiffres-là sont bons, je les ai revérifiés
@@ -40,15 +40,17 @@ const MonthsChart = () => {
           data: [11, 3, 7, 10, 8, 10, 9, 6, 6, 8, 2, 10, 10],
           borderWidth: 2,
           fill: false,
-          borderColor: "green",
+          borderDash: [2,2],
+          borderColor: "indigo",
         },
         {
           // note My : ces chiffres-là sont mis au hasard pour faire le bon total, donc à corriger avec les vrais
           label: "2019",
           data: [13, 9, 15, 8, 11, 14, 12, 10, 11, 13, 16, 18],
           borderWidth: 2,
+          borderDash: [12,5],
           fill: false,
-          borderColor: "purple",
+          borderColor: "rgb(199, 150, 217)",
         },
       ],
       options: {
@@ -66,6 +68,11 @@ const MonthsChart = () => {
           text:
             "Âge moyen des victimes et des coupables ou assassins présumés - 2021",
         },
+        legend: {
+          labels: {
+            defaultFontFamily: "Lato",
+          }
+        }
       },
     };
   };
