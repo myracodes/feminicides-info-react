@@ -1,24 +1,21 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import apiHandler from '../api/apiHandler';
+import NavDashboard from '../components/NavDashboard';
 
 class DashboardHome extends Component {
   render() {
     return (
       <div>
-        <aside className="navbar-dashboard">
-          <nav>
-            <ul>
-              <li>Événements</li>
-              <li>Régions</li>
-              <li>Utilisateurices</li>
-            </ul>
-          </nav>
-        </aside>
-        <h1 className="title-1">Tableau de bord</h1>
-        <p>Gérez les utilisateurs,</p>
-        <p>Ajoutez ou éditez les informations d'un événement/féminicide,</p>
-        <p>Éditez les informations à propos d'une région.</p>
+        <NavDashboard />
+        <div className="Dashboard__container flex flex-column">
+          <h1 className="title-1">Tableau de bord</h1>
+          <div className="page-container">
+            <p>Gérez les utilisateurs,</p>
+            <p>Ajoutez ou éditez les informations d'un événement/féminicide,</p>
+            <p>Éditez les informations à propos d'une région.</p>
+          </div>
+        </div>
       </div>
     )
   }

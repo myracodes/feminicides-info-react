@@ -1,0 +1,19 @@
+.Dashboard__navbar {
+  width: 15%;
+  background: var(--color-main);
+  color: white;
+  height: 80vh;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Dashboard__navbar-link {
+  margin: 20px;
+  font-size: 1.3em;
+}
+
+.Dashboard__container {
+  position: absolute;
+  left: 15%;
+  top: 60px;
+}
