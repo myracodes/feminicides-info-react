@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import apiHandler from "../../../api/apiHandler";
 
 class FormEditUser extends Component {
@@ -43,53 +43,64 @@ class FormEditUser extends Component {
 
   render() {
     return (
+      <div>
+        <h1 className="title-3">Éditer l'utilisateurice</h1>
+        <br/><br/>
+        <Link to="/admin/tableau-de-bord/users" className="btn-3 Dashboard__return-btn">Retour</Link> 
+        <br/>
+        <form onSubmit={this.handleSubmit} key={this.props.location.state.user._id} 
+        className="form-container Dashboard__form">
+          <label htmlFor="firstName" className="form-label">Prénom</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.firstName}
+            type="text"
+            id="firstName"
+            name="firstName"
+            className="form-input"
+          />
+          <label htmlFor="lastName" className="form-label">Nom</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.lastName}
+            type="text"
+            id="lastName"
+            name="lastName"
+            className="form-input"
+          />
+          <label htmlFor="email" className="form-label">E-mail</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.email}
+            type="email"
+            id="email"
+            name="email"
+            className="form-input"
+          />
+          <label htmlFor="password" className="form-label">Mot de passe</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.password}
+            type="password"
+            id="password"
+            name="password"
+            className="form-input"
+          />
+          <label htmlFor="role" className="form-label">Rôle</label>
+          <select
+            onChange={this.handleChange}
+            value={this.state.role}
+            id="role"
+            name="role"
+            className="form-input"
+          >
+            <option value="éditrice">Éditrice.eur</option>
+            <option value="admin">Admin</option>
+          </select>
 
-      <form onSubmit={this.handleSubmit} key={this.props.location.state.user._id}>
-        <label htmlFor="firstName">Prénom</label>
-        <input
-          onChange={this.handleChange}
-          value={this.state.firstName}
-          type="text"
-          id="firstName"
-          name="firstName"
-        />
-        <label htmlFor="lastName">Nom</label>
-        <input
-          onChange={this.handleChange}
-          value={this.state.lastName}
-          type="text"
-          id="lastName"
-          name="lastName"
-        />
-        <label htmlFor="email">E-mail</label>
-        <input
-          onChange={this.handleChange}
-          value={this.state.email}
-          type="email"
-          id="email"
-          name="email"
-        />
-        <label htmlFor="password">Mot de passe</label>
-        <input
-          onChange={this.handleChange}
-          value={this.state.password}
-          type="password"
-          id="password"
-          name="password"
-        />
-        <label htmlFor="role">Rôle</label>
-        <select
-          onChange={this.handleChange}
-          value={this.state.role}
-          id="role"
-          name="role"
-        >
-          <option value="éditrice">Éditrice.eur</option>
-          <option value="admin">Admin</option>
-        </select>
-
-        <button>Mettre à jour</button>
-      </form>
+          <button className="btn-3 Dashboard__form-btn">Mettre à jour</button>
+        </form>
+      </div>
     );
   }
 }

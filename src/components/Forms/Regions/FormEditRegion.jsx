@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import apiHandler from "../../../api/apiHandler";
 
 class FormEditEvent extends Component {
@@ -48,75 +48,87 @@ class FormEditEvent extends Component {
   render() {
     console.log(this.state);
     return (
-      <form onSubmit={this.handleSubmit}>
-        <h1>{this.state.name}</h1>
-        <label htmlFor="name">Nom de la région</label>
-        <input 
-        onChange={this.handleChange}
-        value={this.state.name}
-        type="text"
-        id="name"
-        name="name"
-        /> <br />
-
-        <label htmlFor="politicalParty">Parti politique majoritaire au conseil régional</label>
-        <input 
-        onChange={this.handleChange}
-        value={this.state.politicalParty}
-        type="text"
-        id="politicalParty"
-        name="politicalParty"
-        /> <br />
-
-        <label htmlFor="regionVSSBudget">Budget alloué à la lutte contre les violences sexistes et sexuelles (en milliards d'€)</label>
-        <input 
-        onChange={this.handleChange}
-        value={this.state.regionVSSBudget}
-        type="number"
-        id="regionVSSBudget"
-        name="regionVSSBudget"
-        /> <br />
-
-        <label htmlFor="events">Féminicides</label>
-        <p>Pour éditer un féminicide, passez par la liste des événements.</p>
-        {this.state.events.map(event => (
+      <div>
+        <h1 className="title-2">{this.state.name}</h1>
+        <br/><br/>
+        <Link to="/admin/tableau-de-bord/regions" className="btn-3 Dashboard__return-btn">Retour</Link> 
+        <br/>
+        <form onSubmit={this.handleSubmit} className="form-container Dashboard__form">
+          <label htmlFor="name" className="form-label">Nom de la région</label>
           <input 
-            value={`N° ${event.eventNumber} : ${event.firstName} à ${event.city}`}
-            type="text"
-            id="events"
-            name="events"
-            />
-        ))} <br />
+          onChange={this.handleChange}
+          value={this.state.name}
+          type="text"
+          id="name"
+          name="name"
+          className="form-input"
+          /> <br />
 
-        <label htmlFor="trainedStaff">Nombre de personnel formé</label>
-        <input 
-        onChange={this.handleChange}
-        value={this.state.trainedStaff}
-        type="number"
-        id="trainedStaff"
-        name="trainedStaff"
-        /> <br />
+          <label htmlFor="politicalParty" className="form-label">Parti politique majoritaire au conseil régional</label>
+          <input 
+          onChange={this.handleChange}
+          value={this.state.politicalParty}
+          type="text"
+          id="politicalParty"
+          name="politicalParty"
+          className="form-input"
+          /> <br />
 
-        <label htmlFor="VSSTrainingBudget">Budget alloué à la formation du personnel</label>
-        <input 
-        onChange={this.handleChange}
-        value={this.state.VSSTrainingBudget}
-        type="number"
-        id="VSSTrainingBudget"
-        name="VSSTrainingBudget"
-        /> <br />
+          <label htmlFor="regionVSSBudget" className="form-label">Budget alloué à la lutte contre les violences sexistes et sexuelles (en milliards d'€)</label>
+          <input 
+          onChange={this.handleChange}
+          value={this.state.regionVSSBudget}
+          type="number"
+          id="regionVSSBudget"
+          name="regionVSSBudget"
+          className="form-input"
+          /> <br />
 
-        <label htmlFor="shelterPlaces">Nombre de places en centre d'hébergement</label>
-        <input 
-        onChange={this.handleChange}
-        value={this.state.shelterPlaces}
-        type="number"
-        id="shelterPlaces"
-        name="shelterPlaces"
-        /> <br />
+          <label htmlFor="events" className="form-label">Féminicides</label>
+          <p>Pour éditer un féminicide, passez par la liste des événements.</p>
+          {this.state.events.map(event => (
+            <input 
+              value={`N° ${event.eventNumber} : ${event.firstName} à ${event.city}`}
+              type="text"
+              id="events"
+              name="events"
+              className="form-input"
+              />
+          ))} <br />
 
-        <button>Mettre à jour</button>
-      </form>
+          <label htmlFor="trainedStaff" className="form-label">Nombre de personnel formé</label>
+          <input 
+          onChange={this.handleChange}
+          value={this.state.trainedStaff}
+          type="number"
+          id="trainedStaff"
+          name="trainedStaff"
+          className="form-input"
+          /> <br />
+
+          <label htmlFor="VSSTrainingBudget" className="form-label">Budget alloué à la formation du personnel</label>
+          <input 
+          onChange={this.handleChange}
+          value={this.state.VSSTrainingBudget}
+          type="number"
+          id="VSSTrainingBudget"
+          name="VSSTrainingBudget"
+          className="form-input"
+          /> <br />
+
+          <label htmlFor="shelterPlaces" className="form-label">Nombre de places en centre d'hébergement</label>
+          <input 
+          onChange={this.handleChange}
+          value={this.state.shelterPlaces}
+          type="number"
+          id="shelterPlaces"
+          name="shelterPlaces"
+          className="form-input"
+          /> <br />
+
+          <button className="btn-2 Dashboard__form-btn">Mettre à jour</button>
+        </form>
+      </div>
     )
   }
 }
