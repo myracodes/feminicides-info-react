@@ -1,0 +1,10 @@
+.photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 5px solid var(--color-fourth);
+}
+
+.photo-card {
+    width: 50%;
+}
