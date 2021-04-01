@@ -9,16 +9,14 @@ function CondamnationMetho() {
       <h3 className="title-3">Méthodologie</h3>
       <div className="padding-top">
         <div>
-          <p>
-            Cinq catégories sont représentées :
-          </p>
+          <p>Cinq catégories sont représentées :</p>
           <ul>
             <li>
               <b>Condamné</b> signifie que l'assassin a été jugé et reconnu
               coupable.
             </li>
             <li>
-              <b>Non condamné</b> signifie que l'assassin présumé a jugé et
+              <b>Non condamné</b> signifie que l'assassin présumé a été jugé et
               acquitté.
             </li>
             <li>
@@ -27,9 +25,9 @@ function CondamnationMetho() {
               cours.
             </li>
             <li>
-              <b>Suicide après acte</b> représente le nombre des cas où l'assassin
-              ou assassin présumé s'est donné la mort après avoir tué sa
-              compagne ou son ex-compagne.
+              <b>Suicide après acte</b> représente le nombre des cas où
+              l'assassin ou assassin présumé s'est donné la mort après avoir tué
+              sa compagne ou son ex-compagne.
             </li>
           </ul>
         </div>

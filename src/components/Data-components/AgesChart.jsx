@@ -197,7 +197,7 @@ class Data extends React.Component {
     return (
       <div className="chart">        
         <canvas
-          style={{ width: 600, height: 400 }}
+          style={{ width: 800, height: 700 }}
           ref={this.node}
         />
       </div>

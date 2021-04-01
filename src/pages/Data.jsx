@@ -29,6 +29,9 @@ function DataComponents() {
         </div>
         <AgesChart />
       </div>
+      <div>
+        <DatasComplaints />
+      </div>
       <div className="chart-grid-one">
         <RelationshipChart />
         <div className="method">
@@ -41,7 +44,6 @@ function DataComponents() {
         </div>
         <CondamnationChart />
       </div>
-      <DatasComplaints />
     </div>
   );
 }
