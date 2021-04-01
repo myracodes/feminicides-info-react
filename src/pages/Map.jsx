@@ -64,16 +64,17 @@ class Map extends React.Component {
     <div className="page-container">
 
       <h1 className="title-1">Carte des Féminicides conjuguaux en France</h1>
-      <div className="flex">
+      
+      <div className=" flex">
+
         <div className="filters-box flex flex-column">
-      <SearchBar searchByName={this.searchByName}/>
-      
-      <Filters searchByAge={this.searchByAge} searchByRegion={this.searchByRegion}/>
-      
-      <button className="btn-2" onClick={this.handleReset}>Réinitialiser les filtres</button>
+          <SearchBar searchByName={this.searchByName}/>
+          <Filters searchByAge={this.searchByAge} searchByRegion={this.searchByRegion}/>
+          <button className="btn-2" onClick={this.handleReset}>Réinitialiser les filtres</button>
         </div> 
 
-      <DisplayMap filteredInfos={this.state.filteredInfos}/>
+         <DisplayMap filteredInfos={this.state.filteredInfos}/>
+
       </div>
 
     </div>

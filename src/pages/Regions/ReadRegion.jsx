@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import apiHandler from "../../api/apiHandler";
 import moment from "moment";
 import "../../styles/global.css";
+import { Link } from "react-router-dom";
 
 export class ReadRegion extends Component {
   state = {
@@ -60,6 +61,11 @@ export class ReadRegion extends Component {
         <p><b>Nombre de personnel formé :</b> {this.state.trainedStaff}</p>
         <p><b>Budget alloué à la formation du personnel : </b>{this.state.VSSTrainingBudget}</p>
         <p><b>Nombre de places en centre d'hébergement : </b>{this.state.shelterPlaces}</p>
+      
+      
+        <Link to="/admin/tableau-de-bord/regions" className="btn-3 Dashboard__return-btn">Retour</Link> 
+
+      
       </div>
     )
   }

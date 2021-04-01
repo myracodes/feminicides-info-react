@@ -19,7 +19,7 @@ class SearchBar extends React.Component {
             <form  onSubmit={this.handleSubmit}>
                 <p className="form-label">Rechercher par prénom</p>
                 <input
-                className="form-input border-input input-size" 
+                className="form-input border-input" 
                 onChange={this.handleChange}
                 type="text"
                 placeholder="Prénom"
