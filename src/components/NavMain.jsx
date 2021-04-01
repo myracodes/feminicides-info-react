@@ -22,7 +22,7 @@ const NavMain = (props) => {
   return (
     <nav className="NavMain padding-top">
       <NavLink exact to="/">
-        <h3 className="logo">App name</h3>
+        <h3 className="logo">Féminicides infos</h3>
       </NavLink>
 
       <ul className="nav-list">

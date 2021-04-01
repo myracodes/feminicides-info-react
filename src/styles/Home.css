@@ -1,0 +1,12 @@
+.relative{
+    position:relative;
+    
+    
+}
+
+.absolute{
+    position:absolute;
+    z-index: 1;
+    top:250px;
+    right:525px;
+}
