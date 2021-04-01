@@ -34,28 +34,36 @@ class Details extends React.Component {
         <div className="page-container">
 
             <h1 className="title-1">{this.state.event.eventNumber}. {this.state.event.firstName} {this.state.event.lastName}</h1> <br/>
-            <h2 className="title-2">{this.state.event.age} ans</h2> <br/>
-            <p className="padding-top">Le <b>{this.state.event.date.split('T00:00:00.000Z')}</b>, à <b>{this.state.event.city}</b>, {this.state.event.firstName} {this.state.event.lastName} a été tuée par son <b>{this.state.event.relationship}</b>, {this.state.event.killerAge} ans.</p>
-
-
-            <p>A-t-il été condamné ? {this.state.event.condemned}</p>
-            <p>Autres victimes connues ? {this.state.event.otherVictims}</p>
-            <p className="padding-top"><b>Description : </b>{this.state.event.description}</p>
-
-            <p className="padding-top">Nombre de plaintes déposées avant les faits : {this.state.event.complaint}</p>
-            <p>Etat de l'enquête : {this.state.event.courtDecision}</p>
             
-            <p>Dans la presse : <a href={this.state.event.pressArticles[0]}>lien</a></p>
+            <div className="text-box">
 
-            <img src={this.state.event.commemoration} alt="collage commémoratif" className="padding-top"/>
-            <p>Crédit photo : {this.state.event.imageSource}</p> {console.log(this.state.event.imageSource, "source")}
+                <p>Le <b>{this.state.event.date.split('T00:00:00.000Z')}, {this.state.event.firstName} {this.state.event.lastName}</b> a été tuée par son {this.state.event.relationship} ({this.state.event.killerAge} ans) à <b>{this.state.event.city}.</b><br></br>Elle avait <b>{this.state.event.age} ans.</b></p>
+                <br></br>
+                <p>A-t-il été condamné ? {this.state.event.condemned}</p>
+                <p>Autres victimes connues ? {this.state.event.otherVictims}</p>
+                <p className="padding-top"><b>Description : </b>{this.state.event.description}</p>
+
+                <p className="padding-top"><b>Nombre de plaintes déposées avant les faits : {this.state.event.complaint}</b></p>
+                <p>Etat de l'enquête : {this.state.event.courtDecision}</p>
+            
+                <p>Dans la presse : <a href={this.state.event.pressArticles[0]}>Lien vers l'article</a></p>
+
+                <div className="img-center">
+                <img src={this.state.event.commemoration} alt="collage commémoratif" className="padding-top"/>
+                <p>Crédit photo : {this.state.event.imageSource}</p> {console.log(this.state.event.imageSource, "source")}
+                </div>
+
+            
+
             <div className="filters-box">
-             <h2 className="title-2 padding-top">La région {this.state.event.region.name} et le traitement des violences sexistes et sexuelles (VSS)</h2>
-            <p className="padding-top">Parti politique majoritaire au Conseil régional : {this.state.event.region.politicalParty}</p>
-            <p>Budget 2021 alloué à la lutte contre les VSS : {this.state.event.region.regionVSSBudget} Md €</p>
-            <p>Nb de personnel formés à la prise en charge des victimes de violences : {this.state.event.region.trainedStaff}</p>
-            <p>Nb de places en hébergement d'urgence pour les femmes victimes de violences : {this.state.event.region.shelterPlaces}</p>
-            <p><b>Nb de féminicides dans la région : {this.state.event.region.events.length}</b></p>
+                <h2 className="title-2 padding-top">La région {this.state.event.region.name} et le traitement des violences sexistes et sexuelles (VSS)</h2>
+                <p className="padding-top">Parti politique majoritaire au Conseil régional : {this.state.event.region.politicalParty}</p>
+                <p>Budget 2021 alloué à la lutte contre les VSS : {this.state.event.region.regionVSSBudget} Md €</p>
+                <p>Nb de personnel formés à la prise en charge des victimes de violences : {this.state.event.region.trainedStaff}</p>
+                <p>Nb de places en hébergement d'urgence pour les femmes victimes de violences : {this.state.event.region.shelterPlaces}</p>
+                <p><b>Nb de féminicides dans la région : {this.state.event.region.events.length}</b></p>
+           
+            </div>
             </div>
             <br/>
 
