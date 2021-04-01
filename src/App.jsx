@@ -13,7 +13,7 @@ import DashboardUsers from "./pages/DashboardUsers";
 import About from "./pages/About";
 import Data from "./pages/Data";
 import Map from "./pages/Map";
-import Resources from "./pages/Resources";
+import Ressources from "./pages/Resources";
 import EditUser from "./pages/Users/EditUser";
 import AddEvent from "./pages/Events/AddEvent";
 import EditEvent from "./pages/Events/EditEvent";
@@ -34,7 +34,7 @@ function App() {
                         }}
         />
         <Route exact path="/donnees" component={Data} />
-        <Route exact path="/ressources" component={Resources} />
+        <Route exact path="/ressources" component={Ressources} />
         <Route exact path="/a-propos" component={About} />
         <Route exact path="/espace-admin" component={Signin} />
         {/* <Route exact path="/ajouter-admin" component={ConnexionAdmin} /> */}
