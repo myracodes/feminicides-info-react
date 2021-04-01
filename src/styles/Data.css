@@ -1,6 +1,6 @@
 /*GENERAL*/
 
-p {
+p, ul {
   color: var(--color-text);
   line-height: 1.7rem;
   text-align: justify;
@@ -39,7 +39,7 @@ p {
   flex-direction: column;
 }
 
-/*INTRO & PLAINTES BOX*/
+/*INTRO & COMPLAINTS BOX*/
 
 .total-num-data {
   display: flex;

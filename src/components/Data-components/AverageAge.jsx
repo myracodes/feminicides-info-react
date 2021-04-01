@@ -3,8 +3,8 @@ import apiHandler from "../../api/apiHandler";
 
 export class ListOfData extends PureComponent {
   state = {
-    averageComplaints: [],
     averageAge: [],
+    agesWithoutZeroLength: [],
   };
 
   componentDidMount() {
@@ -15,21 +15,28 @@ export class ListOfData extends PureComponent {
          * functions to re-use
          *
          */
+
         function giveAverage(array) {
-          return array
-            .reduce((acc, val) => acc + val / array.length)
-            .toFixed(0);
+          return (array.reduce((acc, val) => acc + val) / array.length).toFixed(
+            0
+          );
         }
         /**
          * first retrieving the age of each victim
+         * extracting the "0" default value to avoid distort result
          * then calculating the average age
          */
 
         let ages = events.map((event) => {
           return event.age;
         });
-        let averageAge = giveAverage(ages);
-        this.setState({ averageAge: averageAge });
+        let agesWithoutZero = ages.filter((val) => val !== 0);
+        let agesWithoutZeroLength = agesWithoutZero.length;
+        let averageAge = giveAverage(agesWithoutZero);
+        this.setState({
+          averageAge: averageAge,
+          agesWithoutZeroLength: agesWithoutZeroLength,
+        });
       })
       .catch((err) => console.log(err));
   }
@@ -39,7 +46,15 @@ export class ListOfData extends PureComponent {
       <div>
         <ul>
           <li>
-            <p className="to-center">Âge moyen des victimes : <b> {this.state.averageAge} ans.</b> </p>
+            <p className="to-center">
+              Âge moyen des victimes : <b> {this.state.averageAge} ans.</b>{" "}
+            </p>
+            <p>
+              Lorsque l'âge des victimes n'est pas renseigné, il est de 0 par
+              défaut. Pour ne pas la fausser la moyenne, ces valeurs nulles sont
+              exclues. Le résultat affiché ici a donc été calculé sur{" "}
+              {this.state.agesWithoutZeroLength} valeurs.
+            </p>
           </li>
         </ul>
       </div>
