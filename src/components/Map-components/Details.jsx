@@ -48,14 +48,14 @@ class Details extends React.Component {
             
                 <p>Dans la presse : <a href={this.state.event.pressArticles[0]}>Lien vers l'article</a></p>
 
-                <div className="img-center">
-                <img src={this.state.event.commemoration} alt="collage commémoratif" className="padding-top"/>
+                <div className="flex flex-column commemoration">
+                <img className="commemoration-img" src={this.state.event.commemoration} alt="collage commémoratif" className="padding-top"/>
                 <p>Crédit photo : {this.state.event.imageSource}</p> {console.log(this.state.event.imageSource, "source")}
                 </div>
 
             
 
-            <div className="filters-box">
+            <div className="filters-box padding-top">
                 <h2 className="title-2 padding-top">La région {this.state.event.region.name} et le traitement des violences sexistes et sexuelles (VSS)</h2>
                 <p className="padding-top">Parti politique majoritaire au Conseil régional : {this.state.event.region.politicalParty}</p>
                 <p>Budget 2021 alloué à la lutte contre les VSS : {this.state.event.region.regionVSSBudget} Md €</p>

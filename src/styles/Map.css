@@ -7,165 +7,169 @@
     --color-fourth: #f17d52e1;
     --color-text: #646464;
     --color-input: #f9f5f5;
-  }
+}
 
-.standard-select{
-        background-color: transparent;
-        border: none;
-        padding: 0 1em 0 0;
-        margin: 0px;
-        width: 100%;
-        font-family: inherit;
-        font-size: inherit;
-        cursor: inherit;
-        line-height: inherit;
-        outline: none;
-      }
+.standard-select {
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0px;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    outline: none;
+}
 
-      :root {
-        --select-border: #777;
-        --select-focus: #f17d52e1;
-        --select-arrow: var(--select-border);
-      }
+:root {
+    --select-border: #777;
+    --select-focus: #f17d52e1;
+    --select-arrow: var(--select-border);
+}
 
-      .select {
-        width: 100%;
-        min-width: 15ch;
-        max-width: 30ch;
-        border: 1px solid var(--select-border);
-        border-radius: 15px;
-        padding: 0.25em 0.5em;
-        font-size: 1.25rem;
-        cursor: pointer;
-        line-height: 1.1;
-        background-color: #fff;
-        background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
-      }
+.select {
+    width: 100%;
+    min-width: 15ch;
+    max-width: 30ch;
+    border: 1px solid var(--select-border);
+    border-radius: 15px;
+    padding: 0.25em 0.5em;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+}
 
-      .select::after {
-        content: "";
-        width: 0.8em;
-        height: 0.5em;
-        background-color: var(--select-arrow);
-        clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-      }
+.select::after {
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: var(--select-arrow);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
 
-     .filters-box{
-         background-color: var(--color-input);
-         border-radius: 15px;
-         padding:25px;
-         
-     }
+.filters-box {
+    background-color: var(--color-input);
+    border-radius: 15px;
+    padding: 25px;
 
-     .mapbox{
-         width:70%;
-        
-     }
+}
 
-     .form-filter{
-         margin-top:20px;
-         margin:20px;
-         padding:5px;
-     }
+.mapbox {
+    width: 70%;
 
-     .btn-center{
-         display: block;
-         margin-left: auto;
-         margin-right: auto;
-     }
+}
 
-    
+.form-filter {
+    margin-top: 20px;
+    margin: 20px;
+    padding: 5px;
+}
 
-     .mapboxgl-popup-content{
-         background-color: var(--color-input);
-         border-radius:15px;
-         padding:15px;
-         padding-right:25px;
-     }
+.btn-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-     .mapboxgl-popup-close-button {
-        position: absolute;
-        right: 15px;
-        top: 10px;
-        border: 0;
-        border-radius: 0 3px 0 0;
-        cursor: pointer;
-        background-color: transparent;
-    }
 
-    .mapboxgl-popup-content .btn-3 {
-        padding:8px;
-        margin-left:100px;
-        margin-top:10px;
-        display: inline-block;
-        border-radius: 12px;
-    }
 
-    .border-input{
-        border:1px solid var(--color-text);
-        border-top:none;
-        border-right:none;
-        padding-right:120px;
-        padding-left: 20px;
-        box-shadow: 3px 5px var(--color-third);
-        margin:15px;
-        margin-bottom:20px
-    }
+.mapboxgl-popup-content {
+    background-color: var(--color-input);
+    border-radius: 15px;
+    padding: 15px;
+    padding-right: 25px;
+}
 
-    .text-box{
-        border:1px solid var(--color-text);
-        border-top:none;
-        border-right:none;
-        box-shadow: 3px 5px var(--color-third);
-        margin:15px;
-        margin-bottom:20px;
-        border-radius: 15px;
-        padding:25px;
-        display: block;
-         margin-left: auto;
-         margin-right: auto;
-    }
+.mapboxgl-popup-close-button {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    border: 0;
+    border-radius: 0 3px 0 0;
+    cursor: pointer;
+    background-color: transparent;
+}
 
-    .img-center{
-        display:flex;
+.mapboxgl-popup-content .btn-3 {
+    padding: 8px;
+    margin-left: 100px;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 12px;
+}
+
+.border-input {
+    border: 1px solid var(--color-text);
+    border-top: none;
+    border-right: none;
+    padding-right: 120px;
+    padding-left: 20px;
+    box-shadow: 3px 5px var(--color-third);
+    margin: 15px;
+    margin-bottom: 20px
+}
+
+.text-box {
+    border: 1px solid var(--color-text);
+    border-top: none;
+    border-right: none;
+    box-shadow: 3px 5px var(--color-third);
+    margin: 15px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    padding: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-center {
+    /* display: flex;
+    flex-direction: column; */
+    /* min-width: 40%; */
+
+}
+
+.commemoration > img {
+    max-width: 70%;
+    height: auto;
+}
+
+
+.btn-popup {
+    padding-right: 100px;
+}
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 800px) {
+
+    .flex {
         flex-direction: column;
-        padding:30px 185px 30px 185px;
- 
+
     }
 
-    .btn-popup{
-        padding-right:100px;
+    .mapbox {
+        width: 400px;
+
     }
 
-    /*RESPONSIVE*/
-
-   @media screen and (max-width: 800px) {
-    
-      .flex{
-        flex-direction: column;  
-      
-    }
-    
-       .mapbox{
-        width:400px;
-       
+    .mapboxgl-canvas-container {
+        width: 100%;
     }
 
-        .mapboxgl-canvas-container{
-        width:100%;
-    }
-  
-    .border-input{
-        border:1px solid var(--color-text);
-        border-top:none;
-        border-right:none;
-        padding-right:20px;
+    .border-input {
+        border: 1px solid var(--color-text);
+        border-top: none;
+        border-right: none;
+        padding-right: 20px;
         padding-left: 20px;
         box-shadow: 3px 5px var(--color-third);
-        margin:15px;
-        margin-bottom:20px
+        margin: 15px;
+        margin-bottom: 20px
     }
-  
-  }
-   
-        
+
+}
