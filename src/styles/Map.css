@@ -104,7 +104,8 @@
         border:1px solid var(--color-text);
         border-top:none;
         border-right:none;
-        padding-right:80px;
+        padding-right:120px;
+        padding-left: 20px;
         box-shadow: 3px 5px var(--color-third);
         margin:15px;
         margin-bottom:20px
