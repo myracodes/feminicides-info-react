@@ -37,7 +37,7 @@ function App() {
         <Route exact path="/ressources" component={Resources} />
         <Route exact path="/a-propos" component={About} />
         <Route exact path="/espace-admin" component={Signin} />
-        <Route exact path="/ajouter-admin" component={ConnexionAdmin} />
+        {/* <Route exact path="/ajouter-admin" component={ConnexionAdmin} /> */}
         <ProtectedRoute exact path="/admin/tableau-de-bord" component={DashboardHome} />
         <ProtectedRoute exact path="/admin/tableau-de-bord/evenements" component={DashboardEvents} />
         <ProtectedRoute exact path="/admin/tableau-de-bord/regions" component={DashboardRegions} />
