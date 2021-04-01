@@ -1,17 +1,16 @@
 .Dashboard__navbar {
   width: 15%;
-  background: var(--color-main);
   min-height: 92vh;
-  max-height: 100vh;
-  justify-content: space-around;
+  padding-top: 5%;
   align-items: center;
+  position: fixed;
 }
 
 .Dashboard__navbar-link {
   margin: 40px 0;
+  color: var(--color-main);
   font-size: 1.3em;
-  color: var(--color-third);
-  padding: 20px; /* 62px */
+  padding: 20px; 
   width: 100%;
 }
 
@@ -20,11 +19,23 @@
   color: var(--color-third);
 }
 
-.Dashboard__container {
+.Dashboard__container-parent {
   position: absolute;
   left: 15%;
-  top: 60px;
-  height: calc(100% - 60px);
+  top: 70px;
+  width: calc(100% - 15%);
+}
+
+.Dashboard__container {
+  width: 100%;
+  max-height: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Dashboard__container-img {
+  width: 35%;
+  height: 35%;
 }
 
 .Dashboard__icons {
@@ -32,18 +43,11 @@
 }
 
 .Dashboard__text-container {
-  justify-content: center;
-  align-items: center;
-  font-size: 3em;
-  width: 80%;
-  min-height: 80%;
+  font-size: 2.5em;
+  width: 65%;
   color: var(--color-text);
   margin-left: 30px;
 }
-
-/* .Dashboard_btn {
-  margin: 40px 0;
-} */
 
 .Dashboard__form {
   max-width: 80%;
@@ -60,13 +64,26 @@
   margin-top: 40px;
 }
 
-.Dashboard__grid {
-  display: grid;
+.Dashboard__table {
   border: 1px solid var(--color-main);
-  border-radius: 15px;
   max-width: 80%;
-  margin: 12px;
   padding: 15px;
   font-size: 1.2em;
-  grid-template-columns: repeat(4, 1fr);
+  margin: 15px auto;
+  border-radius: 15px;
 }
+
+.Dashboard__table-row-title {
+  border-bottom: 2px solid var(--color-fourth);
+}
+
+.Dashboard__table-row:nth-child(even) {
+  background: var(--color-third);
+}
+
+.Dashboard__table-cell {
+  border-collapse: collapse;
+  text-align: center;
+  padding: 20px 50px;
+}
+

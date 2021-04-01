@@ -87,7 +87,7 @@ class FormEditEvent extends Component {
       .createEvent(formData)
       .then((data) => {
         console.log("created event: ", data);
-        this.props.history.push("/admin/tableau-de-bord");
+        this.props.history.push("/admin/tableau-de-bord/evenements");
       })
       .catch((error) => {
         console.log(error);

@@ -38,7 +38,7 @@ class FormEditEvent extends Component {
       .editRegion(this.props.location.state.region._id, this.state)
       .then((data) => {
         console.log(data);
-        this.props.history.push("/admin/tableau-de-bord");
+        this.props.history.push("/admin/tableau-de-bord/regions");
       })
       .catch((error) => {
         console.log(error);

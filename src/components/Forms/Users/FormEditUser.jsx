@@ -34,7 +34,7 @@ class FormEditUser extends Component {
       .editUser(this.props.location.state.user._id, this.state)
       .then((data) => {
         console.log(data);
-        this.props.history.push("/admin/tableau-de-bord");
+        this.props.history.push("/admin/tableau-de-bord/users");
       })
       .catch((error) => {
         console.log(error);

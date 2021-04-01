@@ -19,10 +19,10 @@ class DashboardRegions extends React.Component {
     return (
       <div>
         <NavDashboard/>
-        <div className="Dashboard__container">
+        <div className="Dashboard__container-parent">
           <h1 className="title-1">Tableau de bord</h1> <br/>
           <h2 className="title-2">Régions, collectivités & territoires</h2>
-          <table>
+          <table className="Dashboard__table">
             <thead>
               <tr>
                 <th>Nom</th>

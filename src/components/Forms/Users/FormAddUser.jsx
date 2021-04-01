@@ -25,7 +25,7 @@ class FormSignup extends Component {
       .signup(this.state)
       .then((data) => {
         this.props.context.setUser(data);
-        this.props.history.push("/admin/tableau-de-bord");
+        this.props.history.push("/admin/tableau-de-bord/users");
       })
       .catch((error) => {
         console.log(error);

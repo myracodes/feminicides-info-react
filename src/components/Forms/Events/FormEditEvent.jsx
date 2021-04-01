@@ -83,7 +83,7 @@ class FormEditEvent extends Component {
     .editEvent(this.props.match.params.id, formData)
     .then(editedEvent => {
       console.log("Event edited: ", editedEvent)
-      this.props.history.push("/admin/tableau-de-bord");
+      this.props.history.push("/admin/tableau-de-bord/evenements");
     })
     .catch((error) => console.log(error));
   };
