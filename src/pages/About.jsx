@@ -52,16 +52,20 @@ const About = () => {
             </span>
           </div>
         </div>
+        <div className="padding-top">
+          Ce projet a été réalisé dans le cadre du bootcamp Fullstack web development d'<a href="https://www.ironhack.com/fr">Ironhack</a>. 
+        </div>
+
       </div>
 
       <h1 className="title-1">Contact</h1>
       <div className="padding-top flex flex-column">
         <a href="mailto:address@e.mail">Contacter le collectif FPCE <br />
         (Féminicides par compagnons ou ex)</a>
-        <div className="flex-row social">
-          <a href="https://www.facebook.com/feminicide" target="_blank" rel="noreferrer"><i class="fab fa-facebook-square"></i></a> &nbsp;
-          <a href="https://www.instagram.com/feminicidespar/" target="_blank" rel="noreferrer"><i class="fab fa-instagram"></i></a> &nbsp;
-          <a href="https://twitter.com/feminicidesfr" target="_blank" rel="noreferrer"><i class="fab fa-twitter-square"></i></a>
+        <div className="flex-row social padding-top">
+          <a href="https://www.facebook.com/feminicide" target="_blank" rel="noreferrer"><i class="fab fa-facebook-square fa-3x"></i></a> &nbsp; &nbsp;
+          <a href="https://www.instagram.com/feminicidespar/" target="_blank" rel="noreferrer"><i class="fab fa-instagram fa-3x"></i></a> &nbsp; &nbsp;
+          <a href="https://twitter.com/feminicidesfr" target="_blank" rel="noreferrer"><i class="fab fa-twitter-square fa-3x"></i></a>
         </div>
       </div>
     </div>
