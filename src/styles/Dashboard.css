@@ -2,7 +2,8 @@
   width: 15%;
   background: var(--color-main);
   color: white;
-  height: 80vh;
+  min-height: 92vh;
+  max-height: 100vh;
   justify-content: space-around;
   align-items: center;
 }
@@ -16,8 +17,18 @@
   position: absolute;
   left: 15%;
   top: 60px;
+  height: calc(100% - 60px);
 }
 
 .Dashboard__icons {
   color: var(--color-fourth);
+}
+
+.Dashboard__text-container {
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  width: 80%;
+  min-height: 80%;
+  border: 1px solid red;
 }

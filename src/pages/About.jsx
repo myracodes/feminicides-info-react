@@ -1,4 +1,5 @@
 import React from 'react';
+import ProfileCard from './../components/About-components/ProfileCard';
 
 const About = () => {
   return (
@@ -9,11 +10,48 @@ const About = () => {
           Ce site internet est basé sur le travail du collectif Féminicides par compagnons ou ex, qui répertorie et dénonce les féminicides commis en France dans le cadre conjugal. <br />
         </div>
         <div className="padding-top">
-          La partie technique a été réalisée par 4 développeuses : <br/>
-          <a href="https://github.com/anachannn" target="_blank" rel="noreferrer">Anaïs Engler</a>,<br/>
-          <a href="https://github.com/zelumine" target="_blank" rel="noreferrer">Mélusine Rey</a>,<br/>
-          <a href="https://github.com/ankapieka" target="_blank" rel="noreferrer">Anna Lefour</a>,<br/>
-          et <a href="https://github.com/myracodes" target="_blank" rel="noreferrer">Myriam Mira</a>. <br/>
+          Ce site a été réalisé par 4 développeuses : <br />
+
+          <div className="padding-top">
+
+            <div className="padding-top">
+              <ProfileCard
+                firstName="Anaïs"
+                lastName="Engler"
+                picture="/photos/Anais.jpg"
+                gitHub="https://github.com/anachannn"
+                LinkedIn=""
+              />
+            </div>
+            <div className="padding-top">
+              <ProfileCard
+                firstName="Anna"
+                lastName="Lefour"
+                picture="/photos/Anna.jpg"
+                gitHub="https://github.com/ankapieka"
+                LinkedIn=""
+              />
+            </div>
+            <div className="padding-top">
+              <ProfileCard
+                firstName="Mélusine"
+                lastName="Rey"
+                picture="/photos/Mélu.jpg"
+                gitHub="https://github.com/zelumine"
+                LinkedIn=""
+              />
+            </div>
+            <div className="padding-top">
+              <ProfileCard
+                firstName="Myriam"
+                lastName="Mira"
+                picture="/photos/My.jpg"
+                gitHub="https://github.com/myracodes"
+                LinkedIn=""
+              />
+            </div>
+          </div>
+
         </div>
       </div>
 

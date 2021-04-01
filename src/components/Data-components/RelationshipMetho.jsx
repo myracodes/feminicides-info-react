@@ -13,15 +13,15 @@ function RelationshipMetho() {
           </p>
           <ul>
             <li>
-              - "Compagnon" signifie que la victime et le coupable ou l'assassin
+              <b>Compagnon</b> signifie que la victime et le coupable ou l'assassin
               présumé entretenaient une relation au moment des faits.
             </li>
             <li>
-              - "Ex-compagnon" signifie que la relation entre les deux personnes
+              <b>Ex-compagnon</b> signifie que la relation entre les deux personnes
               avait cessé.
             </li>
             <li>
-              - "Compagnon supposé" signifie que l'enquête en cours n'a pas permis
+              <b>Compagnon supposé</b> signifie que l'enquête en cours n'a pas permis
               de déterminer la relation entre les deux personnes, pour le
               moment.
             </li>

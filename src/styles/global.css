@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Lexend:wght@100;300;400;700&display=swap'); 
 
 @import "./Gallery.css";
+@import "./About.css";
 
 * {
   margin: 0;

@@ -14,20 +14,20 @@ function CondamnationMetho() {
           </p>
           <ul>
             <li>
-              - "Condamné" signifie que l'assassin a été jugé et reconnu
+              <b>Condamné</b> signifie que l'assassin a été jugé et reconnu
               coupable.
             </li>
             <li>
-              - "Non condamné" signifie que l'assassin présumé a jugé et
+              <b>Non condamné</b> signifie que l'assassin présumé a jugé et
               acquitté.
             </li>
             <li>
-              - "En cours" signifie soit que l'assassin présumé est en fuite,
+              <b>En cours</b> signifie soit que l'assassin présumé est en fuite,
               soit qu'il a été appréhendé mais que l'enquête est encore en
               cours.
             </li>
             <li>
-              - "Suicide après acte" représente le nombre des cas où l'assassin
+              <b>Suicide après acte</b> représente le nombre des cas où l'assassin
               ou assassin présumé s'est donné la mort après avoir tué sa
               compagne ou son ex-compagne.
             </li>
