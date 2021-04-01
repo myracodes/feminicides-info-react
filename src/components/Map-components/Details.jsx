@@ -50,12 +50,12 @@ class Details extends React.Component {
             <img src={this.state.event.commemoration} alt="collage commémoratif" className="padding-top"/>
             <p>Crédit photo : {this.state.event.imageSource}</p> {console.log(this.state.event.imageSource, "source")}
             <div className="filters-box">
-            {/* <h2 className="title-2 padding-top">La région {this.state.event.region.name} et le traitement des violences sexistes et sexuelles (VSS)</h2>
+             <h2 className="title-2 padding-top">La région {this.state.event.region.name} et le traitement des violences sexistes et sexuelles (VSS)</h2>
             <p className="padding-top">Parti politique majoritaire au Conseil régional : {this.state.event.region.politicalParty}</p>
             <p>Budget 2021 alloué à la lutte contre les VSS : {this.state.event.region.regionVSSBudget} Md €</p>
             <p>Nb de personnel formés à la prise en charge des victimes de violences : {this.state.event.region.trainedStaff}</p>
             <p>Nb de places en hébergement d'urgence pour les femmes victimes de violences : {this.state.event.region.shelterPlaces}</p>
-            <p><b>Nb de féminicides dans la région : {this.state.event.region.events.length}</b></p> */}
+            <p><b>Nb de féminicides dans la région : {this.state.event.region.events.length}</b></p>
             </div>
             <br/>
 

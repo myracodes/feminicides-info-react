@@ -16,10 +16,10 @@ class SearchBar extends React.Component {
     render(){
     return (
         <div>
-            <form onSubmit={this.handleSubmit}>
+            <form  onSubmit={this.handleSubmit}>
                 <p className="form-label">Rechercher par prénom</p>
                 <input
-                className="form-input" 
+                className="form-input border-input input-size" 
                 onChange={this.handleChange}
                 type="text"
                 placeholder="Prénom"
