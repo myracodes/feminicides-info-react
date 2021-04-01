@@ -24,39 +24,6 @@
 }
 
 @media screen and (max-width: 825px) {
-  .NavMain .nav-list {
-    margin-left: 0;
-    display: flex;
-    align-items: center;
-    text-align: center;
-  }
-
-  .logo {
-    margin-bottom: 3rem;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-  }
-
-  li {
-    width: 100%;
-    border-bottom: 1px solid var(--color-third);
-  }
-  .li:hover {
-    border-bottom: 1px solid var(--color-main);
-  }
-
-  ul.nav-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-  }
-
   .NavMain {
     height: 15rem;
     margin: 0;
@@ -68,5 +35,42 @@
 
   .NavMain .nav-list li:not(:last-child) {
     margin: 0;
+  }
+
+  .NavMain .nav-list {
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 3rem;
+  }
+
+  /*LIST*/
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .nav-li {
+    width: 100%;
+    border-bottom: 1px solid var(--color-third);
+  }
+  .nav-li:hover {
+    border-bottom: 1px solid var(--color-main);
+  }
+  .nav-li:focus {
+    border-bottom: 1px solid var(--color-main);
+  }
+
+  ul.nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
   }
 }

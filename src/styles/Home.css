@@ -1,3 +1,7 @@
+a:visited {
+  color: black;
+}
+
 .homepage-canva {
   width: 100%;
   display: flex;
@@ -86,7 +90,7 @@
   }
 
   .text-homepage {
-    width: 100%;
+    width: 95%;
     padding: 2rem;
     font-family: "Lato";
   }
