@@ -43,17 +43,21 @@ export class ListOfData extends PureComponent {
     return (
       <div className="to-center">
         <div className="total-num-box">
-          <ul>
-            <li>
-              <h2 className="title-2">Plaintes avant le féminicide</h2>
+          <h2 className="title-2">Plaintes avant le féminicide</h2>
+          {/* <ul>
+            <li> */}
               <p>
                 Nombre moyen de plaintes déposées par la victime :
-                <div className="total-num-data complaints-numbers">{this.state.averageComplaints}</div>
-                
+                <div className="total-num-data complaints-numbers">
+                  {this.state.averageComplaints}
+                </div>
               </p>
               <p>
                 Le plus haut nombre de plaintes déposées contre l'assassin ou
-                assassin suspect : <div className="total-num-data complaints-numbers">{this.state.maxComplaint}</div>
+                assassin suspect :{" "}
+                <div className="total-num-data complaints-numbers">
+                  {this.state.maxComplaint}
+                </div>
               </p>
               <p>
                 Ces chiffres sont précisés à titre indicatif. En effet, il ne
@@ -77,22 +81,25 @@ export class ListOfData extends PureComponent {
                 ex-compagnon, ou bien des mesures insuffisantes. Une enquête
                 parue en novembre 2019, réalisée par la Mission sur les
                 homicides conjugaux de l'Inspection générale de la Justice,
-                révèlait par exemple que <i>"dans 41 % des cas, la victime avait
-                alerté les services de police/gendarmerie et les services
-                d’enquêtes avaient également été informés de faits de violences
-                par le fait de signalement ou à l’occasion d’interventions au
-                domicile. Pourtant, 82 % des mains-courantes et procès-verbaux
-                de renseignement judiciaire n’avaient fait l’objet d’aucune
-                investigation et 80 % des plaintes déposées par les victimes
-                avaient abouti à un classement sans suite."</i>
+                révèlait par exemple que
+                <i>
+                  "dans 41 % des cas, la victime avait alerté les services de
+                  police/gendarmerie et les services d’enquêtes avaient
+                  également été informés de faits de violences par le fait de
+                  signalement ou à l’occasion d’interventions au domicile.
+                  Pourtant, 82 % des mains-courantes et procès-verbaux de
+                  renseignement judiciaire n’avaient fait l’objet d’aucune
+                  investigation et 80 % des plaintes déposées par les victimes
+                  avaient abouti à un classement sans suite."
+                </i>
               </p>
               <p>
                 Il ne faut pas oublier, aussi, que beaucoup de femmes se voient
                 contraintes de retirer leur plainte sous la menace de leur
                 compagnon ou ex.
               </p>
-            </li>
-          </ul>
+            {/* </li>
+          </ul> */}
         </div>
       </div>
     );
