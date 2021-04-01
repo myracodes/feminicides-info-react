@@ -53,27 +53,6 @@ const MonthsChart = () => {
           borderColor: "rgb(199, 150, 217)",
         },
       ],
-      options: {
-        responsive: true,
-        maintainAspectRatio: true,
-        animation: {
-          duration: 2000,
-          easing: "easeInQuad",
-        },
-        title: {
-          display: true,
-          position: "bottom",
-          fontSize: 18,
-          fontFamily: "Lato",
-          text:
-            "Âge moyen des victimes et des coupables ou assassins présumés - 2021",
-        },
-        legend: {
-          labels: {
-            defaultFontFamily: "Lato",
-          }
-        }
-      },
     };
   };
 
@@ -82,6 +61,8 @@ const MonthsChart = () => {
       {/* <Line data={monthsData} /> */}
       <Line
         data={data}
+        width={700}
+        height={700}
         options={{
           responsive: true,
           maintainAspectRatio: true,

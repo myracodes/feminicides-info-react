@@ -74,7 +74,7 @@ export default class CondamnationChart extends PureComponent {
             ],
           },
           options: {
-            responsive: true,
+            // responsive: true,
             maintainAspectRatio: true,
             animation: {
               duration: 2000,
@@ -100,7 +100,7 @@ export default class CondamnationChart extends PureComponent {
 
     return (
       <div className="chart">
-        <canvas style={{ width: 800, height: 400 }} ref={this.node} />
+        <canvas style={{ width: 800, height: 800 }} ref={this.node} />
       </div>
     );
   }

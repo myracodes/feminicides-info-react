@@ -31,8 +31,8 @@ class DashboardEvents extends React.Component {
         <NavDashboard />
         <div className="Dashboard__container">
           <h1 className="title-1">Tableau de bord</h1> <br/>
-          <h2 className="title-2">Événements</h2> <br/>
-          <Link to="/admin/nouvel-evenement" className="btn-2">Ajouter un événement</Link>
+          <h2 className="title-2">Événements</h2> <br/><br/>
+          <Link to="/admin/nouvel-evenement" className="btn-2">Ajouter un événement</Link><br/><br/>
           <table>
             <thead>
               <tr>

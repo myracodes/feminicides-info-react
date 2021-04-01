@@ -11,7 +11,7 @@
   margin: 40px 0;
   font-size: 1.3em;
   color: var(--color-third);
-  padding: 20px 62px;
+  padding: 20px; /* 62px */
   width: 100%;
 }
 
@@ -34,17 +34,28 @@
 .Dashboard__text-container {
   justify-content: center;
   align-items: center;
-  font-size: 5em;
+  font-size: 3em;
   width: 80%;
   min-height: 80%;
-  border: 1px solid red;
+  color: var(--color-text);
+  margin-left: 30px;
 }
 
-.Dashboard_btn {
+/* .Dashboard_btn {
   margin: 40px 0;
-}
+} */
 
 .Dashboard__form {
   max-width: 80%;
   margin: 10px auto;
+}
+
+.Dashboard__form-btn {
+  width: 15%;
+  align-self: center;
+}
+
+.Dashboard__return-btn {
+  width: 7%;
+  margin-top: 40px;
 }

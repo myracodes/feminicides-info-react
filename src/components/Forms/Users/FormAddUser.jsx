@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter, Redirect } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import { withUser } from "../../Auth/withUser";
 import apiHandler from "../../../api/apiHandler";
 
@@ -36,6 +36,9 @@ class FormSignup extends Component {
     return (
       <div>
         <h1 className="title-1">Ajouter un.e nouvel.le utilisateurice</h1>
+        <br/><br/>
+        <Link to="/admin/tableau-de-bord/users" className="btn-3 Dashboard__return-btn">Retour</Link> 
+        <br/>
         <form onSubmit={this.handleSubmit} className="form-container Dashboard__form">
           <label htmlFor="firstName" className="form-label">Prénom</label>
           <input
@@ -85,7 +88,7 @@ class FormSignup extends Component {
             <option value="admin">Admin</option>
           </select>
 
-          <button className="btn-1">Créer</button>
+          <button className="btn-1 Dashboard__form-btn">Créer</button>
         </form>
       </div>
     );
