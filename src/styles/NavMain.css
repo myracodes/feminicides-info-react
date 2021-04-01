@@ -23,6 +23,17 @@
   font-size: 1.5rem;
 }
 
+.nav-li a:hover {
+  color: var(--color-second);
+}
+.nav-li a:active {
+  color: var(--color-second);
+}
+
+a .link-nav:visited {
+  color: black;
+}
+
 @media screen and (max-width: 825px) {
   .NavMain {
     height: 15rem;
@@ -61,9 +72,6 @@
     border-bottom: 1px solid var(--color-third);
   }
   .nav-li:hover {
-    border-bottom: 1px solid var(--color-main);
-  }
-  .nav-li:focus {
     border-bottom: 1px solid var(--color-main);
   }
 

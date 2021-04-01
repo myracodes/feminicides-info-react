@@ -22,21 +22,21 @@ const NavMain = (props) => {
   return (
     <nav className="NavMain">
       <NavLink exact to="/">
-        <h3 className="logo title-1 name-style">Féminicides&nbsp;infos</h3>
+        <h3 className="logo title-1 name-style link-nav">Féminicides&nbsp;infos</h3>
       </NavLink>
 
       <ul className="nav-list">
         <React.Fragment>
-            <li className="nav-li">
+            <li className="nav-li link-nav">
               <NavLink to="/carte">Carte</NavLink>
             </li>
-            <li className="nav-li">
+            <li className="nav-li link-nav">
               <NavLink to="/donnees">Données</NavLink>
             </li>
-            <li className="nav-li">
+            <li className="nav-li link-nav">
               <NavLink to="/ressources">Ressources</NavLink>
             </li>
-            <li className="nav-li">
+            <li className="nav-li link-nav">
               <NavLink to="/a-propos">À propos</NavLink>
             </li>
         </React.Fragment>
@@ -45,7 +45,7 @@ const NavMain = (props) => {
             <li>
               <NavLink to="/admin/tableau-de-bord">Tableau de bord</NavLink>
             </li>
-            <li className="link nav-li">
+            <li className="link nav-li link-nav">
               <p onClick={handleLogout}>Se déconnecter</p>
             </li>
           </React.Fragment>
@@ -55,7 +55,7 @@ const NavMain = (props) => {
             {/* <li>
               <NavLink to="/ajouter-admin">Lien temporaire admin</NavLink>
             </li> */}
-            <li className="nav-li">
+            <li className="nav-li link-nav">
               <NavLink to="/espace-admin">Espace admin</NavLink>
             </li>
           </React.Fragment>
