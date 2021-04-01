@@ -1,5 +1,6 @@
 .homepage-canva {
-  width: 100%;
+  width: 95%;
+  height: 100%;
   display: flex;
   flex-flow: row-reverse nowrap;
   align-content: space-between;
@@ -16,6 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 10rem;
 }
 
 .home-map {
@@ -33,10 +35,33 @@
   margin-left: 50px;
 }
 
-.text-homepage {
-  width: 600px;
+/*text*/
+.all-text {
+  width: 37%;
   font-family: "Lato";
+  font-size: 1.3rem;
 }
+
+.text-homepage {
+  color: white;
+  background-color: var(--color-fourth);
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  margin-top: 4rem;
+}
+
+div.text-homepage > p {
+  color: white;
+}
+
+.catchphrase {
+  font-size: 2.2rem;
+  line-height: 3rem;
+  text-align: center;
+  border-bottom: solid 4px var(--color-main);
+  padding-bottom: 1.8rem;
+}
+
 
 /*ANIM*/
 .fade-in {
@@ -73,7 +98,9 @@
   }
 }
 
-@media screen and (max-width: 570px) {
+/*RESP*/
+
+@media screen and (max-width: 800px) {
   .nav {
     margin: none;
     padding: none;
@@ -82,17 +109,29 @@
   .text-and-map {
     display: flex;
     flex-direction: column-reverse;
+    justify-content: center;
     align-items: center;
   }
 
   .text-homepage {
-    width: 95%;
-    padding: 2rem;
+    min-width: 214px;
+    width: 100%;
+    padding: 1rem;
     font-family: "Lato";
   }
 
   .map-num-container {
-    width: 95%;
+    width: 70%;
     margin: 2rem;
   }
+
+  .catchphrase {
+    min-width: 214px;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: center;
+    border-bottom: solid 2px black;
+    padding-bottom: 1rem;
+  }
+  
 }
