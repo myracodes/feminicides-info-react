@@ -63,9 +63,9 @@ class Map extends React.Component {
     
     <div className="page-container">
 
-      <h1 className="title-1">Carte des Féminicides conjuguaux en France</h1>
+      <h1 className="title-1">Carte des Féminicides conjugaux en France</h1>
       
-      <div className=" flex">
+      <div className="flex padding-top">
 
         <div className="filters-box flex flex-column">
           <SearchBar searchByName={this.searchByName}/>
