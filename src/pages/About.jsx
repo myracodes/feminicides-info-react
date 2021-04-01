@@ -51,17 +51,16 @@ const About = () => {
               />
             </span>
           </div>
-
         </div>
       </div>
 
       <h1 className="title-1">Contact</h1>
-      <div className="padding-top flex flex-row">
+      <div className="padding-top flex flex-column">
         <a href="mailto:address@e.mail">Contacter le collectif FPCE <br />
         (Féminicides par compagnons ou ex)</a>
-        <div className="flex flex-row social">
-          <a href="https://www.facebook.com/feminicide" target="_blank" rel="noreferrer"><i class="fab fa-facebook-square"></i></a>
-          <a href="https://www.instagram.com/feminicidespar/" target="_blank" rel="noreferrer"><i class="fab fa-instagram"></i></a>
+        <div className="flex-row social">
+          <a href="https://www.facebook.com/feminicide" target="_blank" rel="noreferrer"><i class="fab fa-facebook-square"></i></a> &nbsp;
+          <a href="https://www.instagram.com/feminicidespar/" target="_blank" rel="noreferrer"><i class="fab fa-instagram"></i></a> &nbsp;
           <a href="https://twitter.com/feminicidesfr" target="_blank" rel="noreferrer"><i class="fab fa-twitter-square"></i></a>
         </div>
       </div>
