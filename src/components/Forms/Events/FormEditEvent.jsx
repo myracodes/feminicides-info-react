@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import apiHandler from "../../../api/apiHandler";
 
 class FormEditEvent extends Component {
@@ -91,205 +91,220 @@ class FormEditEvent extends Component {
   render() {
     console.log(this.state);
     return (
-      <form 
-        onSubmit={this.handleSubmit} 
-        enctype="multipart/form-data"
-        key={this.props.match.params.id}
-      >
-        <h1>Éditer l'événement n° {this.state.eventNumber}</h1>
-        <label htmlFor="date">Date</label>
-        <input
-          onChange={this.handleChange}
-          value={this.state.date}
-          type="date"
-          id="date"
-          name="date"
-        /> <br />
-
-        <label htmlFor="city">Ville</label>
-        <input
-          onChange={this.handleChange}
-          value={this.state.city}
-          type="text"
-          id="city"
-          name="city"
-        /> <br />
-
-        <label htmlFor="firstName">Prénom</label>
-        <input
-          onChange={this.handleChange}
-          value={this.state.firstName}
-          type="text"
-          id="firstName"
-          name="firstName"
-        /> <br />
-
-        <label htmlFor="lastName">Nom</label>
-        <input
-          onChange={this.handleChange}
-          value={this.state.lastName}
-          type="text"
-          id="lastName"
-          name="lastName"
-        /> <br />
-
-
-        <label htmlFor="age">Âge</label>
-        <input
-          onChange={this.handleChange}
-          value={this.state.age}
-          type="number"
-          id="age"
-          name="age"
-        /> <br />
-
-        <p>Coordonnées géographiques</p>
-        <label htmlFor="lng">Longitude</label>
-        <input
-          onChange={this.handleChange}
-          value={this.state.lng}
-          type="number"
-          id="lng"
-          name="lng"
-        /> <br />
-
-        <label htmlFor="lat">Latitude</label>
-        <input
-          onChange={this.handleChange}
-          value={this.state.lat}
-          type="number"
-          id="lat"
-          name="lat"
-        /> <br />
-
-        <label htmlFor="relationship">Relation avec son tueur</label>
-        <select
-          onChange={this.handleChange}
-          value={this.state.relationship}
-          id="relationship"
-          name="relationship"
+      <div>
+        <h1 className="title-2">Éditer l'événement n° {this.state.eventNumber}</h1>
+        <br/><br/>
+        <Link to="/admin/tableau-de-bord/evenements" className="btn-3 Dashboard__return-btn">Retour</Link> 
+        <br/>
+        <form 
+          onSubmit={this.handleSubmit} 
+          enctype="multipart/form-data"
+          key={this.props.match.params.id}
+          className="form-container Dashboard__form"
         >
-          <option value="compagnon">Compagnon</option>
-          <option value="ex-compagnon">Ex-compagnon</option>
-          <option value="compagnon supposé">Compagnon supposé</option>
-          <option value="non renseigné">Non renseigné</option>
-        </select> <br />
+     
+          <label htmlFor="date" className="form-label">Date</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.date}
+            type="date"
+            id="date"
+            name="date"
+            className="form-input"
+          /> <br />
 
-        <label htmlFor="killerAge">Âge du tueur</label>
-        <input
-          onChange={this.handleChange}
-          value={this.state.killerAge}
-          type="text"
-          id="killerAge"
-          name="killerAge"
-        /> <br />
+          <label htmlFor="city" className="form-label">Ville</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.city}
+            type="text"
+            id="city"
+            name="city"
+            className="form-input"
+          /> <br />
 
-        <label htmlFor="complaint">Nombre de plaintes</label>
-        <input
-          onChange={this.handleChange}
-          value={this.state.complaint}
-          type="text"
-          id="complaint"
-          name="complaint"
-        /> <br />
+          <label htmlFor="firstName" className="form-label">Prénom</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.firstName}
+            type="text"
+            id="firstName"
+            name="firstName"
+            className="form-input"
+          /> <br />
 
-        <label htmlFor="condemned">Tueur condamné ?</label>
-        <select
-          onChange={this.handleChange}
-          value={this.state.condemned}
-          id="condemned"
-          name="condemned"
-        >
-          <option value="condamné">Condamné</option>
-          <option value="non condamné">Non condamné</option>
-          <option value="en cours">En cours</option>
-          <option value="non renseigné">Non renseigné</option>
-        </select>  
+          <label htmlFor="lastName" className="form-label">Nom</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.lastName}
+            type="text"
+            id="lastName"
+            name="lastName"
+            className="form-input"
+          /> <br />
 
-        <label htmlFor="otherVictims">Nombre de victimes collatérales</label>
-        <input
-          onChange={this.handleChange}
-          value={this.state.otherVictims}
-          type="number"
-          id="otherVictims"
-          name="otherVictims"
-        /> <br />
 
-        <label htmlFor="otherVictims">Détails victimes collatérales</label>
-        <input
-          onChange={this.handleChange}
-          value={this.state.otherVictims}
-          type="text"
-          id="otherVictims"
-          name="otherVictims"
-          placeholder="Ex: sa mère, son amie, son nouveau compagnon..."
-        /> <br />
+          <label htmlFor="age" className="form-label">Âge</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.age}
+            type="number"
+            id="age"
+            name="age"
+            className="form-input"
+          /> <br />
 
-        <label htmlFor="description">Description</label>
-        <textarea
-          onChange={this.handleChange}
-          value={this.state.description}
-          id="description"
-          name="description"
-          rows="5" cols="40"
-        >
-        </textarea> <br />
+          <p>Coordonnées géographiques</p>
+          <label htmlFor="lng" className="form-label">Longitude</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.lng}
+            type="number"
+            id="lng"
+            name="lng"
+            className="form-input"
+          /> <br />
 
-        <label htmlFor="courtDecision">Décision de justice</label>
-        <input
-          onChange={this.handleChange}
-          value={this.state.courtDecision}
-          type="text"
-          id="courtDecision"
-          name="courtDecision"
-        /> <br />
+          <label htmlFor="lat" className="form-label">Latitude</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.lat}
+            type="number"
+            id="lat"
+            name="lat"
+            className="form-input"
+          /> <br />
 
-        <label htmlFor="pressArticles">Article(s) de presse</label>
-        <textarea
-          onChange={this.handleChange}
-          value={this.state.pressArticles}
-          type="text"
-          id="pressArticles"
-          name="pressArticles"
-          rows="5" cols="40"
-        ></textarea> <br />
+          <label htmlFor="relationship" className="form-label">Relation avec son tueur</label>
+          <select
+            onChange={this.handleChange}
+            value={this.state.relationship}
+            id="relationship"
+            name="relationship"
+            className="form-input"
+          >
+            <option value="compagnon">Compagnon</option>
+            <option value="ex-compagnon">Ex-compagnon</option>
+            <option value="compagnon supposé">Compagnon supposé</option>
+            <option value="non renseigné">Non renseigné</option>
+          </select> <br />
 
-        {this.state.commemoration &&
-        <img src={this.state.commemoration[0]} alt="Collages commémoratifs" />
-        }
-        <label htmlFor="commemoration">Collages commémoratifs</label>
-        <input
-          onChange={this.handleImage}
-          type="file"
-          id="commemoration"
-          name="commemoration"
-        /> <br />
+          <label htmlFor="killerAge" className="form-label">Âge du tueur</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.killerAge}
+            type="text"
+            id="killerAge"
+            name="killerAge"
+            className="form-input"
+          /> <br />
 
-        <label htmlFor="region">Région</label>
-        <select
-          onChange={this.handleChange}
-          value={this.state.region ? this.state.region : ""}
-          id="region"
-          name="region"
-        >
-          {this.state.regionsList.map(region => (
-            <option value={region._id} key={region._id}>{region.name}</option>
-          ))}
-        </select>
-        <br />
+          <label htmlFor="complaint" className="form-label">Nombre de plaintes</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.complaint}
+            type="text"
+            id="complaint"
+            name="complaint"
+            className="form-input"
+          /> <br />
 
-        <label htmlFor="completeProfile">Fiche complète ?</label>
-        <input
-          onChange={this.handleChange}
-          value={this.state.completeProfile}
-          type="checkbox"
-          id="completeProfile"
-          name="completeProfile"
-        /> <br />
+          <label htmlFor="condemned" className="form-label">Tueur condamné ?</label>
+          <select
+            onChange={this.handleChange}
+            value={this.state.condemned}
+            id="condemned"
+            name="condemned"
+            className="form-input"
+          >
+            <option value="condamné">Condamné</option>
+            <option value="non condamné">Non condamné</option>
+            <option value="en cours">En cours</option>
+            <option value="non renseigné">Non renseigné</option>
+          </select>  
 
-        <button>Mettre à jour</button>
+          <label htmlFor="otherVictims" className="form-label">Nombre de victimes collatérales</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.otherVictims}
+            type="number"
+            id="otherVictims"
+            name="otherVictims"
+            className="form-input"
+          /> <br />
 
-      </form>
+          <label htmlFor="otherVictims" className="form-label">Détails victimes collatérales</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.otherVictims}
+            type="text"
+            id="otherVictims"
+            name="otherVictims"
+            className="form-input"
+            placeholder="Ex: sa mère, son amie, son nouveau compagnon..."
+          /> <br />
+
+          <label htmlFor="description" className="form-label">Description</label>
+          <textarea
+            onChange={this.handleChange}
+            value={this.state.description}
+            id="description"
+            name="description"
+            rows="5" cols="40"
+            className="form-input"
+          >
+          </textarea> <br />
+
+          <label htmlFor="courtDecision" className="form-label">Décision de justice</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.courtDecision}
+            type="text"
+            id="courtDecision"
+            name="courtDecision"
+            className="form-input"
+          /> <br />
+
+          <label htmlFor="pressArticles" className="form-label">Article(s) de presse</label>
+          <textarea
+            onChange={this.handleChange}
+            value={this.state.pressArticles}
+            type="text"
+            id="pressArticles"
+            name="pressArticles"
+            rows="5" cols="40"
+            className="form-input"
+          ></textarea> <br />
+
+          {this.state.commemoration &&
+          <img src={this.state.commemoration[0]} alt="Collages commémoratifs" />
+          }
+          <label htmlFor="commemoration" className="form-label">Collages commémoratifs</label>
+          <input
+            onChange={this.handleImage}
+            type="file"
+            id="commemoration"
+            name="commemoration"
+            className="form-input"
+          /> <br />
+
+          <label htmlFor="region" className="form-label">Région</label>
+          <select
+            onChange={this.handleChange}
+            value={this.state.region ? this.state.region : ""}
+            id="region"
+            name="region"
+            className="form-input"
+          >
+            {this.state.regionsList.map(region => (
+              <option value={region._id} key={region._id}>{region.name}</option>
+            ))}
+          </select>
+          <br />
+          <button className="btn-2 Dashboard__form-btn">Mettre à jour</button>
+
+        </form>
+      </div>
     )
   }
 }
