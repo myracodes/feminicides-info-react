@@ -27,7 +27,7 @@
 
 .cards-container {
     max-width: 640px;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .social {

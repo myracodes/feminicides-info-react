@@ -5,14 +5,14 @@ const About = () => {
   return (
     <div className="page-container">
       <h1 className="title-1">À propos</h1>
-      <div className="padding-top">
+      <div className="padding-top flex flex-column cards-container">
         <div className="padding-top">
           Ce site internet est basé sur le travail du collectif Féminicides par compagnons ou ex, qui répertorie et dénonce les féminicides commis en France dans le cadre conjugal. <br />
         </div>
         <div className="padding-top">
           Il a été réalisé par 4 développeuses : <br />
 
-          <div className="padding-top flex wrap cards-container">
+          <span className="padding-top flex wrap">
 
             <span className="padding-top">
               <ProfileCard
@@ -20,7 +20,6 @@ const About = () => {
                 lastName="Engler"
                 picture="/photos/Anais.jpg"
                 gitHub="https://github.com/anachannn"
-                LinkedIn=""
               />
             </span>
             <span className="padding-top">
@@ -29,7 +28,6 @@ const About = () => {
                 lastName="Lefour"
                 picture="/photos/Anna.jpg"
                 gitHub="https://github.com/ankapieka"
-                LinkedIn=""
               />
             </span>
             <span className="padding-top">
@@ -38,7 +36,6 @@ const About = () => {
                 lastName="Rey"
                 picture="/photos/Mélu.jpg"
                 gitHub="https://github.com/zelumine"
-                LinkedIn=""
               />
             </span>
             <span className="padding-top">
@@ -47,10 +44,9 @@ const About = () => {
                 lastName="Mira"
                 picture="/photos/My.jpg"
                 gitHub="https://github.com/myracodes"
-                LinkedIn=""
               />
             </span>
-          </div>
+          </span>
         </div>
         <div className="padding-top">
           Ce projet a été réalisé dans le cadre du bootcamp Fullstack web development d'<a href="https://www.ironhack.com/fr">Ironhack</a>. 

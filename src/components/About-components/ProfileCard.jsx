@@ -9,7 +9,7 @@ function ProfileCard({ firstName, lastName, picture, gitHub, LinkedIn }) {
                             <b>{firstName} {lastName} </b><br />
                         </span>
                         <span>
-                            <a href={`${gitHub}`} target="_blank" rel="noreferrer"><i class="fab fa-github"></i> GitHub </a> {LinkedIn}
+                            <a href={`${gitHub}`} target="_blank" rel="noreferrer"><i class="fab fa-github"></i> GitHub </a>
                         </span>
                     </span>
                     <span>
