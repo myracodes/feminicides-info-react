@@ -137,23 +137,7 @@
         padding-right:100px;
     }
 
-    /*RESPONSIVE*/
-
-   @media screen and (max-width: 800px) {
-    
-      .flex{
-        flex-direction: column;  
-      
-    }
-    
-       .mapbox{
-        width:400px;
-       
-    }
-
-        .mapboxgl-canvas-container{
-        width:100%;
-    }
+   
   
     .border-input{
         border:1px solid var(--color-text);
@@ -165,6 +149,24 @@
         margin:15px;
         margin-bottom:20px
     }
+
+     /*RESPONSIVE*/
+
+   @media screen and (max-width: 800px) {
+    
+    .flex{
+      flex-direction: column;  
+    
+  }
+  
+     .mapbox{
+      width:400px;
+     
+  }
+
+      .mapboxgl-canvas-container{
+      width:100%;
+  }
   
   }
    

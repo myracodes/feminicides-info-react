@@ -45,7 +45,20 @@
     width:40rem;
 }
 
-/* .img-size{
-    height: 100%;
-    width: 100%;
-} */
+ /*RESPONSIVE*/
+
+ @media screen and (max-width: 800px) {
+    
+    img {
+      max-height:300px;
+      max-width: 400px;
+      
+  }  
+    .btn-center{
+        text-align: center;
+    }
+
+      .container-ressources{
+      width:100%;
+  }
+ }
