@@ -27,13 +27,14 @@
 
 .cards-container {
     max-width: 640px;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .social {
     align-items: center;
     justify-content: space-evenly;
     width: fit-content;
+    margin-bottom: 30px;
 }
 
 @media screen and (max-width: 800px) {
