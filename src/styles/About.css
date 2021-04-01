@@ -14,12 +14,32 @@
 .profile-cards {
     width: 280px;
     min-width: 280px;
+    max-height: 150px;
     flex-wrap: wrap;
-    border:1px solid var(--color-text);
-    border-top:none;
-    border-right:none;
-    box-shadow: 0 5px var(--color-third);
+    border: 1px solid var(--color-text);
+    border-top: none;
+    border-right: none;
+    box-shadow: 0 4px var(--color-third);
     border-radius: 20px;
     margin-right: 20px;
+    padding: 15px 20px;
 }
 
+.cards-container {
+    max-width: 640px;
+    align-items: center;
+}
+
+.social {
+    align-items: center;
+    justify-content: space-evenly;
+    width: fit-content;
+}
+
+@media screen and (max-width: 800px) {
+
+    .profile-cards {
+        width: 300px;
+        flex-direction: row;
+    }
+}

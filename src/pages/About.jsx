@@ -10,9 +10,9 @@ const About = () => {
           Ce site internet est basé sur le travail du collectif Féminicides par compagnons ou ex, qui répertorie et dénonce les féminicides commis en France dans le cadre conjugal. <br />
         </div>
         <div className="padding-top">
-          Ce site a été réalisé par 4 développeuses : <br />
+          Il a été réalisé par 4 développeuses : <br />
 
-          <div className="padding-top flex wrap">
+          <div className="padding-top flex wrap cards-container">
 
             <span className="padding-top">
               <ProfileCard
@@ -56,12 +56,14 @@ const About = () => {
       </div>
 
       <h1 className="title-1">Contact</h1>
-      <div className="padding-top flex flex-column">
+      <div className="padding-top flex flex-row">
         <a href="mailto:address@e.mail">Contacter le collectif FPCE <br />
         (Féminicides par compagnons ou ex)</a>
-        <a href="https://www.facebook.com/feminicide" target="_blank" rel="noreferrer">Facebook</a>
-        <a href="https://www.instagram.com/feminicidespar/" target="_blank" rel="noreferrer">Instagram</a>
-        <a href="https://twitter.com/feminicidesfr" target="_blank" rel="noreferrer">Twitter</a>
+        <div className="flex flex-row social">
+          <a href="https://www.facebook.com/feminicide" target="_blank" rel="noreferrer"><i class="fab fa-facebook-square"></i></a>
+          <a href="https://www.instagram.com/feminicidespar/" target="_blank" rel="noreferrer"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/feminicidesfr" target="_blank" rel="noreferrer"><i class="fab fa-twitter-square"></i></a>
+        </div>
       </div>
     </div>
   )
