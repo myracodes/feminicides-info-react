@@ -97,7 +97,7 @@ ul {
 .btn-2:hover,
 .btn-3:hover {
   box-shadow: 5px 7px var(--color-third);
-  color: var(--color-third);
+  color: var(--color-input);
 }
 
 .btn-2 {
