@@ -18,3 +18,7 @@
 .NavMain .nav-list li:not(:last-child) {
   margin-right: 20px;
 }
+
+.name-style {
+  font-size: 1.5rem;
+}

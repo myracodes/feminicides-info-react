@@ -6,9 +6,21 @@ import "./../styles/Home.css";
 class Home extends React.Component {
   render() {
     return (
-      <div className="homepage-canva">
-        <div>
-          <div>Text</div>
+      <div className="homepage-canva page-container">
+        <div className="text-and-map">
+          <div className="text-homepage">
+            <p>
+              Travail éprouvant mais nécessaire pour que ces femmes restent
+              encore un peu vivantes, nommées quand c'est possible et non plus
+              une parmi d'autres anonymes dans le chiffre global annuel. Chiffre
+              dont pas grand monde ne s'émeut ni ne s'indigne parmi les
+              politiques et même la société... Nous ajusterons le nombre des
+              orphelin-e-s, victimes directes ou collatérales du
+              #TerrorismePatriarcal familial, toléré, minimisé, ignoré des
+              politiques... tellement moins spectaculaire, donc moins effrayant
+              que le terrorisme religieux et pourtant tout aussi mortifère !{" "}
+            </p>
+          </div>
 
           <div className="map-num-container">
             <div className="home-total-num fade-in">
