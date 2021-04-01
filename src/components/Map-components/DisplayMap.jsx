@@ -62,7 +62,7 @@ class DisplayMap extends React.Component {
             <p> Quand ? ${event.date.split('T00:00:00.000Z')}</p>
             <p>Où ? ${event.city}</p>
             <p>Tuée par son ${event.relationship}, ${event.killerAge} ans</p>
-            <a class="btn-3" href="/carte/detail/${event._id}" >Lire plus</a>
+            <a class="btn-3" href="${process.env.NODE_ENV === "production" ? process.env.REACT_APP_BACKEND_URL : ""}/carte/detail/${event._id}" >Lire plus</a>
             </div>
             `)
             .setMaxWidth("300px"))

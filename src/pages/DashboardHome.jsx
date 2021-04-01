@@ -9,8 +9,8 @@ class DashboardHome extends Component {
       <div>
         <NavDashboard />
         <div className="Dashboard__container flex flex-column">
-          <h1 className="title-1">Tableau de bord</h1>
-          <div className="page-container">
+          <h1 className="title-1">Tableau de bord</h1> <br/>
+          <div className="Dashboard__text-container flex flex-column">
             <p>Gérez les utilisateurices,</p>
             <p>Ajoutez ou éditez les informations d'un événement/féminicide,</p>
             <p>Éditez les informations à propos d'une région.</p>

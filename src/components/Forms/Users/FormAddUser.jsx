@@ -34,45 +34,50 @@ class FormSignup extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor="firstName">Prénom</label>
+      <form onSubmit={this.handleSubmit} className="form-container">
+        <label htmlFor="firstName" className="form-label">Prénom</label>
         <input
           onChange={this.handleChange}
           value={this.state.firstName}
           type="text"
           id="firstName"
           name="firstName"
+          className="form-input"
         />
-        <label htmlFor="lastName">Nom</label>
+        <label htmlFor="lastName" className="form-label">Nom</label>
         <input
           onChange={this.handleChange}
           value={this.state.lastName}
           type="text"
           id="lastName"
           name="lastName"
+          className="form-input"
         />
-        <label htmlFor="email">E-mail</label>
+        <label htmlFor="email" className="form-label">E-mail</label>
         <input
           onChange={this.handleChange}
           value={this.state.email}
           type="email"
           id="email"
           name="email"
+          className="form-input"
         />
-        <label htmlFor="password">Mot de passe</label>
+        <label htmlFor="password" className="form-label">Mot de passe</label>
         <input
           onChange={this.handleChange}
           value={this.state.password}
           type="password"
           id="password"
           name="password"
+          className="form-input"
         />
-        <label htmlFor="role">Rôle</label>
+        <label htmlFor="role" className="form-label">Rôle</label>
         <select
           onChange={this.handleChange}
           value={this.state.role}
           id="role"
           name="role"
+          className="form-input"
         >
           <option default value="éditrice">Éditrice.eur</option>
           <option value="admin">Admin</option>
