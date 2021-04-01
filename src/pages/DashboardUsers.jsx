@@ -32,8 +32,8 @@ class DashboardUsers extends React.Component {
         <NavDashboard />
         <div className="Dashboard__container">
           <h1 className="title-1">Tableau de bord</h1> <br/>
-          <h2 className="title-2">Utilisateurices</h2> <br />
-          <Link to="/admin/nouvelle-utilisatrice" className="btn-2 Dashboard_btn">Ajouter un.e utilisateurice</Link>
+          <h2 className="title-2">Utilisateurices</h2> <br/><br/>
+          <Link to="/admin/nouvelle-utilisatrice" className="btn-2 Dashboard_btn">Ajouter un.e utilisateurice</Link><br/><br/>
           <table>
             <thead>
               <tr>
