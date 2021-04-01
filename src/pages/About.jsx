@@ -12,9 +12,9 @@ const About = () => {
         <div className="padding-top">
           Ce site a été réalisé par 4 développeuses : <br />
 
-          <div className="padding-top">
+          <div className="padding-top flex wrap">
 
-            <div className="padding-top">
+            <span className="padding-top">
               <ProfileCard
                 firstName="Anaïs"
                 lastName="Engler"
@@ -22,8 +22,8 @@ const About = () => {
                 gitHub="https://github.com/anachannn"
                 LinkedIn=""
               />
-            </div>
-            <div className="padding-top">
+            </span>
+            <span className="padding-top">
               <ProfileCard
                 firstName="Anna"
                 lastName="Lefour"
@@ -31,8 +31,8 @@ const About = () => {
                 gitHub="https://github.com/ankapieka"
                 LinkedIn=""
               />
-            </div>
-            <div className="padding-top">
+            </span>
+            <span className="padding-top">
               <ProfileCard
                 firstName="Mélusine"
                 lastName="Rey"
@@ -40,8 +40,8 @@ const About = () => {
                 gitHub="https://github.com/zelumine"
                 LinkedIn=""
               />
-            </div>
-            <div className="padding-top">
+            </span>
+            <span className="padding-top">
               <ProfileCard
                 firstName="Myriam"
                 lastName="Mira"
@@ -49,7 +49,7 @@ const About = () => {
                 gitHub="https://github.com/myracodes"
                 LinkedIn=""
               />
-            </div>
+            </span>
           </div>
 
         </div>
