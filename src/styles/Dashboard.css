@@ -1,7 +1,6 @@
 .Dashboard__navbar {
   width: 15%;
   background: var(--color-main);
-  color: white;
   min-height: 92vh;
   max-height: 100vh;
   justify-content: space-around;
@@ -11,6 +10,14 @@
 .Dashboard__navbar-link {
   margin: 40px 0;
   font-size: 1.3em;
+  color: var(--color-third);
+  padding: 20px 62px;
+  width: 100%;
+}
+
+.Dashboard__navbar-link:hover {
+  background: var(--color-fourth);
+  color: var(--color-third);
 }
 
 .Dashboard__container {
@@ -31,4 +38,13 @@
   width: 80%;
   min-height: 80%;
   border: 1px solid red;
+}
+
+.Dashboard_btn {
+  margin: 40px 0;
+}
+
+.Dashboard__form {
+  max-width: 80%;
+  margin: 10px auto;
 }

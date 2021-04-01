@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import apiHandler from '../api/apiHandler';
 import NavDashboard from '../components/NavDashboard';
+import "../styles/Dashboard.css";
 
 class DashboardUsers extends React.Component {
   state = {
@@ -32,7 +33,7 @@ class DashboardUsers extends React.Component {
         <div className="Dashboard__container">
           <h1 className="title-1">Tableau de bord</h1> <br/>
           <h2 className="title-2">Utilisateurices</h2> <br />
-          <Link to="/admin/nouvelle-utilisatrice" className="btn-2">Ajouter un.e utilisateurice</Link>
+          <Link to="/admin/nouvelle-utilisatrice" className="btn-2 Dashboard_btn">Ajouter un.e utilisateurice</Link>
           <table>
             <thead>
               <tr>

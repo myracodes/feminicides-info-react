@@ -47,7 +47,7 @@ const NavMain = (props) => {
                 Tableau de bord
               </NavLink>
             </li>
-            <li>
+            <li className="link">
               <p onClick={handleLogout}>Se déconnecter</p>
             </li>
           </React.Fragment>
