@@ -41,6 +41,10 @@ a:hover, .link {
   color: grey;
 }
 
+a:visited {
+  color: black;
+}
+
 ul {
   list-style-type: none;
 }

@@ -35,7 +35,7 @@
 
 .text-homepage {
   width: 600px;
-  font-family: 'Lato';
+  font-family: "Lato";
 }
 
 /*ANIM*/
@@ -73,8 +73,11 @@
   }
 }
 
-
 @media screen and (max-width: 570px) {
+  .nav {
+    margin: none;
+    padding: none;
+  }
 
   .text-and-map {
     display: flex;
@@ -85,12 +88,11 @@
   .text-homepage {
     width: 100%;
     padding: 2rem;
-    font-family: 'Lato';
+    font-family: "Lato";
   }
 
-  .home-map {
-    margin: 2rem 0;
+  .map-num-container {
+    width: 95%;
+    margin: 2rem;
   }
-  
-
 }

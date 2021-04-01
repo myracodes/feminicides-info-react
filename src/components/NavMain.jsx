@@ -20,32 +20,30 @@ const NavMain = (props) => {
   }
 
   return (
-    <nav className="NavMain padding-top">
+    <nav className="NavMain">
       <NavLink exact to="/">
         <h3 className="logo title-1 name-style">Féminicides&nbsp;infos</h3>
       </NavLink>
 
       <ul className="nav-list">
         <React.Fragment>
-          <li>
-            <NavLink to="/carte">Carte</NavLink>
-          </li>
-          <li>
-            <NavLink to="/donnees">Données</NavLink>
-          </li>
-          <li>
-            <NavLink to="/ressources">Ressources</NavLink>
-          </li>
-          <li>
-            <NavLink to="/a-propos">À propos</NavLink>
-          </li>
+            <li>
+              <NavLink to="/carte">Carte</NavLink>
+            </li>
+            <li>
+              <NavLink to="/donnees">Données</NavLink>
+            </li>
+            <li>
+              <NavLink to="/ressources">Ressources</NavLink>
+            </li>
+            <li>
+              <NavLink to="/a-propos">À propos</NavLink>
+            </li>
         </React.Fragment>
         {context.isLoggedIn && (
           <React.Fragment>
             <li>
-              <NavLink to="/admin/tableau-de-bord">
-                Tableau de bord
-              </NavLink>
+              <NavLink to="/admin/tableau-de-bord">Tableau de bord</NavLink>
             </li>
             <li className="link">
               <p onClick={handleLogout}>Se déconnecter</p>
