@@ -17,6 +17,7 @@
 .Dashboard__navbar-link:hover {
   background: var(--color-fourth);
   color: var(--color-third);
+  border-radius: 15px;
 }
 
 .Dashboard__container-parent {
@@ -66,15 +67,10 @@
 
 .Dashboard__table {
   border: 1px solid var(--color-main);
-  max-width: 80%;
   padding: 15px;
   font-size: 1.2em;
   margin: 15px auto;
   border-radius: 15px;
-}
-
-.Dashboard__table-row-title {
-  border-bottom: 2px solid var(--color-fourth);
 }
 
 .Dashboard__table-row:nth-child(even) {
@@ -82,8 +78,23 @@
 }
 
 .Dashboard__table-cell {
-  border-collapse: collapse;
   text-align: center;
   padding: 20px 50px;
 }
 
+.Dashboard__table-events {
+  width: 60%;
+}
+
+.Dashboard__table-events td {
+  padding: 20px 40px;
+}
+
+.Dashboard__table-region {
+  width: 60%;
+  font-size: 0.9em;
+  border: 1px solid var(--color-main);
+  padding: 10px;
+  margin: 15px auto;
+  border-radius: 15px;
+}
