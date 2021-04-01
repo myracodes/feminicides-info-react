@@ -4,25 +4,17 @@ import apiHandler from '../api/apiHandler';
 import NavDashboard from '../components/NavDashboard';
 import "../styles/Dashboard.css";
 
-let gridStyle;
-
 class DashboardUsers extends React.Component {
   state = {
     users: []
   }
 
   componentDidMount() {
+    // Get all users info from the database
     apiHandler
       .getUsers()
       .then(data => this.setState({ users: data }))
       .catch(error => console.log(error));
-
-    gridStyle = {
-      display: "grid",
-      gridTemplateColumns: "repeat(4, 1fr)",
-      gridTemplateRows: `repeat(${this.state.users.length}, 1fr)`,
-      gap: "5px 5px",
-    }
   }
 
   handleDeleteUser(userID) {
@@ -45,7 +37,7 @@ class DashboardUsers extends React.Component {
           <Link to="/admin/nouvelle-utilisatrice" className="btn-2">Ajouter un.e utilisateurice</Link><br/><br/>
           <table className="Dashboard__table">
             <thead>
-              <tr className="Dashboard__table-row-title">
+              <tr>
                 <th className="Dashboard__table-cell">Prénom</th>
                 <th className="Dashboard__table-cell">Nom</th>
                 <th className="Dashboard__table-cell">Éditer</th>

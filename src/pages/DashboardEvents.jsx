@@ -10,6 +10,7 @@ class DashboardEvents extends React.Component {
   }
 
   componentDidMount() {
+    // Get all events info from the database
     apiHandler
       .allEvents()
       .then(data => this.setState({ events: data.sort((a, b) => a.eventNumber - b.eventNumber) }))
@@ -33,9 +34,9 @@ class DashboardEvents extends React.Component {
           <h1 className="title-1">Tableau de bord</h1> <br/>
           <h2 className="title-2">Événements</h2> <br/><br/>
           <Link to="/admin/nouvel-evenement" className="btn-2">Ajouter un événement</Link><br/><br/>
-          <table className="Dashboard__table">
+          <table className="Dashboard__table Dashboard__table-events">
             <thead>
-              <tr className="Dashboard__table-row-title">
+              <tr>
                 <th className="Dashboard__table-cell">N°</th>
                 <th className="Dashboard__table-cell">Date</th>
                 <th className="Dashboard__table-cell">Prénom</th>
