@@ -10,9 +10,11 @@ class Home extends React.Component {
         <div className="text-and-map">
           <div className="all-text">
             <div className="catchphrase">
-              Depuis le début de l'année, 26 femmes ont été tuées par leur compagnon ou ex.
-            </div>
-            <div className="text-homepage">
+<p className="txt-catchphrase">Tous les</p> 
+<p className="background-color txt-catchphrase"><b>deux jours</b></p> 
+<p className="txt-catchphrase">en France, un homme assasine sa compagne ou ex-compagne. 
+<br></br>Depuis le début de l'année, elles sont :</p></div>
+            {/* <div className="text-homepage">
               <p>
                 Travail éprouvant mais nécessaire pour que ces femmes restent
                 encore un peu vivantes, nommées quand c'est possible et non plus
@@ -25,7 +27,7 @@ class Home extends React.Component {
                 effrayant que le terrorisme religieux et pourtant tout aussi
                 mortifère !
               </p>
-            </div>
+            </div> */}
           </div>
 
           <div className="map-num-container">

@@ -63,7 +63,7 @@ const Ressources = () => {
 
       </div>
 
-      <img className="btn-center" src="https://res.cloudinary.com/dcbzfldni/image/upload/v1617286322/61637_ovdea0.jpg" alt="photo"/>
+      <img className="img-ressources btn-center" src="https://res.cloudinary.com/dcbzfldni/image/upload/v1617286322/61637_ovdea0.jpg" alt="photo"/>
 
     </div>
   )

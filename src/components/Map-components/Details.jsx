@@ -11,8 +11,8 @@ class Details extends React.Component {
 
     componentDidMount() { 
 
-        console.log(this.state.event, "state");
-        console.log(this.state.region, "region");
+        //console.log(this.state.event, "state");
+        //console.log(this.state.region, "region");
         // console.log(this.state.region.name, "region.name");
         const eventId = this.props.match.params.id;
 
@@ -20,7 +20,7 @@ class Details extends React.Component {
         .mapOneEvent(eventId)
         .then(data => this.setState({event : data.data}))
         .catch(error => console.log(error))
-        console.log(this.state.event, "state after api handler");
+        //console.log(this.state.event, "state after api handler");
     };
 
 

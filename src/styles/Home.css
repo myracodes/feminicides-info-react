@@ -58,8 +58,20 @@ div.text-homepage > p {
   font-size: 2.2rem;
   line-height: 3rem;
   text-align: center;
-  border-bottom: solid 4px var(--color-main);
+  border-bottom: solid 4px var(--color-second);
   padding-bottom: 1.8rem;
+  padding-right: 6rem;
+}
+
+.txt-catchphrase{
+  font-size: 2.2rem;
+  line-height: 3rem;
+  text-align: center;
+}
+
+.background-color{
+  background-color: var(--color-third);
+  padding:15px;
 }
 
 

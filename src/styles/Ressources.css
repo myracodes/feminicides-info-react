@@ -42,7 +42,12 @@
     padding:30px;
     padding-top:40px;
     margin:20px;
-    width:40rem;
+    /* width:40rem; */
+}
+
+.img-ressources{
+    width: 500px;
+    height:auto;
 }
 
  /*RESPONSIVE*/
@@ -51,7 +56,7 @@
     
     img {
       max-height:300px;
-      max-width: 400px;
+      max-width: auto;
       
   }  
     .btn-center{
