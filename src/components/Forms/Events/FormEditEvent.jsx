@@ -9,6 +9,7 @@ class FormEditEvent extends Component {
   }
 
   componentDidMount() {
+    // Get all regions to populate the dropdown select list
     apiHandler
     .allRegions()
     .then(data => {
@@ -223,7 +224,7 @@ class FormEditEvent extends Component {
             <option value="non renseigné">Non renseigné</option>
           </select>  
 
-          <label htmlFor="otherVictims" className="form-label">Nombre de victimes collatérales</label>
+          <label htmlFor="otherVictims" className="form-label">Nombre de tiers victimes</label>
           <input
             onChange={this.handleChange}
             value={this.state.otherVictims}
@@ -233,7 +234,7 @@ class FormEditEvent extends Component {
             className="form-input"
           /> <br />
 
-          <label htmlFor="otherVictims" className="form-label">Détails victimes collatérales</label>
+          <label htmlFor="otherVictims" className="form-label">Détails tiers victimes</label>
           <input
             onChange={this.handleChange}
             value={this.state.otherVictims}
