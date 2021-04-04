@@ -11,6 +11,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 5%;
 }
 
 .map-num-container {
@@ -42,6 +43,14 @@
   font-size: 1.3rem;
 }
 
+.map-phrase {
+  position: absolute;
+  display: flex;
+  margin-left: 50px;
+  margin-bottom: 150px;
+  font-size: 1rem;
+}
+
 .text-homepage {
   color: white;
   background-color: var(--color-fourth);
@@ -55,30 +64,53 @@ div.text-homepage > p {
 }
 
 .catchphrase {
+  width: 100%;
+  border-top: 5px solid var(--color-second);
+  border-bottom: 5px solid var(--color-second);
   font-size: 2.2rem;
   line-height: 3rem;
   text-align: center;
-  border-bottom: solid 4px var(--color-second);
-  padding-bottom: 1.8rem;
-  padding-right: 6rem;
+  
+  padding: 4rem;
+  /* border-radius: 15px; */
 }
 
 .txt-catchphrase{
-  font-size: 2.2rem;
-  line-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
+  width: 100%;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  color: var(--color-main);
+  text-shadow: rgba(0, 0, 0, 0.562) 1px 1px 3px;
+}
+
+.color-orange {
+  color: var(--color-fourth)
+}
+
+.two-days-text {
+  background-color: var(--color-fourth);
+  color: white;
+  text-align: center;
+  margin-top: 1.5rem;
+  text-shadow: rgba(0, 0, 0, 0.562) 1px 1px 3px;
 }
 
 .background-color{
-  background-color: var(--color-third);
-  padding:15px;
+  /* width: 10rem;
+  background-color: var(--color-fourth);
+  padding:-3px; */
 }
 
 
 /*ANIM*/
 .fade-in {
-  -webkit-animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation: fade-in 3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 /* ----------------------------------------------
@@ -135,6 +167,7 @@ div.text-homepage > p {
   .map-num-container {
     width: 70%;
     margin: 2rem;
+    margin-top: 50%;
   }
 
   .catchphrase {
@@ -146,4 +179,7 @@ div.text-homepage > p {
     padding-bottom: 1rem;
   }
   
+  .map-phrase {
+    font-size: 0.5rem;
+  }
 }

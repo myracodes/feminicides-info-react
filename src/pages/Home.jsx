@@ -10,10 +10,14 @@ class Home extends React.Component {
         <div className="text-and-map">
           <div className="all-text">
             <div className="catchphrase">
-<p className="txt-catchphrase">Tous les</p> 
-<p className="background-color txt-catchphrase"><b>deux jours</b></p> 
-<p className="txt-catchphrase">en France, un homme assasine sa compagne ou ex-compagne. 
-<br></br>Depuis le début de l'année, elles sont :</p></div>
+              <p className="txt-catchphrase">
+                En France, un homme<span className="color-orange">assassine</span>&nbsp;sa compagne ou&nbsp;ex-compagne tous les
+                <br />
+                <div className="background-color">
+                  <p className="two-days-text">2 jours</p>
+                </div>
+              </p>
+            </div>
             {/* <div className="text-homepage">
               <p>
                 Travail éprouvant mais nécessaire pour que ces femmes restent
@@ -31,8 +35,14 @@ class Home extends React.Component {
           </div>
 
           <div className="map-num-container">
+            <div className="map-phrase">
+              <br></br>Depuis le début de l'année, elles sont :
+            </div>
             <div className="home-total-num fade-in">
-              <TotalNumber />
+              <br />
+              <div>
+                <TotalNumber />
+              </div>
             </div>
             <img
               className="home-map"

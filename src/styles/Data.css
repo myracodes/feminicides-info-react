@@ -50,9 +50,10 @@ ul {
 }
 
 .total-num-text {
-  font-size: 5rem;
-  color: var(--color-second);
+  font-size: 6rem;
+  color: var(--color-fourth);
   text-shadow: 2px 2px var(--color-third);
+  border-bottom: 5px solid var(--color-main);
 }
 
 .total-num-phrase {
@@ -129,4 +130,7 @@ ul {
     flex-direction: column;
   }
 
+  .total-num-text {
+    font-size: 3rem;
+  }
 }
