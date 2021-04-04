@@ -22,7 +22,7 @@ const Ressources = () => {
 
       <div className="container-ressources flex flex-column">
         <h2 className="title-2">Informations complémentaires</h2>
-        <br></br>
+        
 
         <div className="flex flex-column padding-top">
         <p>Pour plus d'informations, consultez le site du <b>Haut Conseil à l'Égalité (HCE).</b> La commission « Violences de genre » est en charge de l’évaluation des plans nationaux de lutte contre les violences faites aux femmes.</p>
