@@ -1,11 +1,16 @@
 .NavMain {
-  background-color: transparent;
+  background-color: white;
   color: rgb(57, 57, 57);
   display: flex;
   align-items: center;
   padding: 20px;
+  padding-right: 200px;
   height: 70px;
   margin: 0 4%;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  width: 100%;
 }
 
 .NavMain .nav-list {
@@ -16,7 +21,7 @@
 }
 
 .NavMain .nav-list li:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 40px;
 }
 
 .name-style {
@@ -27,7 +32,7 @@
 } */
 
 .nav-li a:hover {
-  color: var(--color-second);
+  border-bottom: 4px solid var(--color-second);
 }
 
 /* .link-nav:visited {
