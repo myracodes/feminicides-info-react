@@ -289,6 +289,15 @@ class FormEditEvent extends Component {
             className="form-input"
           /> <br />
 
+          <label htmlFor="imageSource" className="form-label">Source de l'image</label>
+          <input 
+            onChange={this.handleChange}
+            type="text"
+            id="imageSource"
+            name="imageSource"
+            className="form-input"
+          /> <br />
+
           <label htmlFor="region" className="form-label">Région</label>
           <select
             onChange={this.handleChange}
