@@ -11,7 +11,7 @@ class Home extends React.Component {
           <div className="all-text">
             <div className="catchphrase">
               <p className="txt-catchphrase">
-                En France, un homme<span className="color-secondary">assassine</span>&nbsp;sa compagne ou&nbsp;ex-compagne tous les
+                En France, un homme<span className="color-secondary">assassine</span>&nbsp;sa compagne <nobr>ou&nbsp;ex-compagne</nobr> tous les
                 <br />
                 <div className="background-color">
                   <p className="two-days-text">2 jours</p>
