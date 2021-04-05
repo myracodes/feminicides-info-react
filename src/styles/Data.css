@@ -50,10 +50,10 @@ ul {
 }
 
 .total-num-text {
-  font-size: 6rem;
-  color: var(--color-fourth);
+  font-size: 8rem;
+  color: var(--color-second);
   text-shadow: 2px 2px var(--color-third);
-  border-bottom: 5px solid var(--color-main);
+  /* border-bottom: 5px solid var(--color-main); */
 }
 
 .total-num-phrase {
