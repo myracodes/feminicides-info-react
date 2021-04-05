@@ -34,7 +34,7 @@ class FormSignup extends Component {
 
   render() {
     return (
-      <div>
+      <div className="page-container">
         <h1 className="title-1">Ajouter un.e nouvel.le utilisateurice</h1>
         <br/><br/>
         <Link to="/admin/tableau-de-bord/users" className="btn-3 Dashboard__return-btn">Retour</Link> 

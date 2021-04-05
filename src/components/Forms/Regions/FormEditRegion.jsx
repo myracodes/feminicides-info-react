@@ -48,7 +48,7 @@ class FormEditEvent extends Component {
   render() {
     console.log(this.state);
     return (
-      <div>
+      <div className="page-container">
         <h1 className="title-2">{this.state.name}</h1>
         <br/><br/>
         <Link to="/admin/tableau-de-bord/regions" className="btn-3 Dashboard__return-btn">Retour</Link> 

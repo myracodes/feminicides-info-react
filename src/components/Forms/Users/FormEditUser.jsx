@@ -43,7 +43,7 @@ class FormEditUser extends Component {
 
   render() {
     return (
-      <div>
+      <div className="page-container">
         <h1 className="title-3">Éditer l'utilisateurice</h1>
         <br/><br/>
         <Link to="/admin/tableau-de-bord/users" className="btn-3 Dashboard__return-btn">Retour</Link> 

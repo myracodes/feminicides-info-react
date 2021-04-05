@@ -28,7 +28,7 @@ class DashboardEvents extends React.Component {
 
   render() {
     return (
-      <div>
+      <div> 
         <NavDashboard />
         <div className="Dashboard__container-parent">
           <h1 className="title-1">Tableau de bord</h1> <br/>
