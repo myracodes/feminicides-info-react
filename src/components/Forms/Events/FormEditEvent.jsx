@@ -35,6 +35,7 @@ class FormEditEvent extends Component {
       courtDecision: this.props.location.state.event.courtDecision,
       pressArticles: this.props.location.state.event.pressArticles,
       commemoration: this.props.location.state.event.commemoration,
+      imageSource: this.props.location.state.event.imageSource,
       region: this.props.location.state.event.region._id,
       completeProfile: this.props.location.state.event.completeProfile
     });
@@ -75,6 +76,7 @@ class FormEditEvent extends Component {
     formData.append("courtDecision", this.state.courtDecision);
     formData.append("pressArticles", this.state.pressArticles);
     formData.append("commemoration", this.state.commemoration);
+    formData.append("imageSource", this.state.imageSource);
     formData.append("region", this.state.region);
     formData.append("completeProfile", this.state.completeProfile);
 
@@ -291,6 +293,7 @@ class FormEditEvent extends Component {
 
           <label htmlFor="imageSource" className="form-label">Source de l'image</label>
           <input 
+            value={this.state.imageSource}
             onChange={this.handleChange}
             type="text"
             id="imageSource"
