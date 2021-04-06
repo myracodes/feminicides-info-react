@@ -61,11 +61,9 @@ const MonthsChart = () => {
       {/* <Line data={monthsData} /> */}
       <Line
         data={data}
-        width={700}
-        height={700}
         options={{
-          responsive: true,
-          maintainAspectRatio: true,
+          // responsive: true,
+          // maintainAspectRatio: true,
           animation: {
             duration: 2000,
             easing: "easeInQuad",

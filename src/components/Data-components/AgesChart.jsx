@@ -165,8 +165,8 @@ class Data extends React.Component {
             ],
           },
           options: {
-            responsive: true,
-            maintainAspectRatio: true,
+            // responsive: true,
+            // maintainAspectRatio: true,
             animation: {
               duration: 2000,
               easing: 'easeInQuad'
@@ -197,7 +197,7 @@ class Data extends React.Component {
     return (
       <div className="chart">        
         <canvas
-          style={{ width: 800, height: 700 }}
+          // style={{ width: 800, height: 700 }}
           ref={this.node}
         />
       </div>

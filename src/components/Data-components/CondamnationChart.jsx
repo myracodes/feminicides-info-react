@@ -9,7 +9,7 @@ export default class CondamnationChart extends PureComponent {
     notCondemned: [],
     ongoing: [],
     suicide: [],
-    nonRens: []
+    nonRens: [],
   };
 
   node = React.createRef(null);
@@ -23,10 +23,10 @@ export default class CondamnationChart extends PureComponent {
 
         function giveArrayLength(array, value) {
           return array.filter((elem) => elem === value).length;
-        };
+        }
 
         let condemned = giveArrayLength(condamnation, "condamné");
-        let notCondemned = giveArrayLength(condamnation, "non condamné")
+        let notCondemned = giveArrayLength(condamnation, "non condamné");
         let ongoing = giveArrayLength(condamnation, "en cours");
         let suicide = giveArrayLength(condamnation, "suicide après acte");
         let nonRens = giveArrayLength(condamnation, "non renseigné");
@@ -75,19 +75,20 @@ export default class CondamnationChart extends PureComponent {
           },
           options: {
             // responsive: true,
-            maintainAspectRatio: true,
+            // maintainAspectRatio: true,
             animation: {
               duration: 2000,
-              easing: 'easeInQuad'
+              easing: "easeInQuad",
             },
             title: {
               display: true,
-              position: 'bottom',
+              position: "bottom",
               fontSize: 18,
               fontFamily: "Lato",
-              text: 'Statut judiciaire des coupables ou assassins présumés - 2021'
-            }
-          }
+              text:
+                "Statut judiciaire des coupables ou assassins présumés - 2021",
+            },
+          },
         });
       })
       .catch((err) => console.log(err));
@@ -100,7 +101,9 @@ export default class CondamnationChart extends PureComponent {
 
     return (
       <div className="chart">
-        <canvas style={{ width: 800, height: 800 }} ref={this.node} />
+        <canvas 
+        // style={{ width: 800, height: 800 }} 
+        ref={this.node} />
       </div>
     );
   }
