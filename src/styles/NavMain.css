@@ -31,7 +31,7 @@
   color:black;
 } */
 
-.nav-li a:hover {
+.nav-li:hover {
   border-bottom: 4px solid var(--color-second);
 }
 

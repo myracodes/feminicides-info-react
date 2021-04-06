@@ -24,6 +24,7 @@ class FormEditEvent extends Component {
     courtDecision: "",
     pressArticles: "",
     commemoration: "",
+    imageSource: "",
     region: "",
     completeProfile: false
   }
@@ -80,6 +81,7 @@ class FormEditEvent extends Component {
     formData.append("courtDecision", this.state.courtDecision);
     formData.append("pressArticles", this.state.pressArticles);
     formData.append("commemoration", this.state.commemoration);
+    formData.append("imageSource", this.state.imageSource);
     formData.append("region", this.state.region);
     formData.append("completeProfile", this.state.completeProfile);
 
@@ -100,7 +102,7 @@ class FormEditEvent extends Component {
     console.log("state: ", this.state);
 
     return (
-      <div>
+      <div className="page-container">
         <h1 className="title-1">Ajouter un événement</h1>
         <br/><br/>
         <Link to="/admin/tableau-de-bord/evenements" className="btn-3 Dashboard__return-btn">Retour</Link> 
@@ -294,13 +296,14 @@ class FormEditEvent extends Component {
             onChange={this.handleImage}
             type="file"
             id="commemoration"
-            // name="commemoration"
+            name="commemoration"
             className="form-input"
           /> <br />
 
           <label htmlFor="imageSource" className="form-label">Source de l'image</label>
           <input 
             onChange={this.handleChange}
+            value={this.state.imageSource}
             type="text"
             id="imageSource"
             name="imageSource"
